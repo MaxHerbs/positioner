@@ -1,0 +1,79 @@
+###############################################################################
+#
+# Positioner template example
+#
+# $Revision: $
+# $Id: $
+#
+###############################################################################
+
+###############################################################################
+#
+# Positioner template
+#
+# The positioner template generates an mbbo record named '$(device):select' that 
+# is used to select one of n motor positions defined using the position template.
+# The output drives the specified motor record '$(motor)'.
+#
+# interface:
+# mbbi   '$(device):select' - use to select the required motor position.
+#
+# substitutions:
+# device  - device name
+# motor   - the motor record to be driven
+#
+
+file ../db/positioner.template
+{
+pattern { device, motor }
+        { BL18I-DI-PHDGN-01, BL18I-DI-PHDGN-01:MTR }
+}
+
+###############################################################################
+#
+# Position template
+# The position template adds '$(device):pos$(idx)' and '$(device):name$(idx)'
+# position records to the a positioner template. These specify the motor position 
+# and the corresponding string name for that position. Up to 16 positions can be 
+# defined (limited by mbbo record). These records can be changed at run time.
+#
+# interface
+# ao        $(device):pos$(idx)   - use to define the motor position in EGU's at run time
+# stringout $(device):name$(idx)  - use to define the name for the position at run time
+#
+# substitutions:
+# device    - device name. This must match the positioner templates $(device) definition.
+# idx       - the position number suffix (0,1,2...15 corresponding to id)
+# id        - one of the EPICS record count prefixes (must be ZR|ON|TW|TH ...FF). (Must be unique for any one positioner) 
+# pos_name  - the name for the motor position (e.g. a filter name)
+# pos_motor - the required motor position in engineering units.
+#
+
+file ../db/position.template
+{
+pattern { device, idx, id, pos_name, pos_motor }
+        { BL18I-DI-PHDGN-01, 0, ZR, filter0, 0  }
+        { BL18I-DI-PHDGN-01, 1, ON, filter1, 20  }
+        { BL18I-DI-PHDGN-01, 2, TW, filter2, 50  }
+        { BL18I-DI-PHDGN-01, 3, TH, filter3, 95  }
+#        { BL18I-DI-PHDGN-01, 4, FR, filter4, 104  }
+#        { BL18I-DI-PHDGN-01, 5, FV, filter5, 105  }
+#        { BL18I-DI-PHDGN-01, 6, SX, filter6, 106  }
+#        { BL18I-DI-PHDGN-01, 7, SV, filter7, 107  }
+#        { BL18I-DI-PHDGN-01, 8, EI, filter8, 108  }
+#        { BL18I-DI-PHDGN-01, 9, NI, filter9, 109  }
+#        { BL18I-DI-PHDGN-01, 10, TE, filter10, 110  }
+#        { BL18I-DI-PHDGN-01, 11, EL, filter11, 111  }
+#        { BL18I-DI-PHDGN-01, 12, TV, filter12, 112  }
+#        { BL18I-DI-PHDGN-01, 13, TT, filter13, 113  }
+#        { BL18I-DI-PHDGN-01, 14, FT, filter14, 114  }
+#        { BL18I-DI-PHDGN-01, 15, FF, filter15, 115  }
+}
+
+###############################################################################
+
+file /home/pjl45/R3.14.7/simulationdev/db/basic_motor.template
+{
+pattern { P                ,M           ,DESC                 ,DTYP ,DIR ,VELO ,VBAS ,ACCL ,BDST ,BVEL ,BACC ,C ,S ,MRES  ,PREC ,EGU ,DHLM ,DLLM ,INIT }
+        { BL18I-DI-PHDGN-01  ,:MTR      ,"Positioner Motor" ,PMAC ,1   ,1000 ,0    ,1    ,0    ,0    ,0    ,0 ,1 ,1     ,5    ,mm  ,100  ,-100 ,""   }
+}

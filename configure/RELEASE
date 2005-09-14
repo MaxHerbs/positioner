@@ -28,9 +28,9 @@ EPICS_BASE=/home/epics/R3.14.7/base
 #CALC=/home/diamond/R3.14.7/prod/support/calc/2-4
 
 # External module definitions (local release).
-MOTOR=/home/pjl45/R3.14.7/simulationdev
+MOTOR=$(TOP)/../simulationdev
 
 # Python scripting environment variables
-PYTHONPATH=/home/pjl45/R3.14.7/simulationdev/bin/linux-x86
+PYTHONPATH=$(TOP)/../simulationdev/bin/linux-x86
 PYTHONHOME=/home/tools/applications/local
 

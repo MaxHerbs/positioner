@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 764
-y 330
-w 400
-h 180
+x 770
+y 350
+w 300
+h 100
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -19,22 +19,9 @@ ctlBgColor1 index 0
 ctlBgColor2 index 14
 topShadowColor index 0
 botShadowColor index 14
+showGrid
+snapToGrid
 endScreenProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 0
-y 0
-w 400
-h 33
-lineColor index 3
-fill
-fillColor index 6
-endObjectProperties
 
 # (Menu Button)
 object activeMenuButtonClass
@@ -42,8 +29,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 200
-y 51
+x 120
+y 10
 w 170
 h 30
 fgColor index 14
@@ -52,7 +39,7 @@ inconsistentColor index 14
 topShadowColor index 1
 botShadowColor index 11
 controlPv "$(device):select"
-font "arial-medium-r-18.0"
+font "arial-medium-r-16.0"
 endObjectProperties
 
 # (Related Display)
@@ -61,15 +48,15 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 67
-y 132
+x 180
+y 50
 w 110
 h 30
-fgColor index 25
+fgColor index 43
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-medium-r-18.0"
+font "arial-medium-r-16.0"
 buttonLabel "Configure"
 numPvs 4
 numDsps 1
@@ -84,25 +71,6 @@ closeDisplay {
 }
 endObjectProperties
 
-# (Exit Button)
-object activeExitButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 238
-y 132
-w 110
-h 30
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-label "EXIT"
-font "arial-medium-r-18.0"
-3d
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -110,29 +78,10 @@ major 4
 minor 1
 release 0
 x 10
-y 5
-w 380
-h 23
-font "arial-medium-r-20.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "$(title)"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 60
-y 56
-w 68
-h 21
-font "arial-medium-r-18.0"
+y 20
+w 58
+h 19
+font "arial-medium-r-16.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -148,10 +97,10 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 201
-y 93
-w 25
-h 25
+x 120
+y 55
+w 20
+h 20
 controlPv "$(motor).MOVN"
 lineColor index 14
 onColor index 15
@@ -165,11 +114,11 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 60
-y 95
-w 114
-h 21
-font "arial-medium-r-18.0"
+x 10
+y 60
+w 97
+h 19
+font "arial-medium-r-16.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg

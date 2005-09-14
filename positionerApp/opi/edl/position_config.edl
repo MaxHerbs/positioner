@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 622
-y 350
+x 640
+y 410
 w 400
 h 460
 font "arial-medium-r-18.0"
@@ -20,21 +20,6 @@ ctlBgColor2 index 14
 topShadowColor index 0
 botShadowColor index 14
 endScreenProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 0
-y 0
-w 400
-h 33
-lineColor index 3
-fill
-fillColor index 6
-endObjectProperties
 
 # (Textentry)
 object TextentryClass
@@ -110,50 +95,22 @@ fill
 font "arial-medium-r-16.0"
 endObjectProperties
 
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 221
-y 407
-w 111
-h 30
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-font "arial-medium-r-18.0"
-buttonLabel "EXIT"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "positioner.edl"
-}
-closeAction {
-  0 1
-}
-closeDisplay {
-  0 1
-}
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
 release 0
-x 4
-y 6
-w 380
-h 23
-font "arial-medium-r-20.0"
+x 0
+y -1
+w 400
+h 40
+font "arial-bold-r-16.0"
+fontAlign "center"
 fgColor index 14
-bgColor index 0
-useDisplayBg
+bgColor index 48
 value {
+  "$(device)"
   "$(title) Configure"
 }
 endObjectProperties
@@ -430,7 +387,7 @@ x 52
 y 407
 w 110
 h 30
-fgColor index 25
+fgColor index 43
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
@@ -441,5 +398,24 @@ numDsps 1
 displayFileName {
   0 "motor.edl"
 }
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 223
+y 405
+w 109
+h 29
+fgColor index 46
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "arial-medium-r-16.0"
+3d
 endObjectProperties
 

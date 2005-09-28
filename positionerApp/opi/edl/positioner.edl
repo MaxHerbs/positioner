@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 770
-y 350
-w 300
-h 100
+x 641
+y 133
+w 320
+h 160
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -30,7 +30,7 @@ major 4
 minor 0
 release 0
 x 120
-y 10
+y 40
 w 170
 h 30
 fgColor index 14
@@ -39,7 +39,7 @@ inconsistentColor index 14
 topShadowColor index 1
 botShadowColor index 11
 controlPv "$(device):select"
-font "arial-medium-r-16.0"
+font "device-medium-r-18.0"
 endObjectProperties
 
 # (Related Display)
@@ -48,15 +48,15 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 180
-y 50
+x 30
+y 120
 w 110
 h 30
 fgColor index 43
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-medium-r-16.0"
+font "engineering-medium-r-16.0"
 buttonLabel "Configure"
 numPvs 4
 numDsps 1
@@ -77,11 +77,11 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 10
-y 20
-w 58
-h 19
-font "arial-medium-r-16.0"
+x 30
+y 46
+w 68
+h 21
+font "arial-medium-r-18.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -97,8 +97,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 120
-y 55
+x 250
+y 80
 w 20
 h 20
 controlPv "$(motor).MOVN"
@@ -114,11 +114,11 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 10
-y 60
-w 97
-h 19
-font "arial-medium-r-16.0"
+x 120
+y 75
+w 120
+h 30
+font "arial-medium-r-18.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -126,5 +126,58 @@ value {
   "Motor moving"
 }
 autoSize
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 180
+y 120
+w 110
+h 30
+fgColor index 46
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "arial-medium-r-18.0"
+3d
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 320
+h 33
+lineColor index 3
+fill
+fillColor index 6
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 0
+y 5
+w 320
+h 23
+font "arial-medium-r-20.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "$(title)"
+}
 endObjectProperties
 

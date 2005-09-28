@@ -43,31 +43,35 @@ pattern { device, motor }
 #
 # substitutions:
 # device    - device name. This must match the positioner templates $(device) definition.
-# idx       - the position number suffix (0,1,2...15 corresponding to id)
-# id        - one of the EPICS record count prefixes (must be ZR|ON|TW|TH ...FF). (Must be unique for any one positioner) 
 # pos_name  - the name for the motor position (e.g. a filter name)
 # pos_motor - the required motor position in engineering units.
+# pos_min   - motor position minimum (in egu's)
+# pos_max   - motor position maximum (in egu's)
+# pos_egu   - motor position engineering units
+# pos_prec  - display precision (PREC) for positions 
+# idx       - the position suffix (0,1,2...15 corresponding to id)
+# id        - one of the EPICS record count prefixes (must be ZR|ON|TW|TH ...FF). (Must be unique for any one positioner) 
 #
 
 file ../db/position.template
 {
-pattern { device, idx, id, pos_name, pos_motor }
-        { BL18I-DI-PHDGN-01, 0, ZR, filter0, 0  }
-        { BL18I-DI-PHDGN-01, 1, ON, filter1, 20  }
-        { BL18I-DI-PHDGN-01, 2, TW, filter2, 50  }
-        { BL18I-DI-PHDGN-01, 3, TH, filter3, 95  }
-#        { BL18I-DI-PHDGN-01, 4, FR, filter4, 104  }
-#        { BL18I-DI-PHDGN-01, 5, FV, filter5, 105  }
-#        { BL18I-DI-PHDGN-01, 6, SX, filter6, 106  }
-#        { BL18I-DI-PHDGN-01, 7, SV, filter7, 107  }
-#        { BL18I-DI-PHDGN-01, 8, EI, filter8, 108  }
-#        { BL18I-DI-PHDGN-01, 9, NI, filter9, 109  }
-#        { BL18I-DI-PHDGN-01, 10, TE, filter10, 110  }
-#        { BL18I-DI-PHDGN-01, 11, EL, filter11, 111  }
-#        { BL18I-DI-PHDGN-01, 12, TV, filter12, 112  }
-#        { BL18I-DI-PHDGN-01, 13, TT, filter13, 113  }
-#        { BL18I-DI-PHDGN-01, 14, FT, filter14, 114  }
-#        { BL18I-DI-PHDGN-01, 15, FF, filter15, 115  }
+pattern { device, pos_name, pos_motor, pos_min, pos_max, pos_egu, pos_prec, idx, id }
+        { BL18I-DI-PHDGN-01, filter0, 0, -100, 100, mm, 0, 0, ZR  }
+        { BL18I-DI-PHDGN-01, filter1, 20, -100, 100, mm, 0, 1, ON  }
+        { BL18I-DI-PHDGN-01, filter2, 50, -100, 100, mm, 0, 2, TW  }
+        { BL18I-DI-PHDGN-01, filter3, 95, -100, 100, mm, 0, 3, TH  }
+#        { BL18I-DI-PHDGN-01, filter4, 104, -100, 100, mm, 0, 4, FR  }
+#        { BL18I-DI-PHDGN-01, filter5, 105, -100, 100, mm, 0, 5, FV  }
+#        { BL18I-DI-PHDGN-01, filter6, 106, -100, 100, mm, 0, 6, SX  }
+#        { BL18I-DI-PHDGN-01, filter7, 107, -100, 100, mm, 0, 7, SV  }
+#        { BL18I-DI-PHDGN-01, filter8, 108, -100, 100, mm, 0, 8, EI  }
+#        { BL18I-DI-PHDGN-01, filter9, 109, -100, 100, mm, 0, 9, NI  }
+#        { BL18I-DI-PHDGN-01, filter10, 110, -100, 100, mm, 0, 10, TE  }
+#        { BL18I-DI-PHDGN-01, filter11, 111, -100, 100, mm, 0, 11, EL  }
+#        { BL18I-DI-PHDGN-01, filter12, 112, -100, 100, mm, 0, 12, TV  }
+#        { BL18I-DI-PHDGN-01, filter13, 113, -100, 100, mm, 0, 13, TT  }
+#        { BL18I-DI-PHDGN-01, filter14, 114, -100, 100, mm, 0, 14, FT  }
+#        { BL18I-DI-PHDGN-01, filter15, 115, -100, 100, mm, 0, 15, FF  }
 }
 
 ###############################################################################

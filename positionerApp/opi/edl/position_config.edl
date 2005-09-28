@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 435
-y 449
+x 441
+y 470
 w 760
 h 460
 font "arial-medium-r-18.0"
@@ -19,6 +19,7 @@ ctlBgColor1 index 0
 ctlBgColor2 index 14
 topShadowColor index 0
 botShadowColor index 14
+showGrid
 endScreenProperties
 
 # (Rectangle)
@@ -65,7 +66,6 @@ y 82
 w 152
 h 42
 controlPv "$(device):pos0"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -102,7 +102,6 @@ y 121
 w 152
 h 42
 controlPv "$(device):pos1"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -120,7 +119,7 @@ x 583
 y 408
 w 111
 h 30
-fgColor index 14
+fgColor index 46
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
@@ -169,7 +168,6 @@ y 199
 w 152
 h 42
 controlPv "$(device):pos3"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -206,7 +204,6 @@ y 160
 w 152
 h 42
 controlPv "$(device):pos2"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -243,7 +240,6 @@ y 277
 w 152
 h 42
 controlPv "$(device):pos5"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -280,7 +276,6 @@ y 238
 w 152
 h 42
 controlPv "$(device):pos4"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -317,7 +312,6 @@ y 354
 w 152
 h 42
 controlPv "$(device):pos7"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -354,7 +348,6 @@ y 316
 w 152
 h 42
 controlPv "$(device):pos6"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -430,7 +423,7 @@ x 414
 y 408
 w 110
 h 30
-fgColor index 25
+fgColor index 43
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
@@ -510,7 +503,6 @@ y 354
 w 152
 h 42
 controlPv "$(device):pos15"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -529,7 +521,6 @@ y 316
 w 152
 h 42
 controlPv "$(device):pos14"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -548,7 +539,6 @@ y 277
 w 152
 h 42
 controlPv "$(device):pos13"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -567,7 +557,6 @@ y 238
 w 152
 h 42
 controlPv "$(device):pos12"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -586,7 +575,6 @@ y 199
 w 152
 h 42
 controlPv "$(device):pos11"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -605,7 +593,6 @@ y 160
 w 152
 h 42
 controlPv "$(device):pos10"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -624,7 +611,6 @@ y 121
 w 152
 h 42
 controlPv "$(device):pos9"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -643,7 +629,6 @@ y 82
 w 152
 h 42
 controlPv "$(device):pos8"
-displayMode "decimal"
 fgColor index 14
 fgAlarm
 bgColor index 3

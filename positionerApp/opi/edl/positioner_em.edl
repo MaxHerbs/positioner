@@ -3,9 +3,9 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 646
-y 155
-w 270
+x 329
+y 601
+w 265
 h 155
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
@@ -91,7 +91,7 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 230
+x 240
 y 80
 w 20
 h 20
@@ -108,7 +108,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 100
+x 110
 y 80
 w 114
 h 20
@@ -147,12 +147,12 @@ x 0
 y 5
 w 320
 h 23
-font "arial-medium-r-20.0"
+font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "$(title)"
+  "$(motor) - postioner"
 }
 endObjectProperties
 

@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 359
-y 249
+x 364
+y 271
 w 760
 h 460
 font "arial-medium-r-18.0"
@@ -66,7 +66,7 @@ x 54
 y 82
 w 152
 h 42
-controlPv "$(device):name0"
+controlPv "$(motor):name0"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -84,7 +84,7 @@ x 220
 y 82
 w 152
 h 42
-controlPv "$(device):pos0"
+controlPv "$(motor):pos0"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -102,7 +102,7 @@ x 54
 y 121
 w 152
 h 42
-controlPv "$(device):name1"
+controlPv "$(motor):name1"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -120,7 +120,7 @@ x 220
 y 121
 w 152
 h 42
-controlPv "$(device):pos1"
+controlPv "$(motor):pos1"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -143,7 +143,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "$(title) Configure"
+  "$(motor) Positioner Configure"
 }
 endObjectProperties
 
@@ -157,7 +157,7 @@ x 220
 y 199
 w 152
 h 42
-controlPv "$(device):pos3"
+controlPv "$(motor):pos3"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -175,7 +175,7 @@ x 54
 y 199
 w 152
 h 42
-controlPv "$(device):name3"
+controlPv "$(motor):name3"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -193,7 +193,7 @@ x 220
 y 160
 w 152
 h 42
-controlPv "$(device):pos2"
+controlPv "$(motor):pos2"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -211,7 +211,7 @@ x 54
 y 160
 w 152
 h 42
-controlPv "$(device):name2"
+controlPv "$(motor):name2"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -229,7 +229,7 @@ x 220
 y 277
 w 152
 h 42
-controlPv "$(device):pos5"
+controlPv "$(motor):pos5"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -247,7 +247,7 @@ x 54
 y 277
 w 152
 h 42
-controlPv "$(device):name5"
+controlPv "$(motor):name5"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -265,7 +265,7 @@ x 220
 y 238
 w 152
 h 42
-controlPv "$(device):pos4"
+controlPv "$(motor):pos4"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -283,7 +283,7 @@ x 54
 y 238
 w 152
 h 42
-controlPv "$(device):name4"
+controlPv "$(motor):name4"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -301,7 +301,7 @@ x 220
 y 354
 w 152
 h 42
-controlPv "$(device):pos7"
+controlPv "$(motor):pos7"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -319,7 +319,7 @@ x 54
 y 354
 w 152
 h 42
-controlPv "$(device):name7"
+controlPv "$(motor):name7"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -337,7 +337,7 @@ x 220
 y 316
 w 152
 h 42
-controlPv "$(device):pos6"
+controlPv "$(motor):pos6"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -355,7 +355,7 @@ x 54
 y 316
 w 152
 h 42
-controlPv "$(device):name6"
+controlPv "$(motor):name6"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -436,7 +436,7 @@ x 431
 y 82
 w 152
 h 42
-controlPv "$(device):name8"
+controlPv "$(motor):name8"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -474,7 +474,7 @@ x 431
 y 354
 w 152
 h 42
-controlPv "$(device):name15"
+controlPv "$(motor):name15"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -492,7 +492,7 @@ x 597
 y 354
 w 152
 h 42
-controlPv "$(device):pos15"
+controlPv "$(motor):pos15"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -510,7 +510,7 @@ x 597
 y 316
 w 152
 h 42
-controlPv "$(device):pos14"
+controlPv "$(motor):pos14"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -528,7 +528,7 @@ x 597
 y 277
 w 152
 h 42
-controlPv "$(device):pos13"
+controlPv "$(motor):pos13"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -546,7 +546,7 @@ x 597
 y 238
 w 152
 h 42
-controlPv "$(device):pos12"
+controlPv "$(motor):pos12"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -564,7 +564,7 @@ x 597
 y 199
 w 152
 h 42
-controlPv "$(device):pos11"
+controlPv "$(motor):pos11"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -582,7 +582,7 @@ x 597
 y 160
 w 152
 h 42
-controlPv "$(device):pos10"
+controlPv "$(motor):pos10"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -600,7 +600,7 @@ x 597
 y 121
 w 152
 h 42
-controlPv "$(device):pos9"
+controlPv "$(motor):pos9"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -618,7 +618,7 @@ x 597
 y 82
 w 152
 h 42
-controlPv "$(device):pos8"
+controlPv "$(motor):pos8"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -636,7 +636,7 @@ x 431
 y 121
 w 152
 h 42
-controlPv "$(device):name9"
+controlPv "$(motor):name9"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -654,7 +654,7 @@ x 431
 y 199
 w 152
 h 42
-controlPv "$(device):name11"
+controlPv "$(motor):name11"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -672,7 +672,7 @@ x 431
 y 160
 w 152
 h 42
-controlPv "$(device):name10"
+controlPv "$(motor):name10"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -690,7 +690,7 @@ x 431
 y 277
 w 152
 h 42
-controlPv "$(device):name13"
+controlPv "$(motor):name13"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -708,7 +708,7 @@ x 431
 y 238
 w 152
 h 42
-controlPv "$(device):name12"
+controlPv "$(motor):name12"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -726,7 +726,7 @@ x 431
 y 316
 w 152
 h 42
-controlPv "$(device):name14"
+controlPv "$(motor):name14"
 fgColor index 14
 fgAlarm
 bgColor index 3

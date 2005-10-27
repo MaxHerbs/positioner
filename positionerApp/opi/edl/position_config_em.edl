@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 364
-y 271
+x 369
+y 293
 w 760
 h 460
 font "arial-medium-r-18.0"
@@ -136,8 +136,8 @@ minor 1
 release 0
 x 4
 y 6
-w 380
-h 23
+w 306
+h 22
 font "arial-medium-r-20.0"
 fgColor index 14
 bgColor index 0
@@ -145,6 +145,7 @@ useDisplayBg
 value {
   "$(positioner) Positioner Configure"
 }
+autoSize
 endObjectProperties
 
 # (Textentry)

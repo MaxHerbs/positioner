@@ -66,7 +66,7 @@ x 54
 y 82
 w 152
 h 42
-controlPv "$(motor):name0"
+controlPv "$(positioner):name0"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -84,7 +84,7 @@ x 220
 y 82
 w 152
 h 42
-controlPv "$(motor):pos0"
+controlPv "$(positioner):pos0"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -102,7 +102,7 @@ x 54
 y 121
 w 152
 h 42
-controlPv "$(motor):name1"
+controlPv "$(positioner):name1"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -120,7 +120,7 @@ x 220
 y 121
 w 152
 h 42
-controlPv "$(motor):pos1"
+controlPv "$(positioner):pos1"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -143,7 +143,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "$(motor) Positioner Configure"
+  "$(positioner) Positioner Configure"
 }
 endObjectProperties
 
@@ -157,7 +157,7 @@ x 220
 y 199
 w 152
 h 42
-controlPv "$(motor):pos3"
+controlPv "$(positioner):pos3"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -175,7 +175,7 @@ x 54
 y 199
 w 152
 h 42
-controlPv "$(motor):name3"
+controlPv "$(positioner):name3"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -193,7 +193,7 @@ x 220
 y 160
 w 152
 h 42
-controlPv "$(motor):pos2"
+controlPv "$(positioner):pos2"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -211,7 +211,7 @@ x 54
 y 160
 w 152
 h 42
-controlPv "$(motor):name2"
+controlPv "$(positioner):name2"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -229,7 +229,7 @@ x 220
 y 277
 w 152
 h 42
-controlPv "$(motor):pos5"
+controlPv "$(positioner):pos5"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -247,7 +247,7 @@ x 54
 y 277
 w 152
 h 42
-controlPv "$(motor):name5"
+controlPv "$(positioner):name5"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -265,7 +265,7 @@ x 220
 y 238
 w 152
 h 42
-controlPv "$(motor):pos4"
+controlPv "$(positioner):pos4"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -283,7 +283,7 @@ x 54
 y 238
 w 152
 h 42
-controlPv "$(motor):name4"
+controlPv "$(positioner):name4"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -301,7 +301,7 @@ x 220
 y 354
 w 152
 h 42
-controlPv "$(motor):pos7"
+controlPv "$(positioner):pos7"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -319,7 +319,7 @@ x 54
 y 354
 w 152
 h 42
-controlPv "$(motor):name7"
+controlPv "$(positioner):name7"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -337,7 +337,7 @@ x 220
 y 316
 w 152
 h 42
-controlPv "$(motor):pos6"
+controlPv "$(positioner):pos6"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -355,7 +355,7 @@ x 54
 y 316
 w 152
 h 42
-controlPv "$(motor):name6"
+controlPv "$(positioner):name6"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -436,7 +436,7 @@ x 431
 y 82
 w 152
 h 42
-controlPv "$(motor):name8"
+controlPv "$(positioner):name8"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -474,7 +474,7 @@ x 431
 y 354
 w 152
 h 42
-controlPv "$(motor):name15"
+controlPv "$(positioner):name15"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -492,7 +492,7 @@ x 597
 y 354
 w 152
 h 42
-controlPv "$(motor):pos15"
+controlPv "$(positioner):pos15"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -510,7 +510,7 @@ x 597
 y 316
 w 152
 h 42
-controlPv "$(motor):pos14"
+controlPv "$(positioner):pos14"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -528,7 +528,7 @@ x 597
 y 277
 w 152
 h 42
-controlPv "$(motor):pos13"
+controlPv "$(positioner):pos13"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -546,7 +546,7 @@ x 597
 y 238
 w 152
 h 42
-controlPv "$(motor):pos12"
+controlPv "$(positioner):pos12"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -564,7 +564,7 @@ x 597
 y 199
 w 152
 h 42
-controlPv "$(motor):pos11"
+controlPv "$(positioner):pos11"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -582,7 +582,7 @@ x 597
 y 160
 w 152
 h 42
-controlPv "$(motor):pos10"
+controlPv "$(positioner):pos10"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -600,7 +600,7 @@ x 597
 y 121
 w 152
 h 42
-controlPv "$(motor):pos9"
+controlPv "$(positioner):pos9"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -618,7 +618,7 @@ x 597
 y 82
 w 152
 h 42
-controlPv "$(motor):pos8"
+controlPv "$(positioner):pos8"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -636,7 +636,7 @@ x 431
 y 121
 w 152
 h 42
-controlPv "$(motor):name9"
+controlPv "$(positioner):name9"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -654,7 +654,7 @@ x 431
 y 199
 w 152
 h 42
-controlPv "$(motor):name11"
+controlPv "$(positioner):name11"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -672,7 +672,7 @@ x 431
 y 160
 w 152
 h 42
-controlPv "$(motor):name10"
+controlPv "$(positioner):name10"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -690,7 +690,7 @@ x 431
 y 277
 w 152
 h 42
-controlPv "$(motor):name13"
+controlPv "$(positioner):name13"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -708,7 +708,7 @@ x 431
 y 238
 w 152
 h 42
-controlPv "$(motor):name12"
+controlPv "$(positioner):name12"
 fgColor index 14
 fgAlarm
 bgColor index 3
@@ -726,7 +726,7 @@ x 431
 y 316
 w 152
 h 42
-controlPv "$(motor):name14"
+controlPv "$(positioner):name14"
 fgColor index 14
 fgAlarm
 bgColor index 3

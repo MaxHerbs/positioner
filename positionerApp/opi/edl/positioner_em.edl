@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 344
-y 667
+x 281
+y 412
 w 265
 h 155
 font "arial-medium-r-18.0"
@@ -38,7 +38,7 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(motor):select"
+controlPv "$(positioner):select"
 font "arial-bold-r-14.0"
 endObjectProperties
 
@@ -152,7 +152,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "$(motor) - postioner"
+  "$(positioner) - positioner"
 }
 endObjectProperties
 

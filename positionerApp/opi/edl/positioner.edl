@@ -38,7 +38,7 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(motor):select"
+controlPv "$(positioner):select"
 font "device-medium-r-18.0"
 endObjectProperties
 
@@ -172,12 +172,12 @@ x 0
 y 5
 w 320
 h 23
-font "arial-medium-r-20.0"
+font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "$(title)"
+  "$(positioner) - positioner"
 }
 endObjectProperties
 

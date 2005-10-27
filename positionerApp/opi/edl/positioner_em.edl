@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 329
-y 601
+x 339
+y 645
 w 265
 h 155
 font "arial-medium-r-18.0"
@@ -38,8 +38,8 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(device):select"
-font "device-medium-r-18.0"
+controlPv "$(motor):select"
+font "arial-bold-r-14.0"
 endObjectProperties
 
 # (Related Display)

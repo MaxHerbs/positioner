@@ -25,12 +25,6 @@ EPICS_BASE=/home/epics/R3.14.7/base
 #SCH2EDIF_PATH=
 
 # External module definitions (prod release).
-#CALC=/home/diamond/R3.14.7/prod/support/calc/2-4
 
 # External module definitions (local release).
-MOTOR=$(TOP)/../simulationdev
-
-# Python scripting environment variables
-PYTHONPATH=$(TOP)/../simulationdev/bin/linux-x86
-PYTHONHOME=/home/tools/applications/local
 

@@ -21,15 +21,15 @@ template() {
 record(stringout, "$(device):name$(idx)") {
   field(PINI, "YES")
   field(VAL, "$(pos_name)")
-  field(OUT, "$(device):select.$(id)ST PP MS")
   field(DTYP, "Soft Channel")
+  field(OUT, "$(device):select.$(id)ST PP MS")
 }
 
 record(ao, "$(device):pos$(idx)") {
   field(PINI, "YES")
   field(VAL, "$(pos_motor)")
-  field(OUT, "$(device):select.$(id)VL PP MS")
   field(DTYP, "Soft Channel")
+  field(OUT, "$(device):select.$(id)VL PP MS")
   field(EGU, "$(pos_egu)")
   field(HOPR, "$(pos_max)")
   field(LOPR, "$(pos_min)")

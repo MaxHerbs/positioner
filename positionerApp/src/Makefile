@@ -14,10 +14,11 @@ DBD += positioner.dbd
 # positioner.dbd will be made up from these files:
 positioner_DBD += base.dbd
 #include definitions for any other support applications needed
-#positioner_DBD += xxx.dbd
-positioner_DBD += motorSupport.dbd
-positioner_DBD += devSoftMotor.dbd
-positioner_DBD += devDeltaTau.dbd
+# These are only needed for the example application - removed to reduce
+# dependencies
+#positioner_DBD += motorSupport.dbd
+#positioner_DBD += devSoftMotor.dbd
+#positioner_DBD += devDeltaTau.dbd
 
 
 # <name>_registerRecordDeviceDriver.cpp will be created from <name>.dbd
@@ -41,9 +42,11 @@ positioner_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
 #positioner_LIBS += seq pv
 
 positioner_LIBS += $(EPICS_BASE_IOC_LIBS)
-positioner_LIBS += motor
-positioner_LIBS += softMotor
-positioner_LIBS += DeltaTau
+# These are only needed for the example application - removed to reduce
+# dependencies
+#positioner_LIBS += motor
+#positioner_LIBS += softMotor
+#positioner_LIBS += DeltaTau
 
 #The following builds sncExample as a standalone application
 #PROD_HOST += sncExample

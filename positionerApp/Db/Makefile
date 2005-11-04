@@ -26,7 +26,6 @@ DB += position.template
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>
 
-include $(TOP)/configure/RULES.Db
 include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD RULES AFTER THIS LINE

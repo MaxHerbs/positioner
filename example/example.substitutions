@@ -55,29 +55,29 @@ pattern { device, motor }
 
 file ../db/position.template
 {
-pattern { device, pos_name, pos_motor, pos_min, pos_max, pos_egu, pos_prec, idx, id }
-        { BL18I-DI-PHDGN-01, filter0, 0, -100, 100, mm, 0, 0, ZR  }
-        { BL18I-DI-PHDGN-01, filter1, 20, -100, 100, mm, 0, 1, ON  }
-        { BL18I-DI-PHDGN-01, filter2, 50, -100, 100, mm, 0, 2, TW  }
-        { BL18I-DI-PHDGN-01, filter3, 95, -100, 100, mm, 0, 3, TH  }
-#        { BL18I-DI-PHDGN-01, filter4, 104, -100, 100, mm, 0, 4, FR  }
-#        { BL18I-DI-PHDGN-01, filter5, 105, -100, 100, mm, 0, 5, FV  }
-#        { BL18I-DI-PHDGN-01, filter6, 106, -100, 100, mm, 0, 6, SX  }
-#        { BL18I-DI-PHDGN-01, filter7, 107, -100, 100, mm, 0, 7, SV  }
-#        { BL18I-DI-PHDGN-01, filter8, 108, -100, 100, mm, 0, 8, EI  }
-#        { BL18I-DI-PHDGN-01, filter9, 109, -100, 100, mm, 0, 9, NI  }
-#        { BL18I-DI-PHDGN-01, filter10, 110, -100, 100, mm, 0, 10, TE  }
-#        { BL18I-DI-PHDGN-01, filter11, 111, -100, 100, mm, 0, 11, EL  }
-#        { BL18I-DI-PHDGN-01, filter12, 112, -100, 100, mm, 0, 12, TV  }
-#        { BL18I-DI-PHDGN-01, filter13, 113, -100, 100, mm, 0, 13, TT  }
-#        { BL18I-DI-PHDGN-01, filter14, 114, -100, 100, mm, 0, 14, FT  }
-#        { BL18I-DI-PHDGN-01, filter15, 115, -100, 100, mm, 0, 15, FF  }
+pattern { device, pos_name, pos_motor, pos_min, pos_max, pos_egu, pos_prec, idx, id, readback}
+        { BL18I-DI-PHDGN-01, filter0, 10, 0, 20, mm, 0, 0, ZR, BL18I-DI-PHDGN-01:MTR.RBV  }
+        { BL18I-DI-PHDGN-01, filter1, 30, 20, 40, mm, 0, 1, ON, BL18I-DI-PHDGN-01:MTR.RBV   }
+        { BL18I-DI-PHDGN-01, filter2, 50, 40, 60, mm, 0, 2, TW, BL18I-DI-PHDGN-01:MTR.RBV   }
+        { BL18I-DI-PHDGN-01, filter3, 80, 60, 100, mm, 0, 3, TH, BL18I-DI-PHDGN-01:MTR.RBV   }
+#        { BL18I-DI-PHDGN-01, filter4, 104, -100, 100, mm, 0, 4, FR, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter5, 105, -100, 100, mm, 0, 5, FV, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter6, 106, -100, 100, mm, 0, 6, SX, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter7, 107, -100, 100, mm, 0, 7, SV, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter8, 108, -100, 100, mm, 0, 8, EI, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter9, 109, -100, 100, mm, 0, 9, NI, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter10, 110, -100, 100, mm, 0, 10, TE, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter11, 111, -100, 100, mm, 0, 11, EL, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter12, 112, -100, 100, mm, 0, 12, TV , BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter13, 113, -100, 100, mm, 0, 13, TT, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter14, 114, -100, 100, mm, 0, 14, FT, BL18I-DI-PHDGN-01:select.RVAL   }
+#        { BL18I-DI-PHDGN-01, filter15, 115, -100, 100, mm, 0, 15, FF, BL18I-DI-PHDGN-01:select.RVAL   }
 }
 
 ###############################################################################
 
-file /home/pjl45/R3.14.7/simulationdev/db/basic_motor.template
+file /home/diamond/R3.14.7/prod/support/motor/5-6dls1/db/basic_motor.template
 {
-pattern { P                ,M           ,DESC                 ,DTYP ,DIR ,VELO ,VBAS ,ACCL ,BDST ,BVEL ,BACC ,C ,S ,MRES  ,PREC ,EGU ,DHLM ,DLLM ,INIT }
+pattern { P                ,M           ,DESC               ,DTYP ,DIR ,VELO ,VBAS ,ACCL ,BDST ,BVEL ,BACC ,C ,S ,MRES  ,PREC ,EGU ,DHLM ,DLLM ,INIT }
         { BL18I-DI-PHDGN-01  ,:MTR      ,"Positioner Motor" ,PMAC ,1   ,1000 ,0    ,1    ,0    ,0    ,0    ,0 ,1 ,1     ,5    ,mm  ,100  ,-100 ,""   }
 }

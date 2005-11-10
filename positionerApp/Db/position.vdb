@@ -13,6 +13,7 @@ template() {
   #! InputMacro(pos_prec,"Motor position PREC",1420,2200,16777215,1,true)
   #! InputMacro(pos_min,"Motor minimum position (EGU's)",1400,2160,16777215,1,true)
   #! InputMacro(pos_max,"Motor maximum position (EGU's)",1400,2120,16777215,1,true)
+  #! InputMacro(readback,"",1880,2180,16777215,1,true)
   #! InputMacro(idx,"Position index number (0..15)",1460,1640,16777215,1,true)
   #! InputMacro(pos_egu,"Motor position EGU",1420,2060,16777215,1,true)
 }
@@ -37,31 +38,33 @@ template() {
 # pos_prec  - display precision (PREC) for positions 
 # idx       - the position suffix (0,1,2...15 corresponding to id)
 # id        - one of the EPICS record count prefixes (must be ZR|ON|TW|TH ...FF). (Must be unique for any one positioner) 
-# e.g.
-# pattern { device, pos_name, pos_motor, pos_min, pos_max, pos_egu, pos_prec, idx, id }
-#        { BL18I-DI-PHDGN-01, filter0, 0, -100, 100, mm, 0, 0, ZR  }
-#        { BL18I-DI-PHDGN-01, filter1, 20, -100, 100, mm, 0, 1, ON  }
-#        { BL18I-DI-PHDGN-01, filter2, 50, -100, 100, mm, 0, 2, TW  }
-#        { BL18I-DI-PHDGN-01, filter3, 95, -100, 100, mm, 0, 3, TH  }
-#        { BL18I-DI-PHDGN-01, filter4, 104, -100, 100, mm, 0, 4, FR  }
-#        { BL18I-DI-PHDGN-01, filter5, 105, -100, 100, mm, 0, 5, FV  }
-#        { BL18I-DI-PHDGN-01, filter6, 106, -100, 100, mm, 0, 6, SX  }
-#        { BL18I-DI-PHDGN-01, filter7, 107, -100, 100, mm, 0, 7, SV  }
-#        { BL18I-DI-PHDGN-01, filter8, 108, -100, 100, mm, 0, 8, EI  }
-#        { BL18I-DI-PHDGN-01, filter9, 109, -100, 100, mm, 0, 9, NI  }
-#        { BL18I-DI-PHDGN-01, filter10, 110, -100, 100, mm, 0, 10, TE  }
-#        { BL18I-DI-PHDGN-01, filter11, 111, -100, 100, mm, 0, 11, EL  }
-#        { BL18I-DI-PHDGN-01, filter12, 112, -100, 100, mm, 0, 12, TV  }
-#        { BL18I-DI-PHDGN-01, filter13, 113, -100, 100, mm, 0, 13, TT  }
-#        { BL18I-DI-PHDGN-01, filter14, 114, -100, 100, mm, 0, 14, FT  }
-#        { BL18I-DI-PHDGN-01, filter15, 115, -100, 100, mm, 0, 15, FF  }
+# readback  - the position readback PV for detecting position errors ( set to motor.RBV or $(device):select.RVAL )
+# pattern { device, pos_name, pos_motor, pos_min, pos_max, pos_egu, pos_prec, idx, id, readback }
+#        { BL18I-DI-PHDGN-01, filter0, 0, -100, 100, mm, 0, 0, ZR, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter1, 20, -100, 100, mm, 0, 1, ON, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter2, 50, -100, 100, mm, 0, 2, TW, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter3, 95, -100, 100, mm, 0, 3, TH, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter4, 104, -100, 100, mm, 0, 4, FR, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter5, 105, -100, 100, mm, 0, 5, FV, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter6, 106, -100, 100, mm, 0, 6, SX, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter7, 107, -100, 100, mm, 0, 7, SV, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter8, 108, -100, 100, mm, 0, 8, EI, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter9, 109, -100, 100, mm, 0, 9, NI, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter10, 110, -100, 100, mm, 0, 10, TE, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter11, 111, -100, 100, mm, 0, 11, EL, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter12, 112, -100, 100, mm, 0, 12, TV, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter13, 113, -100, 100, mm, 0, 13, TT, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter14, 114, -100, 100, mm, 0, 14, FT, BL18I-DI-PHDGN-01:select.RVAL  }
+#        { BL18I-DI-PHDGN-01, filter15, 115, -100, 100, mm, 0, 15, FF, BL18I-DI-PHDGN-01:select.RVAL  }
 record(stringout, "$(device):name$(idx)") {
   field(PINI, "YES")
   field(VAL, "$(pos_name)")
   field(DTYP, "Soft Channel")
   field(OUT, "$(device):select.$(id)ST PP MS")
+  field(DESC, "Position name")
 }
 
+# The required motor position
 record(ao, "$(device):pos$(idx)") {
   field(PINI, "YES")
   field(VAL, "$(pos_motor)")
@@ -75,31 +78,56 @@ record(ao, "$(device):pos$(idx)") {
   field(LOLO, "$(pos_min)")
   field(HHSV, "MAJOR")
   field(LLSV, "MAJOR")
+  field(DESC, "Demand position")
+}
+
+# This record compares the readback position with the demand position and flags an error if they are inconsistent
+record(calcout, "$(device):posError$(idx)") {
+  field(SCAN, "1 second")
+  field(CALC, "($(idx)=C)")
+  field(INPA, "$(device):pos$(idx).HOPR")
+  field(INPB, "$(device):pos$(idx).LOPR")
+  field(INPC, "$(device):select")
+  field(INPD, "$(readback)")
+  field(OUT, "$(device):posError PP")
+  field(OOPT, "When Non-zero")
+  field(DOPT, "Use OCAL")
+  field(OCAL, "D>A||D<B")
+  field(DESC, "Position $(idx) error")
 }
 
 #! Further lines contain data used by VisualDCT
-#! View(1089,1562,1.0)
-#! Record("$(device):name$(idx)",1560,1649,0,1,"$(device):name$(idx)")
+#! View(1041,1418,0.9)
+#! Record("$(device):name$(idx)",1560,1634,0,1,"$(device):name$(idx)")
 #! Field("$(device):name$(idx).OUT",16777215,1,"$(device):name$(idx).OUT")
 #! Link("$(device):name$(idx).OUT","$(device):name$(idx)/OUT")
 #! Field("$(device):name$(idx).VAL",16777215,0,"$(device):name$(idx).VAL")
 #! Link("$(device):name$(idx).VAL",pos_name)
 #! Connector("$(device):name$(idx)/OUT",null,1800,1780,16777215,"",2)
-#! Record("$(device):pos$(idx)",1560,1821,0,1,"$(device):pos$(idx)")
+#! Record("$(device):pos$(idx)",1560,1820,0,1,"$(device):pos$(idx)")
 #! Field("$(device):pos$(idx).OUT",16777215,1,"$(device):pos$(idx).OUT")
 #! Link("$(device):pos$(idx).OUT","$(device):pos$(idx)/OUT")
 #! Field("$(device):pos$(idx).VAL",16777215,0,"$(device):pos$(idx).VAL")
 #! Link("$(device):pos$(idx).VAL",pos_motor)
 #! Field("$(device):pos$(idx).EGU",16777215,0,"$(device):pos$(idx).EGU")
 #! Link("$(device):pos$(idx).EGU",pos_egu)
-#! Field("$(device):pos$(idx).HOPR",16777215,0,"$(device):pos$(idx).HOPR")
+#! Field("$(device):pos$(idx).HOPR",16777215,1,"$(device):pos$(idx).HOPR")
 #! Link("$(device):pos$(idx).HOPR",pos_max)
 #! Field("$(device):pos$(idx).HIHI",16777215,0,"$(device):pos$(idx).HIHI")
 #! Link("$(device):pos$(idx).HIHI",pos_max)
-#! Field("$(device):pos$(idx).LOPR",16777215,0,"$(device):pos$(idx).LOPR")
+#! Field("$(device):pos$(idx).LOPR",16777215,1,"$(device):pos$(idx).LOPR")
 #! Link("$(device):pos$(idx).LOPR",pos_min)
 #! Field("$(device):pos$(idx).LOLO",16777215,0,"$(device):pos$(idx).LOLO")
 #! Link("$(device):pos$(idx).LOLO",pos_min)
 #! Field("$(device):pos$(idx).PREC",16777215,0,"$(device):pos$(idx).PREC")
 #! Link("$(device):pos$(idx).PREC",pos_prec)
 #! Connector("$(device):pos$(idx)/OUT",null,1800,1960,16777215,"",2)
+#! Record("$(device):posError$(idx)",2000,1908,0,1,"$(device):posError$(idx)")
+#! Field("$(device):posError$(idx).INPA",16777215,0,"$(device):posError$(idx).INPA")
+#! Link("$(device):posError$(idx).INPA","$(device):pos$(idx).HOPR")
+#! Field("$(device):posError$(idx).INPB",16777215,0,"$(device):posError$(idx).INPB")
+#! Link("$(device):posError$(idx).INPB","$(device):pos$(idx).LOPR")
+#! Field("$(device):posError$(idx).INPC",16777215,0,"$(device):posError$(idx).INPC")
+#! Field("$(device):posError$(idx).INPD",16777215,0,"$(device):posError$(idx).INPD")
+#! Link("$(device):posError$(idx).INPD",readback)
+#! Field("$(device):posError$(idx).OUT",16777215,1,"$(device):posError$(idx).OUT")

@@ -22,7 +22,7 @@ dbLoadTemplate("$(TOP)/example/example.substitutions","user=pjl45")
 
 # Configure simulation PMAC
 var simulation_mode 1
-PmacSetup(0,0,0,0,0,0,0)
+PmacSetup(1,0,0,0,0,0,0)
 
 cd ${TOP}/iocBoot/${IOC}
 iocInit()

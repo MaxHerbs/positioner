@@ -1,6 +1,8 @@
 #!/bin/sh
+LOCALDIR=/home/pjl45/R3.14.7/support
 EDMDATAFILES=/home/diamond/R3.13.9/prod/support/motor/2-1/motorApp/opi/edl:/home/pjl45/R3.14.7/support/positioner/positionerApp/opi/edl:/home/diamond/R3.13.9/prod/support/superTop/2-19/opi/edl:/home/diamond/R3.13.9/prod/support/superTop/2-19/opi/symbol:.
+EDMDATAFILES=$EDMDATAFILES:$LOCALDIR/symbols/symbolsApp/opi/edl
 export EDMDATAFILES
 export EPICS_CA_SERVER_PORT=6064
 export EPICS_CA_REPEATER_PORT=6065
-edm -x -eolc -m "device=BL18I-DI-PHDGN-01,title=BL18I-DI-PHDGN-01,motor=BL18I-DI-PHDGN-01:MTR" positioner.edl
+edm -x -eolc -m "positioner=BL18I-DI-PHDGN-01,title=BL18I-DI-PHDGN-01,motor=BL18I-DI-PHDGN-01:MTR" positioner.edl

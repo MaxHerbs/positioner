@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 646
-y 155
+x 661
+y 221
 w 320
 h 160
 font "arial-medium-r-18.0"
@@ -22,6 +22,26 @@ botShadowColor index 14
 showGrid
 snapToGrid
 endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 150
+y 80
+w 111
+h 20
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Position error"
+}
+autoSize
+endObjectProperties
 
 # (Menu Button)
 object activeMenuButtonClass
@@ -97,7 +117,7 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 250
+x 100
 y 80
 w 20
 h 20
@@ -114,16 +134,16 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 120
-y 75
-w 114
+x 30
+y 80
+w 60
 h 20
 font "arial-medium-r-18.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Motor moving"
+  "Moving"
 }
 autoSize
 endObjectProperties
@@ -179,5 +199,37 @@ useDisplayBg
 value {
   "$(positioner) - positioner"
 }
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 270
+y 80
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 4
+minValues {
+  0 -1
+  2 2
+  3 1
+}
+maxValues {
+  1 1
+  2 10
+  3 2
+}
+controlPvs {
+  0 "$(positioner):posError"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 0
 endObjectProperties
 

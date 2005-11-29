@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 661
-y 221
+x 644
+y 539
 w 320
 h 160
 font "arial-medium-r-18.0"
@@ -111,23 +111,6 @@ value {
 autoSize
 endObjectProperties
 
-# (Byte)
-object ByteClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 100
-y 80
-w 20
-h 20
-controlPv "$(motor).MOVN"
-lineColor index 14
-onColor index 15
-offColor index 19
-numBits 1
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -225,6 +208,40 @@ maxValues {
 }
 controlPvs {
   0 "$(positioner):posError"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 0
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 100
+y 80
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 -1
+  1 1
+  2 2
+  3 3
+}
+maxValues {
+  1 2
+  2 3
+  3 4
+  4 1
+}
+controlPvs {
+  0 "$(motor).MOVN"
 }
 numPvs 1
 useOriginalSize

@@ -1,0 +1,979 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 652
+y 266
+w 193
+h 113
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+showGrid
+gridSize 5
+endScreenProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 65
+y 43
+w 20
+h 20
+controlPv "$(mp):DMOV"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Menu Mux)
+object menuMuxClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 70
+y 25
+w 1
+h 1
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(mp):UPDATE"
+font "arial-medium-r-18.0"
+initialState "1"
+numItems 1
+symbolTag {
+  0 "?"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 190
+h 110
+lineColor index 14
+fillColor index 0
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 9
+w 151
+h 30
+fgColor index 14
+fgAlarm
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(mp):SELECT"
+font "arial-medium-r-18.0"
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 141
+y 43
+w 20
+h 20
+controlPv "$(mp):inPos"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 43
+w 56
+h 20
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DMOV"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 90
+y 43
+w 47
+h 20
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "InPos"
+}
+autoSize
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 165
+y 14
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "posNames.edl"
+}
+icon
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 140
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 151
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.G"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 141
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.G"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 140
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "G"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p7)"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 141
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.G"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.G"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 162
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 173
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.H"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 163
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.H"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 162
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "H"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p8)"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 163
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.H"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.H"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 118
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 129
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.F"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 119
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.F"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 118
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "F"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p6)"
+}
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 119
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.F"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.F"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 96
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 97
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.E"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 96
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "E"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p5)"
+}
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 97
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.E"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 107
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.E"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.E"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 74
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 75
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.D"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 74
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "D"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p4)"
+}
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 75
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.D"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 85
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.D"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.D"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 30
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 31
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.B"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 30
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "B"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p2)"
+}
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 31
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.B"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 41
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.B"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.B"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 9
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.A"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "A"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p1)"
+}
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 9
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.A"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 19
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.A"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.A"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 52
+y 68
+w 20
+h 36
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 53
+y 68
+w 18
+h 5
+lineColor index 14
+fill
+fillColor index 20
+lineWidth 0
+visPv "$(mp):ERROR.C"
+visMin "1"
+visMax "5"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 52
+y 75
+w 20
+h 20
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 14
+font "arial-medium-r-12.0"
+buttonLabel "C"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "ps=$(p3)"
+}
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 53
+y 96
+w 8
+h 8
+controlPv "$(mp):DMOV.C"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 63
+y 96
+w 8
+h 8
+controlPv "$(mp):inPos.C"
+lineColor index 14
+onColor index 15
+offColor index 19
+numBits 1
+endObjectProperties
+
+endGroup
+
+visPv "$(mp):TYPE.C"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+

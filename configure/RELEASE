@@ -16,6 +16,19 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 #If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
+CALC=/home/diamond/R3.14.7/prod/support/calc/2-4
+
+# To build the example application uncomment the next 4 lines
+#MOTOR=$(TOP)/../../support/motor
+#POSITIONER=$(TOP)/../../support/positioner
+#SSCAN=/home/diamond/R3.14.7/prod/support/sscan/2-4
+#GENSUB=/home/diamond/R3.14.7/prod/support/genSub/1-6
+
+# Python scripting environment variables
+# To build the example application uncomment the next 2 lines
+#PYTHONPATH=$(MOTOR)/bin/linux-x86
+#PYTHONHOME=/home/tools/python2.4
+
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/home/epics/R3.14.7/base
@@ -24,7 +37,5 @@ EPICS_BASE=/home/epics/R3.14.7/base
 #CAPFAST_TEMPLATES=
 #SCH2EDIF_PATH=
 
-# External module definitions (prod release).
-
-# External module definitions (local release).
+-include $(TOP)/configure/RELEASE.private
 

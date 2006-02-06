@@ -1,0 +1,3 @@
+To build the example code
+1. Uncomment the line in the top-level makefile to add the positionerExample directory
+2. Uncomment the modules in configure/RELEASE

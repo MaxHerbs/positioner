@@ -1881,6 +1881,7 @@ lineColor index 3
 fill
 fillColor index 3
 visPv "$(mp):$(ps):SETINPUT4.VAL"
+visInvert
 visMin "2"
 visMax "5"
 endObjectProperties

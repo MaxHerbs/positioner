@@ -1,0 +1,14 @@
+Positioner Documentation
+========================
+
+Database:
+========
+See example
+
+Screens:
+======
+
+Macros
+------
+$(mp) = multipostioner PV (normally $(P):mp)
+$(p1)..$(p8) = positioner PVs, so $(mp)$(p1) is the first positioner (normally $(p1)=$(M[n]) where the [n]th motor in a device is a positioner)

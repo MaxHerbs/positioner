@@ -5,8 +5,8 @@ minor 0
 release 1
 x 80
 y 678
-w 190
-h 110
+w 230
+h 160
 font "helvetica-medium-r-14.0"
 ctlFont "courier-bold-r-14.0"
 btnFont "helvetica-medium-r-14.0"
@@ -19,40 +19,25 @@ ctlBgColor1 index 3
 ctlBgColor2 index 3
 topShadowColor index 1
 botShadowColor index 11
-title "Motor box small"
+title "Tooltip"
 showGrid
 snapToGrid
 gridSize 5
 endScreenProperties
 
-# (Related Display)
-object relatedDisplayClass
+# (Rectangle)
+object activeRectangleClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 0
-y 0
-w 190
-h 110
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-14.0"
-xPosOffset -20
-yPosOffset -30
-button3Popup
-invisible
-buttonLabel "Tooltip"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "positioner-1pos-tooltip"
-}
-setPosition {
-  0 "button"
-}
+x 5
+y 5
+w 220
+h 150
+lineColor index 14
+fillColor index 3
+lineWidth 3
 endObjectProperties
 
 # (Rectangle)
@@ -61,8 +46,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 0
-y 5
+x 20
+y 35
 w 189
 h 104
 lineColor index 14
@@ -75,8 +60,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 6
-y 16
+x 26
+y 46
 w 178
 h 30
 fgColor index 14
@@ -95,8 +80,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 162
-y 53
+x 182
+y 83
 w 20
 h 20
 file "symbols-traffic-light-symbol.edl"
@@ -124,8 +109,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 7
-y 53
+x 27
+y 83
 w 20
 h 20
 file "symbols-traffic-light-symbol.edl"
@@ -163,10 +148,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 6
-y 0
-w 2
-h 0
+x 26
+y 30
+w 44
+h 14
 font "arial-medium-r-12.0"
 fgColor index 14
 bgColor index 3
@@ -176,42 +161,14 @@ value {
 autoSize
 endObjectProperties
 
-# (Menu Mux PV)
-object menuMuxPVClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 50
-y 249
-w 20
-h 20
-fgColour index 14
-bgColour index 3
-topShadowColour index 1
-botShadowColour index 11
-controlPv "$(mp):UPDATE"
-font "helvetica-medium-r-14.0"
-numItems 1
-symbolTag {
-  0 "."
-}
-symbol0 {
-  0 "label"
-}
-PV0 {
-  0 "$(mp):SELECT.DESC"
-}
-endObjectProperties
-
 # (Related Display)
 object relatedDisplayClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 6
-y 80
+x 26
+y 110
 w 85
 h 24
 fgColor index 43
@@ -236,8 +193,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 64
-y 51
+x 84
+y 81
 w 61
 h 24
 fgColor index 43
@@ -259,8 +216,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 127
-y 55
+x 147
+y 85
 w 33
 h 20
 font "arial-medium-r-10.0"
@@ -279,8 +236,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 30
-y 55
+x 50
+y 85
 w 33
 h 20
 font "arial-medium-r-10.0"
@@ -298,8 +255,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 99
-y 80
+x 119
+y 110
 w 85
 h 24
 fgColor index 21
@@ -313,5 +270,24 @@ onLabel "STOP"
 offLabel "STOP"
 3d
 font "arial-bold-r-18.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 75
+y 10
+w 90
+h 25
+font "arial-bold-r-16.0"
+fontAlign "center"
+fgColor index 0
+bgColor index 9
+value {
+  "Help"
+}
 endObjectProperties
 

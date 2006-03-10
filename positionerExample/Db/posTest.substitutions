@@ -9,20 +9,20 @@
 
 # Define the multipositioner and the names of the positions
 # Macro     - Description
-# Device    - Name of the multipositioner
+# P         - Name of the multipositioner
 # STRA-STRL - 12 position strings. Need to be "" for unused positions
 #
 file multipositioner.template
 {
-pattern { device             ,DESC                , STRA    ,STRB     ,STRC     ,STRD     ,STRE   ,STRF   ,STRG   ,STRH,STRI,STRJ,STRK,STRL}
-        { BLGDA-OP-COLM-01:mp,"Example positioner", "Centre","Small X","Small Y","Small Z","Big X","Big Y","Big Z",""  ,""  ,""  ,""  ,""  }
+pattern { P                  ,DESC                , STRA    ,STRB     ,STRC     ,STRD     ,STRE   ,STRF   ,STRG   ,STRH,STRI,STRJ,STRK,STRL}
+        { BLPOS-OP-COLM-01:MP,"Example positioner", "Centre","Small X","Small Y","Small Z","Big X","Big Y","Big Z",""  ,""  ,""  ,""  ,""  }
 }
 
 # Positioners controlling motors.
 # Each is names and has list of values for the positions
 # Macro     - Description
-# Device    - Name of the multipositioner
-# pname     - Name of the positioner
+# P         - Name of the multipositioner
+# Q         - Name of the positioner
 # DESC      - description
 # motor     - Name of the motor
 # READBACK  - readback link (normally same as motor with '.RBK' on end)
@@ -33,22 +33,24 @@ pattern { device             ,DESC                , STRA    ,STRB     ,STRC     
 #
 file motorpositioner.template
 {
-pattern { device            , pname, DESC   , motor                  , READBACK          , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
-        {BLGDA-OP-COLM-01:mp, X    , "X motor", BLGDA-OP-COLM-01:X     , BLGDA-OP-COLM-01:X.RBV     , A  ,  0.1, 10.1,  0.1,  0.1, 20.1,  0.1,  0.1,    0,    0,    0,    0    ,0,    5,  mm}
-        {BLGDA-OP-COLM-01:mp, Y    , "Y motor", BLGDA-OP-COLM-01:Y     , BLGDA-OP-COLM-01:Y.RBV     , B  ,  0.2,  0.2, 10.2,  0.2,  0.2, 20.2,  0.2,    0,    0,    0,    0    ,0,    3, rad}
-        {BLGDA-OP-COLM-01:mp, Z    , "Z motor", BLGDA-OP-COLM-01:Z     , BLGDA-OP-COLM-01:Z.RBV     , C  ,  0.3,  0.3,  0.3, 10.3,  0.3,  0.3, 20.3,    0,    0,    0,    0    ,0,    5,  km}
+pattern { P                 , Q    , DESC   , motor                  , READBACK          , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
+        {BLPOS-OP-COLM-01:MP, :X   , "X motor", BLPOS-OP-COLM-01:X     , BLPOS-OP-COLM-01:X.RBV     , A  ,  0.1,100.1,  0.1,  0.1,200.1,  0.1,  0.1,    0,    0,    0,    0    ,0,    5,  mm}
+        {BLPOS-OP-COLM-01:MP, :Y   , "Y motor", BLPOS-OP-COLM-01:Y     , BLPOS-OP-COLM-01:Y.RBV     , B  ,  0.2,  0.2,100.2,  0.2,  0.2,200.2,  0.2,    0,    0,    0,    0    ,0,    3, rad}
+        {BLPOS-OP-COLM-01:MP, :Z   , "Z motor", BLPOS-OP-COLM-01:Z     , BLPOS-OP-COLM-01:Z.RBV     , C  ,  0.3,  0.3,  0.3,100.3,  0.3,  0.3,200.3,    0,    0,    0,    0    ,0,    5,  km}
 }
 
 
 # Positioners controlling values.
 # Each is names and has list of values for the positions
 # Macro     - Description
-# device    - Name of the multipositioner
-# pname     - Name of the positioner
+# P         - Name of the multipositioner
+# Q         - Name of the positioner
 # DESC      - description
 # set       - record to send set value to
 # READBACK  - readback link (normally same as motor with '.RBK' on end)
 # DEADBAND  - tolerance for testing in position
+# STOPVAL   - Value used for stopping motion. Could be PV or constant.
+# STOP      - PV to write stop value to
 # pos       - Letter from A-H giving position within the multipositioner.
 # VALA-VALL - 12 position values
 # PREC      - precision to be used on GUI
@@ -56,8 +58,12 @@ pattern { device            , pname, DESC   , motor                  , READBACK 
 #
 file positioner.template
 {
-pattern { device            , pname, DESC    , SET                            , READBACK                      , DEADBAND , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
-        {BLGDA-OP-COLM-01:mp, OFF  , "X offset", BLGDA-OP-COLM-01:X.OFF         ,BLGDA-OP-COLM-01:X.OFF          , 0.0001   , D  , 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07,    0,    0,    0,    0    ,0,    5,  mm}
+pattern { P                 , Q    , DESC    , SET                        , READBACK                      , DEADBAND , STOPVAL               , STOP                         , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
+# This is an instant change so the STOP part doesn't need to do anything.
+        {BLPOS-OP-COLM-01:MP, :OFF , "X offset", BLPOS-OP-COLM-01:X.OFF   , BLPOS-OP-COLM-01:X.OFF          , 0.0001 , 0                     , BLPOS-OP-COLM-01:MP:OFF:STOP , D  , 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07,    0,    0,    0,    0    ,0,    5,  mm}
+        {BLPOS-OP-COLM-01:MP, :FP  , "Fine Pitch", BLPOS-OP-COLM-01:FP    , BLPOS-OP-COLM-01:FP.RBV         , 0.1    , 1                     , BLPOS-OP-COLM-01:FP.STOP     , E  , 10  , 20  , 30  , 40  , 30  , 20  , 10  ,    0,    0,    0,    0    ,0,    5,  urad}
+# This sets the set point to the readback. Not as nice as the above line since the motor has moved on, but this can be used as a last resort.
+#        {BLPOS-OP-COLM-01:MP, :FP  , "Fine Pitch", BLPOS-OP-COLM-01:FP    , BLPOS-OP-COLM-01:FP.RBV         , 0.1    , BLPOS-OP-COLM-01:FP.RBV, BLPOS-OP-COLM-01:FP        , E  , 10  , 20  , 30  , 40  , 30  , 20  , 10  ,    0,    0,    0,    0    ,0,    5,  urad}
 }
 
 #
@@ -65,7 +71,8 @@ pattern { device            , pname, DESC    , SET                            , 
 file basic_motor.template
 {
 pattern { P                 ,M ,DESC                      ,DTYP ,DIR ,VELO ,VBAS ,VMAX ,ACCL ,BDST ,BVEL ,BACC ,C ,S ,MRES ,PREC ,EGU ,DHLM ,DLLM ,INIT,HLSV}
-        { BLGDA-OP-COLM-01: ,X ,"X Translation motor."    ,PMAC ,0 ,1000 ,10   ,10000,1    ,0    ,0    ,0    ,0 ,22 ,0.1  ,5    ,mm  ,50   ,-100 ,""   ,MAJOR}
-        { BLGDA-OP-COLM-01: ,Y ,"Y Translation motor."    ,PMAC ,0 ,1000 ,10   ,10000,1    ,0    ,0    ,0    ,0 ,23 ,0.1  ,5    ,mm  ,50   ,-100 ,""   ,MAJOR}
-        { BLGDA-OP-COLM-01: ,Z ,"Z Translation motor."    ,PMAC ,0 ,1000 ,10   ,10000,1    ,0    ,0    ,0    ,0 ,24 ,0.1  ,5    ,mm  ,50   ,-100 ,""   ,MAJOR}
+        { BLPOS-OP-COLM-01 ,:X ,"X Translation motor."    ,PMAC ,0   ,10   ,1    ,100  ,1    ,0    ,0    ,0    ,0 ,22 ,0.1  ,5    ,mm  ,500  ,-500 ,""   ,MAJOR}
+        { BLPOS-OP-COLM-01 ,:Y ,"Y Translation motor."    ,PMAC ,0   ,10   ,1    ,100  ,1    ,0    ,0    ,0    ,0 ,23 ,0.1  ,5    ,mm  ,500  ,-500 ,""   ,MAJOR}
+        { BLPOS-OP-COLM-01 ,:Z ,"Z Translation motor."    ,PMAC ,0   ,10   ,1    ,100  ,1    ,0    ,0    ,0    ,0 ,24 ,0.1  ,5    ,mm  ,500  ,-500 ,""   ,MAJOR}
+        { BLPOS-OP-COLM-01 ,:FP,"Fine Pitch motor."       ,PMAC ,0   ,10   ,1    ,100  ,1    ,0    ,0    ,0    ,0 ,25 ,0.1  ,5    ,mm  ,500  ,-500 ,""   ,MAJOR}
 }

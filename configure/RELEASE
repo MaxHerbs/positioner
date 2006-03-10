@@ -9,6 +9,7 @@
 # module defined in the RELEASE file is rebuilt.
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+SUPPORT=/home/diamond/R3.14.7/prod/support
 
 # If you don't want to install into $(TOP) then
 # define INSTALL_LOCATION_APP here
@@ -16,18 +17,17 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 #If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
-CALC=/home/diamond/R3.14.7/prod/support/calc/2-4
+CALC=$(SUPPORT)/calc/2-4
 
-# To build the example application uncomment the next 4 lines
-#MOTOR=$(TOP)/../../support/motor
-#POSITIONER=$(TOP)/../../support/positioner
-#SSCAN=/home/diamond/R3.14.7/prod/support/sscan/2-4
-#GENSUB=/home/diamond/R3.14.7/prod/support/genSub/1-6
+# To build the example application uncomment the next 3 lines
+#MOTOR=$(SUPPORT)/motor/5-6dls3
+#SYMBOL=$(SUPPORT)/symbol/1-0
+#POSITIONER=$(TOP)
 
 # Python scripting environment variables
 # To build the example application uncomment the next 2 lines
-#PYTHONPATH=$(MOTOR)/bin/linux-x86
-#PYTHONHOME=/home/tools/python2.4
+PYTHONPATH=$(MOTOR)/bin/linux-x86
+PYTHONHOME=/home/tools/python2.4
 
 
 # EPICS_BASE usually appears last so other apps can override stuff:

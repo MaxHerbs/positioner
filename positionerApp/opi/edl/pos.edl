@@ -107,7 +107,7 @@ x 141
 y 43
 w 20
 h 20
-controlPv "$(mp):inPos"
+controlPv "$(mp):INPOS"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -200,7 +200,7 @@ x 151
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.G"
+controlPv "$(mp):INPOS.G"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -300,7 +300,7 @@ x 173
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.H"
+controlPv "$(mp):INPOS.H"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -400,7 +400,7 @@ x 129
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.F"
+controlPv "$(mp):INPOS.F"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -562,7 +562,7 @@ x 107
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.E"
+controlPv "$(mp):INPOS.E"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -662,7 +662,7 @@ x 85
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.D"
+controlPv "$(mp):INPOS.D"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -762,7 +762,7 @@ x 41
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.B"
+controlPv "$(mp):INPOS.B"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -862,7 +862,7 @@ x 19
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.A"
+controlPv "$(mp):INPOS.A"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -962,7 +962,7 @@ x 63
 y 96
 w 8
 h 8
-controlPv "$(mp):inPos.C"
+controlPv "$(mp):INPOS.C"
 lineColor index 14
 onColor index 15
 offColor index 19

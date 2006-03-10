@@ -7,7 +7,7 @@
 # List of names for selection by user.
 # Severity is returned via DISA.
 # DISV set to 2 to stop disabling.
-record(mbbo, "$(device):SELECT") {
+record(mbbo, "$(P):SELECT") {
   field(DESC, "$(DESC)")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
@@ -19,7 +19,7 @@ record(mbbo, "$(device):SELECT") {
   field(FVST, "$(STRF)")
   field(SXST, "$(STRG)")
   field(PINI, "YES")
-  field(FLNK, "$(device):GATE PP MS")
+  field(FLNK, "$(P):GATE PP MS")
   field(SVST, "$(STRH)")
   field(EIST, "$(STRI)")
   field(NIST, "$(STRJ)")
@@ -29,50 +29,34 @@ record(mbbo, "$(device):SELECT") {
   field(VAL, "0")
 }
 
-# Combined in position indicator.
-# Value from AND of all 8 possible inputs.
-# The fixed values of 1 are overwritten by each positioner.
-record(calcout, "$(device):inPos") {
-  field(CALC, "A&B&C&D&E&F&G&H")
-  field(A, "1")
-  field(B, "1")
-  field(C, "1")
-  field(D, "1")
-  field(E, "1")
-  field(F, "1")
-  field(G, "1")
-  field(H, "1")
-  field(DESC, "Positioner in position")
-}
-
 # Fans selected position number to each separate controller
 # The outlinks are filled by the positioners.
-record(dfanout, "$(device):DFANOUT") {
+record(dfanout, "$(P):DFANOUT") {
   field(DESC, "Fanout selection")
   field(SELM, "All")
-  field(DOL, "$(device):VALUE.VAL")
+  field(DOL, "$(P):VALUE.VAL")
   field(OMSL, "closed_loop")
 }
 
 # Open a gate on each positioner.
 # The outlinks are filled by the positioners.
-record(dfanout, "$(device):SFANOUT") {
+record(dfanout, "$(P):SFANOUT") {
   field(DESC, "Fanout start motion")
   field(SELM, "All")
   field(VAL, "0")
 }
 
 # On selection make sure all gates are open before motion
-record(fanout, "$(device):FANOUT") {
-  field(LNK1, "$(device):SFANOUT PP MS")
-  field(LNK2, "$(device):DFANOUT PP MS")
+record(fanout, "$(P):FANOUT") {
+  field(LNK1, "$(P):SFANOUT PP MS")
+  field(LNK2, "$(P):DFANOUT PP MS")
   field(DESC, "Fanout of processing")
 }
 
 # Combined done moving indicator.
 # Value from AND of all 8 possible inputs.
 # The fixed values of 1 are overwritten by each positioner.
-record(calcout, "$(device):DMOV") {
+record(calcout, "$(P):DMOV") {
   field(CALC, "A&B&C&D&E&F&G&H")
   field(A, "1")
   field(B, "1")
@@ -87,19 +71,19 @@ record(calcout, "$(device):DMOV") {
 
 # Test opening of gates by waiting between open gate and move commands
 # To use this change the FLNK of VALUE to point to this.
-record(seq, "$(device):FANOUT2") {
+record(seq, "$(P):FANOUT2") {
   field(DESC, "Wait before sending val")
   field(SCAN, "Passive")
   field(SELM, "All")
   field(DOL1, "0")
-  field(LNK1, "$(device):SFANOUT.PROC PP MS")
+  field(LNK1, "$(P):SFANOUT.PROC PP MS")
   field(DLY2, "5")
-  field(LNK2, "$(device):DFANOUT.PROC PP MS")
+  field(LNK2, "$(P):DFANOUT.PROC PP MS")
 }
 
-record(transform, "$(device):ERROR") {
+record(transform, "$(P):ERROR") {
   field(DESC, "Errors from positioners")
-  field(FLNK, "$(device):SETERROR1 PP MS")
+  field(FLNK, "$(P):SETERROR1 PP MS")
   field(CLCI, "MAX(MAX(A,B),MAX(C,D))")
   field(CLCJ, "MAX(MAX(E,F),MAX(G,H))")
   field(CLCK, "MAX(I,J)")
@@ -115,13 +99,13 @@ record(transform, "$(device):ERROR") {
 
 # Check if value has changed from previous call.
 # This stops infinite loops when passing MS back
-record(calcout, "$(device):GATE") {
+record(calcout, "$(P):GATE") {
   field(DESC, "Stop repeated output")
   field(DTYP, "Soft Channel")
   field(CALC, "A = B")
-  field(INPA, "$(device):SELECT NPP MS")
-  field(INPB, "$(device):VALUE")
-  field(OUT, "$(device):VALUE PP MS")
+  field(INPA, "$(P):SELECT NPP MS")
+  field(INPB, "$(P):VALUE")
+  field(OUT, "$(P):VALUE PP MS")
   field(OOPT, "When Zero")
   field(DOPT, "Use OCAL")
   field(OCAL, "A")
@@ -129,71 +113,71 @@ record(calcout, "$(device):GATE") {
 
 # Stores last selected value. This enables the gate record to check if the value has changed.
 # Initially set to -1 to ensure first value is selected correctly.
-record(longout, "$(device):VALUE") {
+record(longout, "$(P):VALUE") {
   field(DESC, "Value selected")
   field(DTYP, "Soft Channel")
-  field(FLNK, "$(device):FANOUT")
+  field(FLNK, "$(P):FANOUT")
   field(VAL, "-1")
 }
 
 # Add 1 to selection to allow 1st seq to work
-record(calc, "$(device):SELECT1") {
+record(calc, "$(P):SELECT1") {
   field(DESC, "Selection+1")
   field(CALC, "A+1")
-  field(INPA, "$(device):SELECT.VAL")
+  field(INPA, "$(P):SELECT.VAL")
 }
 
 # Sets error severities for 2nd 6 positions
-record(seq, "$(device):SETERROR2") {
+record(seq, "$(P):SETERROR2") {
   field(DESC, "Sets errors in SELECT")
   field(SELM, "Specified")
-  field(SELL, "$(device):SELECT2.VAL PP")
-  field(DOL1, "$(device):ERROR.K NPP MS")
-  field(LNK1, "$(device):SELECT.SXSV PP MS")
-  field(DOL2, "$(device):ERROR.K NPP MS")
-  field(LNK2, "$(device):SELECT.SVSV PP MS")
-  field(DOL3, "$(device):ERROR.K NPP MS")
-  field(LNK3, "$(device):SELECT.EISV PP MS")
-  field(DOL4, "$(device):ERROR.K NPP MS")
-  field(LNK4, "$(device):SELECT.NISV PP MS")
-  field(DOL5, "$(device):ERROR.K NPP MS")
-  field(LNK5, "$(device):SELECT.TESV PP MS")
-  field(DOL6, "$(device):ERROR.K NPP MS")
-  field(LNK6, "$(device):SELECT.ELSV PP MS")
+  field(SELL, "$(P):SELECT2.VAL PP")
+  field(DOL1, "$(P):ERROR.K NPP MS")
+  field(LNK1, "$(P):SELECT.SXSV PP MS")
+  field(DOL2, "$(P):ERROR.K NPP MS")
+  field(LNK2, "$(P):SELECT.SVSV PP MS")
+  field(DOL3, "$(P):ERROR.K NPP MS")
+  field(LNK3, "$(P):SELECT.EISV PP MS")
+  field(DOL4, "$(P):ERROR.K NPP MS")
+  field(LNK4, "$(P):SELECT.NISV PP MS")
+  field(DOL5, "$(P):ERROR.K NPP MS")
+  field(LNK5, "$(P):SELECT.TESV PP MS")
+  field(DOL6, "$(P):ERROR.K NPP MS")
+  field(LNK6, "$(P):SELECT.ELSV PP MS")
 }
 
 # Select the correct link from the second sequence
-record(calc, "$(device):SELECT2") {
+record(calc, "$(P):SELECT2") {
   field(DESC, "Selection-5")
   field(CALC, "A-5")
-  field(INPA, "$(device):SELECT.VAL")
+  field(INPA, "$(P):SELECT.VAL")
 }
 
 # Sets error severities for 1st 6 positions
-record(seq, "$(device):SETERROR1") {
+record(seq, "$(P):SETERROR1") {
   field(DESC, "Sets errors in SELECT")
-  field(FLNK, "$(device):SETERROR2")
+  field(FLNK, "$(P):SETERROR2")
   field(SELM, "Specified")
-  field(SELL, "$(device):SELECT1 PP")
-  field(DOL1, "$(device):ERROR.K NPP MS")
-  field(LNK1, "$(device):SELECT.ZRSV PP MS")
-  field(DOL2, "$(device):ERROR.K NPP MS")
-  field(LNK2, "$(device):SELECT.ONSV PP MS")
-  field(DOL3, "$(device):ERROR.K NPP MS")
-  field(LNK3, "$(device):SELECT.TWSV PP MS")
-  field(DOL4, "$(device):ERROR.K NPP MS")
-  field(LNK4, "$(device):SELECT.THSV PP MS")
-  field(DOL5, "$(device):ERROR.K NPP MS")
-  field(LNK5, "$(device):SELECT.FRSV PP MS")
-  field(DOL6, "$(device):ERROR.K NPP MS")
-  field(LNK6, "$(device):SELECT.FVSV PP MS")
+  field(SELL, "$(P):SELECT1 PP")
+  field(DOL1, "$(P):ERROR.K NPP MS")
+  field(LNK1, "$(P):SELECT.ZRSV PP MS")
+  field(DOL2, "$(P):ERROR.K NPP MS")
+  field(LNK2, "$(P):SELECT.ONSV PP MS")
+  field(DOL3, "$(P):ERROR.K NPP MS")
+  field(LNK3, "$(P):SELECT.TWSV PP MS")
+  field(DOL4, "$(P):ERROR.K NPP MS")
+  field(LNK4, "$(P):SELECT.THSV PP MS")
+  field(DOL5, "$(P):ERROR.K NPP MS")
+  field(LNK5, "$(P):SELECT.FRSV PP MS")
+  field(DOL6, "$(P):ERROR.K NPP MS")
+  field(LNK6, "$(P):SELECT.FVSV PP MS")
 }
 
 # Stores types of underlying positioners
 # 0 = Undefined
 # 1 = Normal
 # 2 = Motor
-record(calcout, "$(device):TYPE") {
+record(calcout, "$(P):TYPE") {
   field(CALC, "A&B&C&D&E&F&G&H")
   field(A, "0")
   field(B, "0")
@@ -207,7 +191,7 @@ record(calcout, "$(device):TYPE") {
 }
 
 # Record to allow EDM to process changes of strings.
-record(bo, "$(device):UPDATE") {
+record(bo, "$(P):UPDATE") {
   field(DESC, "Dummy for EDM")
   field(PINI, "YES")
   field(DTYP, "Soft Channel")
@@ -216,145 +200,168 @@ record(bo, "$(device):UPDATE") {
   field(ONAM, "Normal")
 }
 
+# Combined in position indicator.
+# Value from AND of all 8 possible inputs.
+# The fixed values of 1 are overwritten by each positioner.
+record(calcout, "$(P):INPOS") {
+  field(CALC, "A&B&C&D&E&F&G&H")
+  field(A, "1")
+  field(B, "1")
+  field(C, "1")
+  field(D, "1")
+  field(E, "1")
+  field(F, "1")
+  field(G, "1")
+  field(H, "1")
+  field(DESC, "Combined in position monitor")
+}
+
+record(dfanout, "$(P):STOP") {
+  field(DESC, "Stop all motors")
+  field(VAL, "1")
+  field(SELM, "All")
+}
+
 #! Further lines contain data used by VisualDCT
-#! View(969,1003,0.6)
-#! Record("$(device):SELECT",1980,1752,0,0,"$(device):SELECT")
-#! Field("$(device):SELECT.FLNK",16777215,1,"$(device):SELECT.FLNK")
-#! Link("$(device):SELECT.FLNK","$(device):GATE")
-#! Field("$(device):SELECT.ZRSV",16777215,0,"$(device):SELECT.ZRSV")
-#! Field("$(device):SELECT.ONSV",16777215,0,"$(device):SELECT.ONSV")
-#! Field("$(device):SELECT.TWSV",16777215,0,"$(device):SELECT.TWSV")
-#! Field("$(device):SELECT.THSV",16777215,0,"$(device):SELECT.THSV")
-#! Field("$(device):SELECT.FRSV",16777215,0,"$(device):SELECT.FRSV")
-#! Field("$(device):SELECT.FVSV",16777215,0,"$(device):SELECT.FVSV")
-#! Field("$(device):SELECT.VAL",16777215,1,"$(device):SELECT.VAL")
-#! Field("$(device):SELECT.SXSV",16777215,0,"$(device):SELECT.SXSV")
-#! Field("$(device):SELECT.SVSV",16777215,0,"$(device):SELECT.SVSV")
-#! Field("$(device):SELECT.EISV",16777215,0,"$(device):SELECT.EISV")
-#! Field("$(device):SELECT.NISV",16777215,0,"$(device):SELECT.NISV")
-#! Field("$(device):SELECT.TESV",16777215,0,"$(device):SELECT.TESV")
-#! Field("$(device):SELECT.ELSV",16777215,0,"$(device):SELECT.ELSV")
-#! Record("$(device):inPos",2260,2460,0,1,"$(device):inPos")
-#! Record("$(device):DFANOUT",3040,2127,0,0,"$(device):DFANOUT")
-#! Field("$(device):DFANOUT.PROC",16777215,0,"$(device):DFANOUT.PROC")
-#! Field("$(device):DFANOUT.DOL",16777215,0,"$(device):DFANOUT.DOL")
-#! Link("$(device):DFANOUT.DOL","$(device):VALUE.VAL")
-#! Record("$(device):SFANOUT",3040,1842,0,0,"$(device):SFANOUT")
-#! Field("$(device):SFANOUT.PROC",16777215,0,"$(device):SFANOUT.PROC")
-#! Record("$(device):FANOUT",2760,1782,0,0,"$(device):FANOUT")
-#! Field("$(device):FANOUT.LNK1",16777215,1,"$(device):FANOUT.LNK1")
-#! Link("$(device):FANOUT.LNK1","$(device):SFANOUT")
-#! Field("$(device):FANOUT.LNK2",16777215,1,"$(device):FANOUT.LNK2")
-#! Link("$(device):FANOUT.LNK2","$(device):DFANOUT")
-#! Record("$(device):DMOV",2440,2460,0,0,"$(device):DMOV")
-#! Record("$(device):FANOUT2",2760,2024,0,0,"$(device):FANOUT2")
-#! Field("$(device):FANOUT2.LNK1",16777215,1,"$(device):FANOUT2.LNK1")
-#! Link("$(device):FANOUT2.LNK1","$(device):SFANOUT.PROC")
-#! Field("$(device):FANOUT2.LNK2",16777215,1,"$(device):FANOUT2.LNK2")
-#! Link("$(device):FANOUT2.LNK2","$(device):DFANOUT.PROC")
-#! Record("$(device):ERROR",780,1697,0,1,"$(device):ERROR")
-#! Field("$(device):ERROR.FLNK",16777215,1,"$(device):ERROR.FLNK")
-#! Link("$(device):ERROR.FLNK","$(device):ERROR/FLNK")
-#! Field("$(device):ERROR.K",16777215,1,"$(device):ERROR.K")
-#! Connector("$(device):ERROR/FLNK","$(device):SETERROR1",1280,1893,16777215,"",0)
-#! Record("$(device):GATE",2240,1995,0,0,"$(device):GATE")
-#! Field("$(device):GATE.INPA",16777215,0,"$(device):GATE.INPA")
-#! Link("$(device):GATE.INPA","$(device):SELECT.VAL")
-#! Field("$(device):GATE.INPB",16777215,1,"$(device):GATE.INPB")
-#! Link("$(device):GATE.INPB","$(device):VALUE.VAL")
-#! Field("$(device):GATE.OUT",16777215,1,"$(device):GATE.OUT")
-#! Link("$(device):GATE.OUT","$(device):VALUE.VAL")
-#! Record("$(device):VALUE",2500,2087,0,1,"$(device):VALUE")
-#! Field("$(device):VALUE.FLNK",16777215,1,"$(device):VALUE.FLNK")
-#! Link("$(device):VALUE.FLNK","$(device):FANOUT")
-#! Field("$(device):VALUE.VAL",16777215,1,"$(device):VALUE.VAL")
-#! Record("$(device):SELECT1",1580,2222,0,1,"$(device):SELECT1")
-#! Field("$(device):SELECT1.VAL",16777215,0,"$(device):SELECT1.VAL")
-#! Field("$(device):SELECT1.INPA",16777215,1,"$(device):SELECT1.INPA")
-#! Link("$(device):SELECT1.INPA","$(device):SELECT1/INPA")
-#! Connector("$(device):SELECT1/INPA","$(device):SELECT.VAL",1800,2290,16777215,"",0)
-#! Record("$(device):SETERROR2",1060,2109,0,1,"$(device):SETERROR2")
-#! Field("$(device):SETERROR2.SELL",16777215,1,"$(device):SETERROR2.SELL")
-#! Link("$(device):SETERROR2.SELL","$(device):SELECT2.VAL")
-#! Field("$(device):SETERROR2.DOL1",16777215,0,"$(device):SETERROR2.DOL1")
-#! Link("$(device):SETERROR2.DOL1","$(device):ERROR.K")
-#! Field("$(device):SETERROR2.DOL2",16777215,0,"$(device):SETERROR2.DOL2")
-#! Link("$(device):SETERROR2.DOL2","$(device):ERROR.K")
-#! Field("$(device):SETERROR2.DOL3",16777215,0,"$(device):SETERROR2.DOL3")
-#! Link("$(device):SETERROR2.DOL3","$(device):ERROR.K")
-#! Field("$(device):SETERROR2.DOL4",16777215,0,"$(device):SETERROR2.DOL4")
-#! Link("$(device):SETERROR2.DOL4","$(device):ERROR.K")
-#! Field("$(device):SETERROR2.DOL5",16777215,0,"$(device):SETERROR2.DOL5")
-#! Link("$(device):SETERROR2.DOL5","$(device):ERROR.K")
-#! Field("$(device):SETERROR2.DOL6",16777215,0,"$(device):SETERROR2.DOL6")
-#! Link("$(device):SETERROR2.DOL6","$(device):ERROR.K")
-#! Field("$(device):SETERROR2.LNK1",16777215,1,"$(device):SETERROR2.LNK1")
-#! Link("$(device):SETERROR2.LNK1","$(device):SETERROR2/LNK1")
-#! Field("$(device):SETERROR2.LNK2",16777215,1,"$(device):SETERROR2.LNK2")
-#! Link("$(device):SETERROR2.LNK2","$(device):SETERROR2/LNK2")
-#! Field("$(device):SETERROR2.LNK3",16777215,1,"$(device):SETERROR2.LNK3")
-#! Link("$(device):SETERROR2.LNK3","$(device):SETERROR2/LNK3")
-#! Field("$(device):SETERROR2.LNK4",16777215,1,"$(device):SETERROR2.LNK4")
-#! Link("$(device):SETERROR2.LNK4","$(device):SETERROR2/LNK4")
-#! Field("$(device):SETERROR2.LNK5",16777215,1,"$(device):SETERROR2.LNK5")
-#! Link("$(device):SETERROR2.LNK5","$(device):SETERROR2/LNK5")
-#! Field("$(device):SETERROR2.LNK6",16777215,1,"$(device):SETERROR2.LNK6")
-#! Link("$(device):SETERROR2.LNK6","$(device):SETERROR2/LNK6")
-#! Connector("$(device):SETERROR2/LNK6","$(device):SELECT.ELSV",1920,2490,16777215,"",0)
-#! Connector("$(device):SETERROR2/LNK5","$(device):SELECT.TESV",1900,2470,16777215,"",0)
-#! Connector("$(device):SETERROR2/LNK4","$(device):SELECT.NISV",1880,2450,16777215,"",0)
-#! Connector("$(device):SETERROR2/LNK3","$(device):SELECT.EISV",1860,2430,16777215,"",0)
-#! Connector("$(device):SETERROR2/LNK2","$(device):SELECT.SVSV",1840,2410,16777215,"",0)
-#! Connector("$(device):SETERROR2/LNK1","$(device):SELECT.SXSV",1820,2390,16777215,"",0)
-#! Record("$(device):SELECT2",1320,2282,0,1,"$(device):SELECT2")
-#! Field("$(device):SELECT2.INPA",16777215,1,"$(device):SELECT2.INPA")
-#! Link("$(device):SELECT2.INPA","$(device):SELECT2/INPA")
-#! Field("$(device):SELECT2.VAL",16777215,0,"$(device):SELECT2.VAL")
-#! Connector("$(device):SELECT2/INPA","$(device):SELECT.VAL",1800,2310,16777215,"",0)
-#! Record("$(device):SETERROR1",1320,1694,0,0,"$(device):SETERROR1")
-#! Field("$(device):SETERROR1.DOL1",16777215,0,"$(device):SETERROR1.DOL1")
-#! Link("$(device):SETERROR1.DOL1","$(device):ERROR.K")
-#! Field("$(device):SETERROR1.DOL2",16777215,0,"$(device):SETERROR1.DOL2")
-#! Link("$(device):SETERROR1.DOL2","$(device):ERROR.K")
-#! Field("$(device):SETERROR1.DOL3",16777215,0,"$(device):SETERROR1.DOL3")
-#! Link("$(device):SETERROR1.DOL3","$(device):ERROR.K")
-#! Field("$(device):SETERROR1.DOL4",16777215,0,"$(device):SETERROR1.DOL4")
-#! Link("$(device):SETERROR1.DOL4","$(device):ERROR.K")
-#! Field("$(device):SETERROR1.DOL5",16777215,0,"$(device):SETERROR1.DOL5")
-#! Link("$(device):SETERROR1.DOL5","$(device):ERROR.K")
-#! Field("$(device):SETERROR1.DOL6",16777215,0,"$(device):SETERROR1.DOL6")
-#! Link("$(device):SETERROR1.DOL6","$(device):ERROR.K")
-#! Field("$(device):SETERROR1.LNK1",16777215,1,"$(device):SETERROR1.LNK1")
-#! Link("$(device):SETERROR1.LNK1","$(device):SETERROR/LNK1")
-#! Field("$(device):SETERROR1.LNK2",16777215,1,"$(device):SETERROR1.LNK2")
-#! Link("$(device):SETERROR1.LNK2","$(device):SETERROR/LNK2")
-#! Field("$(device):SETERROR1.LNK3",16777215,1,"$(device):SETERROR1.LNK3")
-#! Link("$(device):SETERROR1.LNK3","$(device):SETERROR/LNK3")
-#! Field("$(device):SETERROR1.LNK4",16777215,1,"$(device):SETERROR1.LNK4")
-#! Link("$(device):SETERROR1.LNK4","$(device):SETERROR/LNK4")
-#! Field("$(device):SETERROR1.LNK5",16777215,1,"$(device):SETERROR1.LNK5")
-#! Link("$(device):SETERROR1.LNK5","$(device):SETERROR/LNK5")
-#! Field("$(device):SETERROR1.LNK6",16777215,1,"$(device):SETERROR1.LNK6")
-#! Link("$(device):SETERROR1.LNK6","$(device):SETERROR/LNK6")
-#! Field("$(device):SETERROR1.SELL",16777215,1,"$(device):SETERROR1.SELL")
-#! Link("$(device):SETERROR1.SELL","$(device):SELECT1.VAL")
-#! Field("$(device):SETERROR1.FLNK",16777215,0,"$(device):SETERROR1.FLNK")
-#! Link("$(device):SETERROR1.FLNK","$(device):SETERROR2")
-#! Connector("$(device):SETERROR/LNK6","$(device):SELECT.FVSV",1820,2210,16777215,"",0)
-#! Connector("$(device):SETERROR/LNK5","$(device):SELECT.FRSV",1840,2190,16777215,"",0)
-#! Connector("$(device):SETERROR/LNK4","$(device):SELECT.THSV",1860,2170,16777215,"",0)
-#! Connector("$(device):SETERROR/LNK3","$(device):SELECT.TWSV",1880,2150,16777215,"",0)
-#! Connector("$(device):SETERROR/LNK2","$(device):SELECT.ONSV",1900,2130,16777215,"",0)
-#! Connector("$(device):SETERROR/LNK1","$(device):SELECT.ZRSV",1920,2110,16777215,"",0)
-#! Record("$(device):TYPE",2680,2460,0,1,"$(device):TYPE")
-#! Record("$(device):UPDATE",2860,2499,0,1,"$(device):UPDATE")
+#! View(1019,981,0.6)
+#! Record("$(P):SELECT",1980,1752,0,0,"$(P):SELECT")
+#! Field("$(P):SELECT.FLNK",16777215,1,"$(P):SELECT.FLNK")
+#! Link("$(P):SELECT.FLNK","$(P):GATE")
+#! Field("$(P):SELECT.ZRSV",16777215,0,"$(P):SELECT.ZRSV")
+#! Field("$(P):SELECT.ONSV",16777215,0,"$(P):SELECT.ONSV")
+#! Field("$(P):SELECT.TWSV",16777215,0,"$(P):SELECT.TWSV")
+#! Field("$(P):SELECT.THSV",16777215,0,"$(P):SELECT.THSV")
+#! Field("$(P):SELECT.FRSV",16777215,0,"$(P):SELECT.FRSV")
+#! Field("$(P):SELECT.FVSV",16777215,0,"$(P):SELECT.FVSV")
+#! Field("$(P):SELECT.VAL",16777215,1,"$(P):SELECT.VAL")
+#! Field("$(P):SELECT.SXSV",16777215,0,"$(P):SELECT.SXSV")
+#! Field("$(P):SELECT.SVSV",16777215,0,"$(P):SELECT.SVSV")
+#! Field("$(P):SELECT.EISV",16777215,0,"$(P):SELECT.EISV")
+#! Field("$(P):SELECT.NISV",16777215,0,"$(P):SELECT.NISV")
+#! Field("$(P):SELECT.TESV",16777215,0,"$(P):SELECT.TESV")
+#! Field("$(P):SELECT.ELSV",16777215,0,"$(P):SELECT.ELSV")
+#! Record("$(P):DFANOUT",3040,2127,0,0,"$(P):DFANOUT")
+#! Field("$(P):DFANOUT.PROC",16777215,0,"$(P):DFANOUT.PROC")
+#! Field("$(P):DFANOUT.DOL",16777215,0,"$(P):DFANOUT.DOL")
+#! Link("$(P):DFANOUT.DOL","$(P):VALUE.VAL")
+#! Record("$(P):SFANOUT",3040,1842,0,0,"$(P):SFANOUT")
+#! Field("$(P):SFANOUT.PROC",16777215,0,"$(P):SFANOUT.PROC")
+#! Record("$(P):FANOUT",2760,1782,0,0,"$(P):FANOUT")
+#! Field("$(P):FANOUT.LNK1",16777215,1,"$(P):FANOUT.LNK1")
+#! Link("$(P):FANOUT.LNK1","$(P):SFANOUT")
+#! Field("$(P):FANOUT.LNK2",16777215,1,"$(P):FANOUT.LNK2")
+#! Link("$(P):FANOUT.LNK2","$(P):DFANOUT")
+#! Record("$(P):DMOV",2440,2460,0,0,"$(P):DMOV")
+#! Record("$(P):FANOUT2",2760,2024,0,0,"$(P):FANOUT2")
+#! Field("$(P):FANOUT2.LNK1",16777215,1,"$(P):FANOUT2.LNK1")
+#! Link("$(P):FANOUT2.LNK1","$(P):SFANOUT.PROC")
+#! Field("$(P):FANOUT2.LNK2",16777215,1,"$(P):FANOUT2.LNK2")
+#! Link("$(P):FANOUT2.LNK2","$(P):DFANOUT.PROC")
+#! Record("$(P):ERROR",780,1697,0,1,"$(P):ERROR")
+#! Field("$(P):ERROR.FLNK",16777215,1,"$(P):ERROR.FLNK")
+#! Link("$(P):ERROR.FLNK","$(P):ERROR/FLNK")
+#! Field("$(P):ERROR.K",16777215,1,"$(P):ERROR.K")
+#! Connector("$(P):ERROR/FLNK","$(P):SETERROR1",1280,1893,16777215,"",0)
+#! Record("$(P):GATE",2240,1995,0,0,"$(P):GATE")
+#! Field("$(P):GATE.INPA",16777215,0,"$(P):GATE.INPA")
+#! Link("$(P):GATE.INPA","$(P):SELECT.VAL")
+#! Field("$(P):GATE.INPB",16777215,1,"$(P):GATE.INPB")
+#! Link("$(P):GATE.INPB","$(P):VALUE.VAL")
+#! Field("$(P):GATE.OUT",16777215,1,"$(P):GATE.OUT")
+#! Link("$(P):GATE.OUT","$(P):VALUE.VAL")
+#! Record("$(P):VALUE",2500,2087,0,1,"$(P):VALUE")
+#! Field("$(P):VALUE.FLNK",16777215,1,"$(P):VALUE.FLNK")
+#! Link("$(P):VALUE.FLNK","$(P):FANOUT")
+#! Field("$(P):VALUE.VAL",16777215,1,"$(P):VALUE.VAL")
+#! Record("$(P):SELECT1",1580,2222,0,1,"$(P):SELECT1")
+#! Field("$(P):SELECT1.VAL",16777215,0,"$(P):SELECT1.VAL")
+#! Field("$(P):SELECT1.INPA",16777215,1,"$(P):SELECT1.INPA")
+#! Link("$(P):SELECT1.INPA","$(P):SELECT1/INPA")
+#! Connector("$(P):SELECT1/INPA","$(P):SELECT.VAL",1800,2290,16777215,"",0)
+#! Record("$(P):SETERROR2",1060,2109,0,1,"$(P):SETERROR2")
+#! Field("$(P):SETERROR2.SELL",16777215,1,"$(P):SETERROR2.SELL")
+#! Link("$(P):SETERROR2.SELL","$(P):SELECT2.VAL")
+#! Field("$(P):SETERROR2.DOL1",16777215,0,"$(P):SETERROR2.DOL1")
+#! Link("$(P):SETERROR2.DOL1","$(P):ERROR.K")
+#! Field("$(P):SETERROR2.DOL2",16777215,0,"$(P):SETERROR2.DOL2")
+#! Link("$(P):SETERROR2.DOL2","$(P):ERROR.K")
+#! Field("$(P):SETERROR2.DOL3",16777215,0,"$(P):SETERROR2.DOL3")
+#! Link("$(P):SETERROR2.DOL3","$(P):ERROR.K")
+#! Field("$(P):SETERROR2.DOL4",16777215,0,"$(P):SETERROR2.DOL4")
+#! Link("$(P):SETERROR2.DOL4","$(P):ERROR.K")
+#! Field("$(P):SETERROR2.DOL5",16777215,0,"$(P):SETERROR2.DOL5")
+#! Link("$(P):SETERROR2.DOL5","$(P):ERROR.K")
+#! Field("$(P):SETERROR2.DOL6",16777215,0,"$(P):SETERROR2.DOL6")
+#! Link("$(P):SETERROR2.DOL6","$(P):ERROR.K")
+#! Field("$(P):SETERROR2.LNK1",16777215,1,"$(P):SETERROR2.LNK1")
+#! Link("$(P):SETERROR2.LNK1","$(P):SETERROR2/LNK1")
+#! Field("$(P):SETERROR2.LNK2",16777215,1,"$(P):SETERROR2.LNK2")
+#! Link("$(P):SETERROR2.LNK2","$(P):SETERROR2/LNK2")
+#! Field("$(P):SETERROR2.LNK3",16777215,1,"$(P):SETERROR2.LNK3")
+#! Link("$(P):SETERROR2.LNK3","$(P):SETERROR2/LNK3")
+#! Field("$(P):SETERROR2.LNK4",16777215,1,"$(P):SETERROR2.LNK4")
+#! Link("$(P):SETERROR2.LNK4","$(P):SETERROR2/LNK4")
+#! Field("$(P):SETERROR2.LNK5",16777215,1,"$(P):SETERROR2.LNK5")
+#! Link("$(P):SETERROR2.LNK5","$(P):SETERROR2/LNK5")
+#! Field("$(P):SETERROR2.LNK6",16777215,1,"$(P):SETERROR2.LNK6")
+#! Link("$(P):SETERROR2.LNK6","$(P):SETERROR2/LNK6")
+#! Connector("$(P):SETERROR2/LNK6","$(P):SELECT.ELSV",1920,2490,16777215,"",0)
+#! Connector("$(P):SETERROR2/LNK5","$(P):SELECT.TESV",1900,2470,16777215,"",0)
+#! Connector("$(P):SETERROR2/LNK4","$(P):SELECT.NISV",1880,2450,16777215,"",0)
+#! Connector("$(P):SETERROR2/LNK3","$(P):SELECT.EISV",1860,2430,16777215,"",0)
+#! Connector("$(P):SETERROR2/LNK2","$(P):SELECT.SVSV",1840,2410,16777215,"",0)
+#! Connector("$(P):SETERROR2/LNK1","$(P):SELECT.SXSV",1820,2390,16777215,"",0)
+#! Record("$(P):SELECT2",1320,2282,0,1,"$(P):SELECT2")
+#! Field("$(P):SELECT2.INPA",16777215,1,"$(P):SELECT2.INPA")
+#! Link("$(P):SELECT2.INPA","$(P):SELECT2/INPA")
+#! Field("$(P):SELECT2.VAL",16777215,0,"$(P):SELECT2.VAL")
+#! Connector("$(P):SELECT2/INPA","$(P):SELECT.VAL",1800,2310,16777215,"",0)
+#! Record("$(P):SETERROR1",1320,1694,0,0,"$(P):SETERROR1")
+#! Field("$(P):SETERROR1.DOL1",16777215,0,"$(P):SETERROR1.DOL1")
+#! Link("$(P):SETERROR1.DOL1","$(P):ERROR.K")
+#! Field("$(P):SETERROR1.DOL2",16777215,0,"$(P):SETERROR1.DOL2")
+#! Link("$(P):SETERROR1.DOL2","$(P):ERROR.K")
+#! Field("$(P):SETERROR1.DOL3",16777215,0,"$(P):SETERROR1.DOL3")
+#! Link("$(P):SETERROR1.DOL3","$(P):ERROR.K")
+#! Field("$(P):SETERROR1.DOL4",16777215,0,"$(P):SETERROR1.DOL4")
+#! Link("$(P):SETERROR1.DOL4","$(P):ERROR.K")
+#! Field("$(P):SETERROR1.DOL5",16777215,0,"$(P):SETERROR1.DOL5")
+#! Link("$(P):SETERROR1.DOL5","$(P):ERROR.K")
+#! Field("$(P):SETERROR1.DOL6",16777215,0,"$(P):SETERROR1.DOL6")
+#! Link("$(P):SETERROR1.DOL6","$(P):ERROR.K")
+#! Field("$(P):SETERROR1.LNK1",16777215,1,"$(P):SETERROR1.LNK1")
+#! Link("$(P):SETERROR1.LNK1","$(P):SETERROR/LNK1")
+#! Field("$(P):SETERROR1.LNK2",16777215,1,"$(P):SETERROR1.LNK2")
+#! Link("$(P):SETERROR1.LNK2","$(P):SETERROR/LNK2")
+#! Field("$(P):SETERROR1.LNK3",16777215,1,"$(P):SETERROR1.LNK3")
+#! Link("$(P):SETERROR1.LNK3","$(P):SETERROR/LNK3")
+#! Field("$(P):SETERROR1.LNK4",16777215,1,"$(P):SETERROR1.LNK4")
+#! Link("$(P):SETERROR1.LNK4","$(P):SETERROR/LNK4")
+#! Field("$(P):SETERROR1.LNK5",16777215,1,"$(P):SETERROR1.LNK5")
+#! Link("$(P):SETERROR1.LNK5","$(P):SETERROR/LNK5")
+#! Field("$(P):SETERROR1.LNK6",16777215,1,"$(P):SETERROR1.LNK6")
+#! Link("$(P):SETERROR1.LNK6","$(P):SETERROR/LNK6")
+#! Field("$(P):SETERROR1.SELL",16777215,1,"$(P):SETERROR1.SELL")
+#! Link("$(P):SETERROR1.SELL","$(P):SELECT1.VAL")
+#! Field("$(P):SETERROR1.FLNK",16777215,0,"$(P):SETERROR1.FLNK")
+#! Link("$(P):SETERROR1.FLNK","$(P):SETERROR2")
+#! Connector("$(P):SETERROR/LNK6","$(P):SELECT.FVSV",1820,2210,16777215,"",0)
+#! Connector("$(P):SETERROR/LNK5","$(P):SELECT.FRSV",1840,2190,16777215,"",0)
+#! Connector("$(P):SETERROR/LNK4","$(P):SELECT.THSV",1860,2170,16777215,"",0)
+#! Connector("$(P):SETERROR/LNK3","$(P):SELECT.TWSV",1880,2150,16777215,"",0)
+#! Connector("$(P):SETERROR/LNK2","$(P):SELECT.ONSV",1900,2130,16777215,"",0)
+#! Connector("$(P):SETERROR/LNK1","$(P):SELECT.ZRSV",1920,2110,16777215,"",0)
+#! Record("$(P):TYPE",2680,2460,0,1,"$(P):TYPE")
+#! Record("$(P):UPDATE",2860,2499,0,1,"$(P):UPDATE")
+#! Record("$(P):INPOS",2260,2460,0,1,"$(P):INPOS")
 #! Box(Box0,2240,2400,2620,2680,1,65280,null)
 #! Box(Box4,2160,1940,2680,2260,1,16711680,null)
 #! Box(Box3,760,1680,1940,2680,1,65280,null)
 #! Box(Box2,2740,2000,2960,2240,1,255,null)
 #! Box(Box1,1960,1680,3220,2380,1,16711680,null)
-#! TextBox(TB0,2280,2420,2580,2460,0,"Dialog",12,1,16777215,"Combination of individual DMOV and inPos",null)
+#! TextBox(TB0,2280,2420,2580,2460,0,"Dialog",12,1,16777215,"Combination of individual DMOV and INPOS",null)
 #! TextBox(TB4,2280,1960,2680,1980,0,"Dialog",12,1,16777215,"These records stop the maximise severity causing an endless loop",null)
 #! TextBox(TB3,1020,1700,1200,1740,0,"Dialog",12,1,16777215,"Calculation of error state",null)
 #! TextBox(TB2,2760,2000,2960,2020,0,"Dialog",12,1,16777215,"Record for testing of DMOV.",null)
 #! TextBox(TB1,2160,1700,2660,1740,0,"Dialog",12,1,16777215,"Take user selection and fanout to start motion and the selection to positioners\nThe positioners set the output links from the dfanouts themselves",null)
+#! Record("$(P):STOP",3080,2502,0,1,"$(P):STOP")

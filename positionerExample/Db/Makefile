@@ -12,9 +12,9 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 DB += posTest.db
 
-USES_TEMPLATE += $(POSITIONER)/db/multipositioner.template
-USES_TEMPLATE += $(POSITIONER)/db/motorpositioner.template
-USES_TEMPLATE += $(POSITIONER)/db/positioner.template
+USES_TEMPLATE += $(TOP)/positioner/db/multipositioner.template
+USES_TEMPLATE += $(TOP)/positioner/db/motorpositioner.template
+USES_TEMPLATE += $(TOP)/positioner/db/positioner.template
 USES_TEMPLATE += $(MOTOR)/db/basic_motor.template
 
 #----------------------------------------------------

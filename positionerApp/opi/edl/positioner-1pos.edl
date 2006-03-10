@@ -109,7 +109,7 @@ maxValues {
   4 1
 }
 controlPvs {
-  0 "$(mp):inPos"
+  0 "$(mp):INPOS"
 }
 numPvs 1
 useOriginalSize

@@ -17,7 +17,7 @@ SUPPORT=/home/diamond/R3.14.7/prod/support
 
 #If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
-CALC=$(SUPPORT)/calc/2-4
+CALC=$(SUPPORT)/calc/2-4dls1
 
 # To build the example application uncomment the next 3 lines
 #MOTOR=$(SUPPORT)/motor/5-7dls2

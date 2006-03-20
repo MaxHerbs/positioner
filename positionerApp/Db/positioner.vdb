@@ -7,12 +7,10 @@
 template() {
 
   #! InputMacro(Q,"Name of positioner",960,980,16777215,1,false)
-  #! InputMacro(P,"Name of multipositioner",840,980,16777215,1,false)
-  #! InputMacro(pos,"Position in multipositioner",1080,980,16777215,1,false)
-  #! InputMacro(READBACK,"",3280,2100,65535,1,false)
-  #! InputMacro(SET,"",3280,2020,16711731,1,false)
-  #! InputMacro(DEADBAND,"",3280,2060,16777215,1,false)
-  #! InputMacro(STOP,"",3340,2140,16777215,1,false)
+  #! InputMacro(MP,"Name of multipositioner",860,980,16777215,1,false)
+  #! InputMacro(P,"Name of device",760,980,16777215,1,false)
+  #! InputMacro(DEADBAND,"",3280,2100,16777215,1,false)
+  #! InputMacro(pos,"Position in multipositioner",1060,980,16777215,1,false)
 }
 
 # This record sets the first input link from the multipositioner.
@@ -24,7 +22,7 @@ record(stringout, "$(P)$(Q):SETINPUT") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT2")
   field(VAL, "$(P)$(Q):SEL.SELN PP")
-  field(OUT, "$(P):DFANOUT.OUT$(pos) CA")
+  field(OUT, "$(P)$(MP):DFANOUT.OUT$(pos) CA")
   field(SCAN, "1 second")
 }
 
@@ -33,7 +31,7 @@ record(stringout, "$(P)$(Q):SETINPUT2") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT3")
   field(VAL, "$(P)$(Q):OPENGATE PP")
-  field(OUT, "$(P):SFANOUT.OUT$(pos) CA")
+  field(OUT, "$(P)$(MP):SFANOUT.OUT$(pos) CA")
 }
 
 # This record stops the setting of the input after 1 cycle
@@ -42,7 +40,7 @@ record(stringout, "$(P)$(Q):SETINPUT2") {
 record(bo, "$(P)$(Q):SETUPDISABLE") {
   field(DESC, "Disable proc once done")
   field(DTYP, "Soft Channel")
-  field(FLNK, "$(P):FANOUT.PROC CA")
+  field(FLNK, "$(P)$(MP):FANOUT.PROC CA")
   field(VAL, "1")
   field(OUT, "$(P)$(Q):SETINPUT.DISA")
 }
@@ -179,20 +177,20 @@ record(ao, "$(P)$(Q):SETVALUE") {
 record(ao, "$(P)$(Q):SETA") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALA PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(bo, "$(P)$(Q):DMOV") {
   field(DTYP, "Soft Channel")
-  field(OUT, "$(P):DMOV.$(pos) PP MS")
+  field(OUT, "$(P)$(MP):DMOV.$(pos) PP MS")
   field(ZNAM, "Opened")
   field(ONAM, "Closed")
 }
 
 record(bo, "$(P)$(Q):INPOS") {
   field(DTYP, "Soft Channel")
-  field(OUT, "$(P):INPOS.$(pos) PP MS")
+  field(OUT, "$(P)$(MP):INPOS.$(pos) PP MS")
   field(ZNAM, "Opened")
   field(ONAM, "Closed")
 }
@@ -206,77 +204,77 @@ record(dfanout, "$(P)$(Q):OPENGATE") {
 record(ao, "$(P)$(Q):SETB") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALB PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETC") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALC PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETD") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALD PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETE") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALE PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETF") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALF PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETL") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALL PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETK") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALK PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETJ") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALJ PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETG") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALG PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETH") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALH PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETI") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALI PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
@@ -285,12 +283,12 @@ record(stringout, "$(P)$(Q):SETINPUT3") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT4")
   field(VAL, "$(P)$(Q):UPD.SEVR CP")
-  field(OUT, "$(P):ERROR.INP$(pos) CA")
+  field(OUT, "$(P)$(MP):ERROR.INP$(pos) CA")
 }
 
 record(ao, "$(P)$(Q):SETVALUE2") {
   field(PREC, "$(PREC)")
-  field(OUT, "$(SET) PP")
+  field(OUT, "$(P)$(SET) PP")
   field(EGU, "$(EGU)")
   field(FLNK, "$(P)$(Q):UPD")
 }
@@ -300,7 +298,7 @@ record(stringout, "$(P)$(Q):SETINPUT4") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT5")
   field(VAL, "1")
-  field(OUT, "$(P):TYPE.$(pos) CA")
+  field(OUT, "$(P)$(MP):TYPE.$(pos) CA")
 }
 
 # This record contains the list of positions for motor.
@@ -315,16 +313,16 @@ record(sel, "$(P)$(Q):SEL") {
 
 record(stringout, "$(P)$(Q):DEVNAME") {
   field(DESC, "Placeholder for name")
-  field(VAL, "$(SET)")
+  field(VAL, "$(P)$(SET)")
 }
 
 record(transform, "$(P)$(Q):UPD") {
   field(CLCE, "ABS(D-A)<=C")
   field(CLCF, "ABS(D-B)<=C")
-  field(INPA, "$(SET)")
+  field(INPA, "$(P)$(SET)")
   field(INPB, "$(P)$(Q):SEL.VAL")
   field(INPC, "$(DEADBAND)")
-  field(INPD, "$(READBACK) CP MS")
+  field(INPD, "$(P)$(READBACK) CP MS")
   field(OUTE, "$(P)$(Q):DMOV PP MS")
   field(OUTF, "$(P)$(Q):INPOS PP MS")
   field(EGU, "$(EGU)")
@@ -336,18 +334,18 @@ record(stringout, "$(P)$(Q):SETINPUT5") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETUPDISABLE")
   field(VAL, "$(P)$(Q):STOP PP")
-  field(OUT, "$(P):STOP.OUT$(pos) CA")
+  field(OUT, "$(P)$(MP):STOP.OUT$(pos) CA")
 }
 
 record(ao, "$(P)$(Q):STOP") {
   field(DESC, "Stop the motion")
-  field(OUT, "$(STOP) PP")
+  field(OUT, "$(P)$(STOP) PP")
   field(DOL, "$(STOPVAL)")
   field(OMSL, "closed_loop")
 }
 
 #! Further lines contain data used by VisualDCT
-#! View(2746,1689,1.0)
+#! View(487,465,1.0)
 #! Record("$(P)$(Q):SETINPUT",760,1140,0,0,"$(P)$(Q):SETINPUT")
 #! Field("$(P)$(Q):SETINPUT.OUT",16777215,1,"$(P)$(Q):SETINPUT.OUT")
 #! Link("$(P)$(Q):SETINPUT.OUT","$(P)$(Q):SETINPUT/OUT1")
@@ -438,9 +436,6 @@ record(ao, "$(P)$(Q):STOP") {
 #! Field("$(P)$(Q):SETA.OUT",16777215,1,"$(P)$(Q):SETA.OUT")
 #! Link("$(P)$(Q):SETA.OUT","$(P)$(Q):VALA.VAL")
 #! Field("$(P)$(Q):SETA.DOL",65535,1,"$(P)$(Q):SETA.DOL")
-#! Link("$(P)$(Q):SETA.DOL","$(P)$(Q):SETA/DOL1")
-#! Connector("$(P)$(Q):SETA/DOL",READBACK,2560,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETA/DOL1","$(P)$(Q):SETA/DOL",1860,2165,65535,"",0)
 #! Record("$(P)$(Q):DMOV",2680,2268,0,1,"$(P)$(Q):DMOV")
 #! Field("$(P)$(Q):DMOV.VAL",255,1,"$(P)$(Q):DMOV.VAL")
 #! Field("$(P)$(Q):DMOV.OUT",255,0,"$(P)$(Q):DMOV.OUT")
@@ -462,79 +457,46 @@ record(ao, "$(P)$(Q):STOP") {
 #! Field("$(P)$(Q):SETB.OUT",16777215,1,"$(P)$(Q):SETB.OUT")
 #! Link("$(P)$(Q):SETB.OUT","$(P)$(Q):VALB.VAL")
 #! Field("$(P)$(Q):SETB.DOL",65535,1,"$(P)$(Q):SETB.DOL")
-#! Link("$(P)$(Q):SETB.DOL","$(P)$(Q):SETB/DOL1")
-#! Connector("$(P)$(Q):SETB/DOL",READBACK,2340,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETB/DOL1","$(P)$(Q):SETB/DOL",1420,2175,65535,"",0)
 #! Record("$(P)$(Q):SETC",760,1548,0,1,"$(P)$(Q):SETC")
 #! Field("$(P)$(Q):SETC.OUT",16777215,1,"$(P)$(Q):SETC.OUT")
 #! Link("$(P)$(Q):SETC.OUT","$(P)$(Q):VALC.VAL")
 #! Field("$(P)$(Q):SETC.DOL",65535,1,"$(P)$(Q):SETC.DOL")
-#! Link("$(P)$(Q):SETC.DOL","$(P)$(Q):SETC/DOL1")
-#! Connector("$(P)$(Q):SETC/DOL",READBACK,2120,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETC/DOL1","$(P)$(Q):SETC/DOL",980,2185,65535,"",0)
 #! Record("$(P)$(Q):SETD",1640,1748,0,1,"$(P)$(Q):SETD")
 #! Field("$(P)$(Q):SETD.OUT",16777215,1,"$(P)$(Q):SETD.OUT")
 #! Link("$(P)$(Q):SETD.OUT","$(P)$(Q):VALD.VAL")
 #! Field("$(P)$(Q):SETD.DOL",65535,1,"$(P)$(Q):SETD.DOL")
-#! Link("$(P)$(Q):SETD.DOL","$(P)$(Q):SETD/DOL1")
-#! Connector("$(P)$(Q):SETD/DOL",READBACK,2560,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETD/DOL1","$(P)$(Q):SETD/DOL",1860,2285,65535,"",0)
 #! Record("$(P)$(Q):SETE",1200,1768,0,1,"$(P)$(Q):SETE")
 #! Field("$(P)$(Q):SETE.OUT",16777215,1,"$(P)$(Q):SETE.OUT")
 #! Link("$(P)$(Q):SETE.OUT","$(P)$(Q):VALE.VAL")
 #! Field("$(P)$(Q):SETE.DOL",65535,1,"$(P)$(Q):SETE.DOL")
-#! Link("$(P)$(Q):SETE.DOL","$(P)$(Q):SETE/DOL1")
-#! Connector("$(P)$(Q):SETE/DOL",READBACK,2340,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETE/DOL1","$(P)$(Q):SETE/DOL",1420,2295,65535,"",0)
 #! Record("$(P)$(Q):SETF",760,1788,0,1,"$(P)$(Q):SETF")
 #! Field("$(P)$(Q):SETF.OUT",16777215,1,"$(P)$(Q):SETF.OUT")
 #! Link("$(P)$(Q):SETF.OUT","$(P)$(Q):VALF.VAL")
 #! Field("$(P)$(Q):SETF.DOL",65535,1,"$(P)$(Q):SETF.DOL")
-#! Link("$(P)$(Q):SETF.DOL","$(P)$(Q):SETF/DOL1")
-#! Connector("$(P)$(Q):SETF/DOL",READBACK,2120,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETF/DOL1","$(P)$(Q):SETF/DOL",980,2305,65535,"",0)
 #! Record("$(P)$(Q):SETL",760,2268,0,1,"$(P)$(Q):SETL")
 #! Field("$(P)$(Q):SETL.OUT",16777215,1,"$(P)$(Q):SETL.OUT")
 #! Link("$(P)$(Q):SETL.OUT","$(P)$(Q):VALL.VAL")
 #! Field("$(P)$(Q):SETL.DOL",65535,1,"$(P)$(Q):SETL.DOL")
-#! Link("$(P)$(Q):SETL.DOL","$(P)$(Q):SETL/DOL1")
-#! Connector("$(P)$(Q):SETL/DOL",READBACK,2120,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETL/DOL1","$(P)$(Q):SETL/DOL",980,2545,65535,"",0)
 #! Record("$(P)$(Q):SETK",1200,2248,0,1,"$(P)$(Q):SETK")
 #! Field("$(P)$(Q):SETK.OUT",16777215,1,"$(P)$(Q):SETK.OUT")
 #! Link("$(P)$(Q):SETK.OUT","$(P)$(Q):VALK.VAL")
 #! Field("$(P)$(Q):SETK.DOL",65535,1,"$(P)$(Q):SETK.DOL")
-#! Link("$(P)$(Q):SETK.DOL","$(P)$(Q):SETK/DOL1")
-#! Connector("$(P)$(Q):SETK/DOL",READBACK,2340,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETK/DOL1","$(P)$(Q):SETK/DOL",1420,2535,65535,"",0)
 #! Record("$(P)$(Q):SETJ",1640,2228,0,1,"$(P)$(Q):SETJ")
 #! Field("$(P)$(Q):SETJ.OUT",16777215,1,"$(P)$(Q):SETJ.OUT")
 #! Link("$(P)$(Q):SETJ.OUT","$(P)$(Q):VALJ.VAL")
 #! Field("$(P)$(Q):SETJ.DOL",65535,1,"$(P)$(Q):SETJ.DOL")
-#! Link("$(P)$(Q):SETJ.DOL","$(P)$(Q):SETJ/DOL1")
-#! Connector("$(P)$(Q):SETJ/DOL",READBACK,2560,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETJ/DOL1","$(P)$(Q):SETJ/DOL",1860,2525,65535,"",0)
 #! Record("$(P)$(Q):SETG",1640,1988,0,1,"$(P)$(Q):SETG")
 #! Field("$(P)$(Q):SETG.OUT",16777215,1,"$(P)$(Q):SETG.OUT")
 #! Link("$(P)$(Q):SETG.OUT","$(P)$(Q):VALG.VAL")
 #! Field("$(P)$(Q):SETG.DOL",65535,1,"$(P)$(Q):SETG.DOL")
-#! Link("$(P)$(Q):SETG.DOL","$(P)$(Q):SETG/DOL1")
-#! Connector("$(P)$(Q):SETG/DOL",READBACK,2560,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETG/DOL1","$(P)$(Q):SETG/DOL",1860,2405,65535,"",0)
 #! Record("$(P)$(Q):SETH",1200,2008,0,1,"$(P)$(Q):SETH")
 #! Field("$(P)$(Q):SETH.OUT",16777215,1,"$(P)$(Q):SETH.OUT")
 #! Link("$(P)$(Q):SETH.OUT","$(P)$(Q):VALH.VAL")
 #! Field("$(P)$(Q):SETH.DOL",65535,1,"$(P)$(Q):SETH.DOL")
-#! Link("$(P)$(Q):SETH.DOL","$(P)$(Q):SETH/DOL1")
-#! Connector("$(P)$(Q):SETH/DOL",READBACK,2340,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETH/DOL1","$(P)$(Q):SETH/DOL",1420,2415,65535,"",0)
 #! Record("$(P)$(Q):SETI",760,2028,0,1,"$(P)$(Q):SETI")
 #! Field("$(P)$(Q):SETI.OUT",16777215,1,"$(P)$(Q):SETI.OUT")
 #! Link("$(P)$(Q):SETI.OUT","$(P)$(Q):VALI.VAL")
 #! Field("$(P)$(Q):SETI.DOL",65535,1,"$(P)$(Q):SETI.DOL")
-#! Link("$(P)$(Q):SETI.DOL","$(P)$(Q):SETI/DOL1")
-#! Connector("$(P)$(Q):SETI/DOL",READBACK,2120,2680,65535,"",0)
-#! Connector("$(P)$(Q):SETI/DOL1","$(P)$(Q):SETI/DOL",980,2425,65535,"",0)
 #! Record("$(P)$(Q):SETINPUT3",1280,1154,0,0,"$(P)$(Q):SETINPUT3")
 #! Field("$(P)$(Q):SETINPUT3.OUT",16777215,1,"$(P)$(Q):SETINPUT3.OUT")
 #! Link("$(P)$(Q):SETINPUT3.OUT","$(P)$(Q):SETINPUT3/OUT1")
@@ -548,7 +510,7 @@ record(ao, "$(P)$(Q):STOP") {
 #! Link("$(P)$(Q):SETVALUE2.OUT","$(P)$(Q):SETVALUE2/OUT")
 #! Field("$(P)$(Q):SETVALUE2.FLNK",16777215,1,"$(P)$(Q):SETVALUE2.FLNK")
 #! Link("$(P)$(Q):SETVALUE2.FLNK","$(P)$(Q):UPD")
-#! Connector("$(P)$(Q):SETVALUE2/OUT",SET,3200,2000,16711731,"",0)
+#! Connector("$(P)$(Q):SETVALUE2/OUT",null,3200,2040,16711731,"",2)
 #! Record("$(P)$(Q):SETINPUT4",1540,1154,0,0,"$(P)$(Q):SETINPUT4")
 #! Field("$(P)$(Q):SETINPUT4.OUT",16777215,1,"$(P)$(Q):SETINPUT4.OUT")
 #! Link("$(P)$(Q):SETINPUT4.OUT","$(P)$(Q):SETINPUT4/OUT1")
@@ -573,9 +535,7 @@ record(ao, "$(P)$(Q):STOP") {
 #! Field("$(P)$(Q):SEL.K",16777215,0,"$(P)$(Q):SEL.K")
 #! Field("$(P)$(Q):SEL.L",16777215,0,"$(P)$(Q):SEL.L")
 #! Record("$(P)$(Q):DEVNAME",2960,1656,0,1,"$(P)$(Q):DEVNAME")
-#! Field("$(P)$(Q):DEVNAME.VAL",16777215,1,"$(P)$(Q):DEVNAME.VAL")
-#! Link("$(P)$(Q):DEVNAME.VAL","$(P)$(Q):DEVNAME/VAL")
-#! Connector("$(P)$(Q):DEVNAME/VAL",SET,3200,1890,16777215,"",0)
+#! Field("$(P)$(Q):DEVNAME.VAL",16777215,0,"$(P)$(Q):DEVNAME.VAL")
 #! Record("$(P)$(Q):UPD",2980,2025,0,1,"$(P)$(Q):UPD")
 #! Field("$(P)$(Q):UPD.INPA",16711731,1,"$(P)$(Q):UPD.INPA")
 #! Link("$(P)$(Q):UPD.INPA","$(P)$(Q):UPD/INPA")
@@ -584,36 +544,37 @@ record(ao, "$(P)$(Q):STOP") {
 #! Field("$(P)$(Q):UPD.INPC",16777215,1,"$(P)$(Q):UPD.INPC")
 #! Link("$(P)$(Q):UPD.INPC","$(P)$(Q):UPD/INPC")
 #! Field("$(P)$(Q):UPD.INPD",65535,1,"$(P)$(Q):UPD.INPD")
-#! Link("$(P)$(Q):UPD.INPD",READBACK)
+#! Link("$(P)$(Q):UPD.INPD","$(P)$(Q):UPD/INPD")
 #! Field("$(P)$(Q):UPD.OUTE",255,0,"$(P)$(Q):UPD.OUTE")
 #! Link("$(P)$(Q):UPD.OUTE","$(P)$(Q):UPDATE/OUTE")
 #! Field("$(P)$(Q):UPD.OUTF",65535,0,"$(P)$(Q):UPD.OUTF")
 #! Link("$(P)$(Q):UPD.OUTF","$(P)$(Q):UPDATE/OUTF")
+#! Connector("$(P)$(Q):UPD/INPC",DEADBAND,3220,2190,16777215,"",0)
+#! Connector("$(P)$(Q):UPD/INPA",null,3200,2060,16711731,"",3)
 #! Connector("$(P)$(Q):UPDATE/OUTF","$(P)$(Q):INPOS.VAL",2920,2450,65535,"",0)
 #! Connector("$(P)$(Q):UPDATE/OUTE","$(P)$(Q):DMOV.VAL",2900,2350,255,"",0)
-#! Connector("$(P)$(Q):UPD/INPA",SET,3200,2130,16711731,"",0)
-#! Connector("$(P)$(Q):UPD/INPC",DEADBAND,3220,2170,16777215,"",0)
+#! Connector("$(P)$(Q):UPD/INPD",null,3240,2200,65535,"",3)
+#! Record("$(P)$(Q):SETINPUT5",1800,1154,0,0,"$(P)$(Q):SETINPUT5")
+#! Field("$(P)$(Q):SETINPUT5.OUT",16777215,1,"$(P)$(Q):SETINPUT5.OUT")
+#! Link("$(P)$(Q):SETINPUT5.OUT","$(P)$(Q):SETINPUT5/OUT1")
+#! Field("$(P)$(Q):SETINPUT5.FLNK",16777215,1,"$(P)$(Q):SETINPUT5.FLNK")
+#! Link("$(P)$(Q):SETINPUT5.FLNK","$(P)$(Q):SETUPDISABLE")
+#! Connector("$(P)$(Q):SETINPUT5/OUT1","$(P)$(Q):SETINPUT5/OUT",2020,1225,16777215,"",0)
+#! Connector("$(P)$(Q):SETINPUT5/OUT",null,2280,1160,16777215,"",2)
+#! Record("$(P)$(Q):STOP",3500,2008,0,1,"$(P)$(Q):STOP")
+#! Field("$(P)$(Q):STOP.DOL",16777215,1,"$(P)$(Q):STOP.DOL")
+#! Field("$(P)$(Q):STOP.OUT",16777215,0,"$(P)$(Q):STOP.OUT")
+#! Link("$(P)$(Q):STOP.OUT","$(P)$(Q):STOP/OUT2")
+#! Connector("$(P)$(Q):STOP/OUT2",null,3380,2140,16777215,"",2)
 #! Box(Box0,740,1040,2480,1360,1,16777215,null)
 #! Box(Box6,2560,1740,2320,2440,1,16711680,null)
 #! Box(Box5,3180,1980,3400,2220,1,16777215,null)
 #! Box(Box3,2320,2480,2560,2600,1,16711680,null)
 #! Box(Box2,740,1380,2220,2440,1,16777215,null)
-#! Box(Box1,1180,1020,740,920,1,16777215,null)
+#! Box(Box1,1160,1020,740,920,1,16777215,null)
 #! TextBox(TB0,980,1040,1360,1080,0,"Dialog",20,1,16777215,"Setup of links from multipositioner",null)
 #! TextBox(TB6,3220,1980,3400,2040,0,"Dialog",20,1,16777215,"Links to device",null)
 #! TextBox(TB4,760,920,1180,980,0,"Dialog",20,1,16777215,"Macros defining positioner, multipositioner and their relationship",null)
 #! TextBox(TB3,2340,2480,2540,2540,0,"Dialog",20,1,16777215,"Outputs to multipositioner",null)
 #! TextBox(TB2,760,1400,1200,1440,0,"Dialog",20,1,16777215,"Inputs from template and set buttons",null)
 #! TextBox(TB1,2360,1760,2540,1820,0,"Dialog",20,1,16777215,"Inputs from multipositioner",null)
-#! Record("$(P)$(Q):SETINPUT5",1800,1154,0,0,"$(P)$(Q):SETINPUT5")
-#! Field("$(P)$(Q):SETINPUT5.OUT",16777215,1,"$(P)$(Q):SETINPUT5.OUT")
-#! Link("$(P)$(Q):SETINPUT5.OUT","$(P)$(Q):SETINPUT5/OUT1")
-#! Field("$(P)$(Q):SETINPUT5.FLNK",16777215,1,"$(P)$(Q):SETINPUT5.FLNK")
-#! Link("$(P)$(Q):SETINPUT5.FLNK","$(P)$(Q):SETUPDISABLE")
-#! Connector("$(P)$(Q):SETINPUT5/OUT",null,2280,1160,16777215,"",2)
-#! Connector("$(P)$(Q):SETINPUT5/OUT1","$(P)$(Q):SETINPUT5/OUT",2020,1225,16777215,"",0)
-#! Record("$(P)$(Q):STOP",3500,2008,0,1,"$(P)$(Q):STOP")
-#! Field("$(P)$(Q):STOP.DOL",16777215,1,"$(P)$(Q):STOP.DOL")
-#! Field("$(P)$(Q):STOP.OUT",16777215,0,"$(P)$(Q):STOP.OUT")
-#! Link("$(P)$(Q):STOP.OUT","$(P)$(Q):STOP/OUT2")
-#! Connector("$(P)$(Q):STOP/OUT2",STOP,3420,2150,16777215,"",0)

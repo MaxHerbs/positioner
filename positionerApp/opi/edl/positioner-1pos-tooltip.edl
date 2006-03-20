@@ -70,7 +70,7 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(mp):SELECT"
+controlPv "$(P)$(mp):SELECT"
 font "arial-bold-r-14.0"
 endObjectProperties
 
@@ -94,7 +94,7 @@ maxValues {
   4 1
 }
 controlPvs {
-  0 "$(mp):INPOS"
+  0 "$(P)$(mp):INPOS"
 }
 numPvs 1
 useOriginalSize
@@ -129,8 +129,8 @@ maxValues {
   5 1
 }
 controlPvs {
-  0 "$(mp):DMOV"
-  1 "$(mp):ERROR"
+  0 "$(P)$(mp):DMOV"
+  1 "$(P)$(mp):ERROR"
 }
 numPvs 2
 shiftCount {
@@ -264,7 +264,7 @@ onColor index 4
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp):STOP.PROC"
+controlPv "$(P)$(mp):STOP.PROC"
 pressValue "1"
 onLabel "STOP"
 offLabel "STOP"

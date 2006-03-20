@@ -6,9 +6,10 @@
 
 template() {
 
-  #! InputMacro(pname,"Name of positioner",960,980,16777215,1,false)
-  #! InputMacro(device,"Name of multipositioner",840,980,16777215,1,false)
-  #! InputMacro(pos,"Position in multipositioner",1080,980,16777215,1,false)
+  #! InputMacro(Q,"Name of positioner",960,980,16777215,1,false)
+  #! InputMacro(MP,"Name of multipositioner",860,980,16777215,1,false)
+  #! InputMacro(P,"Name of positioner",760,980,16777215,1,false)
+  #! InputMacro(pos,"Position in multipositioner",1060,980,16777215,1,false)
 }
 
 # This record sets the first input link from the multipositioner.
@@ -20,7 +21,7 @@ record(stringout, "$(P)$(Q):SETINPUT") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT2")
   field(VAL, "$(P)$(Q):SEL.SELN PP")
-  field(OUT, "$(P):DFANOUT.OUT$(pos) CA")
+  field(OUT, "$(P)$(MP):DFANOUT.OUT$(pos) CA")
   field(SCAN, "1 second")
 }
 
@@ -29,7 +30,7 @@ record(stringout, "$(P)$(Q):SETINPUT2") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT3")
   field(VAL, "$(P)$(Q):OPENGATE PP")
-  field(OUT, "$(P):SFANOUT.OUT$(pos) CA")
+  field(OUT, "$(P)$(MP):SFANOUT.OUT$(pos) CA")
 }
 
 # This record stops the setting of the input after 1 cycle
@@ -38,7 +39,7 @@ record(stringout, "$(P)$(Q):SETINPUT2") {
 record(bo, "$(P)$(Q):SETUPDISABLE") {
   field(DESC, "Disable proc once done")
   field(DTYP, "Soft Channel")
-  field(FLNK, "$(P):FANOUT.PROC CA")
+  field(FLNK, "$(P)$(MP):FANOUT.PROC CA")
   field(VAL, "1")
   field(OUT, "$(P)$(Q):SETINPUT.DISA")
 }
@@ -185,20 +186,20 @@ record(ao, "$(P)$(Q):SETVALUE") {
 record(ao, "$(P)$(Q):SETA") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALA PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(bo, "$(P)$(Q):DMOV") {
   field(DTYP, "Soft Channel")
-  field(OUT, "$(P):DMOV.$(pos) PP")
+  field(OUT, "$(P)$(MP):DMOV.$(pos) PP")
   field(ZNAM, "Opened")
   field(ONAM, "Closed")
 }
 
 record(bo, "$(P)$(Q):INPOS") {
   field(DTYP, "Soft Channel")
-  field(OUT, "$(P):INPOS.$(pos) PP")
+  field(OUT, "$(P)$(MP):INPOS.$(pos) PP")
   field(ZNAM, "Opened")
   field(ONAM, "Closed")
 }
@@ -212,77 +213,77 @@ record(dfanout, "$(P)$(Q):OPENGATE") {
 record(ao, "$(P)$(Q):SETB") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALB PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETC") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALC PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETD") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALD PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETE") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALE PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETF") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALF PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETL") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALL PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETK") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALK PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETJ") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALJ PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETG") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALG PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETH") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALH PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
 record(ao, "$(P)$(Q):SETI") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALI PP")
-  field(DOL, "$(READBACK)")
+  field(DOL, "$(P)$(motor).RBV")
   field(OMSL, "closed_loop")
 }
 
@@ -291,12 +292,12 @@ record(stringout, "$(P)$(Q):SETINPUT3") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT4")
   field(VAL, "$(P)$(Q):UPD.SEVR CP")
-  field(OUT, "$(P):ERROR.INP$(pos) CA")
+  field(OUT, "$(P)$(MP):ERROR.INP$(pos) CA")
 }
 
 record(ao, "$(P)$(Q):SETVALUE2") {
   field(PREC, "$(PREC)")
-  field(OUT, "$(motor) PP")
+  field(OUT, "$(P)$(motor) PP")
   field(EGU, "$(EGU)")
   field(FLNK, "$(P)$(Q):UPD")
 }
@@ -306,21 +307,21 @@ record(stringout, "$(P)$(Q):SETINPUT4") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETINPUT5")
   field(VAL, "2")
-  field(OUT, "$(P):TYPE.$(pos) CA")
+  field(OUT, "$(P)$(MP):TYPE.$(pos) CA")
 }
 
 record(stringout, "$(P)$(Q):DEVNAME") {
   field(DESC, "Placeholder for name")
-  field(VAL, "$(motor)")
+  field(VAL, "$(P)$(motor)")
 }
 
 record(transform, "$(P)$(Q):UPD") {
   field(CLCE, "A")
   field(CLCF, "ABS(D-B)<=C")
-  field(INPA, "$(motor).DMOV CP")
+  field(INPA, "$(P)$(motor).DMOV CP")
   field(INPB, "$(P)$(Q):SEL.VAL")
-  field(INPC, "$(motor).RDBD")
-  field(INPD, "$(READBACK) CP MS")
+  field(INPC, "$(P)$(motor).RDBD")
+  field(INPD, "$(P)$(motor).RBV CP MS")
   field(OUTE, "$(P)$(Q):DMOV PP")
   field(OUTF, "$(P)$(Q):INPOS PP")
   field(EGU, "$(EGU)")
@@ -332,7 +333,7 @@ record(stringout, "$(P)$(Q):SETINPUT5") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(Q):SETUPDISABLE")
   field(VAL, "$(P)$(Q):STOP PP")
-  field(OUT, "$(P):STOP.OUT$(pos) CA")
+  field(OUT, "$(P)$(MP):STOP.OUT$(pos) CA")
 }
 
 # Send stop to motor
@@ -340,11 +341,11 @@ record(bo, "$(P)$(Q):STOP") {
   field(DESC, "Stop motor")
   field(OMSL, "closed_loop")
   field(DOL, "1")
-  field(OUT, "$(motor).STOP PP")
+  field(OUT, "$(P)$(motor).STOP PP")
 }
 
 #! Further lines contain data used by VisualDCT
-#! View(2121,1787,1.6)
+#! View(1270,1270,1.6)
 #! Record("$(P)$(Q):SETINPUT",760,1138,0,0,"$(P)$(Q):SETINPUT")
 #! Field("$(P)$(Q):SETINPUT.OUT",16777215,1,"$(P)$(Q):SETINPUT.OUT")
 #! Link("$(P)$(Q):SETINPUT.OUT","$(P)$(Q):SETINPUT/OUT1")
@@ -562,13 +563,13 @@ record(bo, "$(P)$(Q):STOP") {
 #! Record("$(P)$(Q):STOP",3480,2046,0,1,"$(P)$(Q):STOP")
 #! Field("$(P)$(Q):STOP.OUT",16777215,0,"$(P)$(Q):STOP.OUT")
 #! Link("$(P)$(Q):STOP.OUT","$(P)$(Q):STOP/OUT")
-#! Connector("$(P)$(Q):STOP/OUT",null,3380,2160,16777215,"",2)
+#! Connector("$(P)$(Q):STOP/OUT",null,3400,2160,16777215,"",2)
 #! Box(Box0,740,1040,2460,1360,1,16777215,null)
 #! Box(Box6,2560,1740,2320,2440,1,16711680,null)
 #! Box(Box5,3180,2020,3400,2180,1,3407616,null)
 #! Box(Box3,2320,2480,2560,2600,1,16711680,null)
 #! Box(Box2,740,1400,2220,2440,1,16777215,null)
-#! Box(Box1,1180,1020,740,920,1,16777215,null)
+#! Box(Box1,1160,1020,740,920,1,16777215,null)
 #! TextBox(TB0,980,1040,1360,1080,0,"Dialog",20,1,16777215,"Setup of links from multipositioner",null)
 #! TextBox(TB6,3220,2020,3400,2080,0,"Dialog",20,1,16777215,"Links to device",null)
 #! TextBox(TB4,760,920,1180,980,0,"Dialog",20,1,16777215,"Macros defining positioner, multipositioner and their relationship",null)

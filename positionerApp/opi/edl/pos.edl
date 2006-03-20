@@ -33,7 +33,7 @@ x 65
 y 43
 w 20
 h 20
-controlPv "$(mp):DMOV"
+controlPv "$(P)$(mp):DMOV"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -54,7 +54,7 @@ fgColor index 14
 bgColor index 0
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(mp):UPDATE"
+controlPv "$(P)$(mp):UPDATE"
 font "arial-medium-r-18.0"
 initialState "1"
 numItems 1
@@ -93,7 +93,7 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(mp):SELECT"
+controlPv "$(P)$(mp):SELECT"
 font "arial-medium-r-18.0"
 endObjectProperties
 
@@ -107,7 +107,7 @@ x 141
 y 43
 w 20
 h 20
-controlPv "$(mp):INPOS"
+controlPv "$(P)$(mp):INPOS"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -200,7 +200,7 @@ x 151
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.G"
+controlPv "$(P)$(mp):INPOS.G"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -217,7 +217,7 @@ x 141
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.G"
+controlPv "$(P)$(mp):DMOV.G"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -264,14 +264,14 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.G"
+visPv "$(P)$(mp):ERROR.G"
 visMin "1"
 visMax "5"
 endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.G"
+visPv "$(P)$(mp):TYPE.G"
 visInvert
 visMin "0"
 visMax "1"
@@ -300,7 +300,7 @@ x 173
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.H"
+controlPv "$(P)$(mp):INPOS.H"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -317,7 +317,7 @@ x 163
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.H"
+controlPv "$(P)$(mp):DMOV.H"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -364,14 +364,14 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.H"
+visPv "$(P)$(mp):ERROR.H"
 visMin "1"
 visMax "5"
 endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.H"
+visPv "$(P)$(mp):TYPE.H"
 visInvert
 visMin "0"
 visMax "1"
@@ -400,7 +400,7 @@ x 129
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.F"
+controlPv "$(P)$(mp):INPOS.F"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -421,7 +421,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.F"
+visPv "$(P)$(mp):ERROR.F"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -462,7 +462,7 @@ x 119
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.F"
+controlPv "$(P)$(mp):DMOV.F"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -471,7 +471,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.F"
+visPv "$(P)$(mp):TYPE.F"
 visInvert
 visMin "0"
 visMax "1"
@@ -504,7 +504,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.E"
+visPv "$(P)$(mp):ERROR.E"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -545,7 +545,7 @@ x 97
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.E"
+controlPv "$(P)$(mp):DMOV.E"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -562,7 +562,7 @@ x 107
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.E"
+controlPv "$(P)$(mp):INPOS.E"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -571,7 +571,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.E"
+visPv "$(P)$(mp):TYPE.E"
 visInvert
 visMin "0"
 visMax "1"
@@ -604,7 +604,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.D"
+visPv "$(P)$(mp):ERROR.D"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -645,7 +645,7 @@ x 75
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.D"
+controlPv "$(P)$(mp):DMOV.D"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -662,7 +662,7 @@ x 85
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.D"
+controlPv "$(P)$(mp):INPOS.D"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -671,7 +671,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.D"
+visPv "$(P)$(mp):TYPE.D"
 visInvert
 visMin "0"
 visMax "1"
@@ -704,7 +704,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.B"
+visPv "$(P)$(mp):ERROR.B"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -745,7 +745,7 @@ x 31
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.B"
+controlPv "$(P)$(mp):DMOV.B"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -762,7 +762,7 @@ x 41
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.B"
+controlPv "$(P)$(mp):INPOS.B"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -771,7 +771,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.B"
+visPv "$(P)$(mp):TYPE.B"
 visInvert
 visMin "0"
 visMax "1"
@@ -804,7 +804,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.A"
+visPv "$(P)$(mp):ERROR.A"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -845,7 +845,7 @@ x 9
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.A"
+controlPv "$(P)$(mp):DMOV.A"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -862,7 +862,7 @@ x 19
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.A"
+controlPv "$(P)$(mp):INPOS.A"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -871,7 +871,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.A"
+visPv "$(P)$(mp):TYPE.A"
 visInvert
 visMin "0"
 visMax "1"
@@ -904,7 +904,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(mp):ERROR.C"
+visPv "$(P)$(mp):ERROR.C"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -945,7 +945,7 @@ x 53
 y 96
 w 8
 h 8
-controlPv "$(mp):DMOV.C"
+controlPv "$(P)$(mp):DMOV.C"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -962,7 +962,7 @@ x 63
 y 96
 w 8
 h 8
-controlPv "$(mp):INPOS.C"
+controlPv "$(P)$(mp):INPOS.C"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -971,7 +971,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):TYPE.C"
+visPv "$(P)$(mp):TYPE.C"
 visInvert
 visMin "0"
 visMax "1"

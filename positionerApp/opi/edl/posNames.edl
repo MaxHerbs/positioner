@@ -19,7 +19,7 @@ ctlBgColor1 index 3
 ctlBgColor2 index 14
 topShadowColor index 1
 botShadowColor index 11
-title "$(mp)"
+title "$(P)$(mp)"
 showGrid
 snapToGrid
 gridSize 5
@@ -70,7 +70,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -120,7 +120,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "2"
 visMax "3"
 endObjectProperties
@@ -170,7 +170,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "3"
 visMax "4"
 endObjectProperties
@@ -220,7 +220,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "4"
 visMax "5"
 endObjectProperties
@@ -270,7 +270,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "5"
 visMax "6"
 endObjectProperties
@@ -320,7 +320,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "6"
 visMax "7"
 endObjectProperties
@@ -370,7 +370,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "7"
 visMax "8"
 endObjectProperties
@@ -420,7 +420,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "8"
 visMax "9"
 endObjectProperties
@@ -470,7 +470,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "9"
 visMax "10"
 endObjectProperties
@@ -520,7 +520,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "10"
 visMax "11"
 endObjectProperties
@@ -570,7 +570,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "11"
 visMax "12"
 endObjectProperties
@@ -620,7 +620,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp):SELECT.VAL"
+visPv "$(P)$(mp):SELECT.VAL"
 visMin "0"
 visMax "1"
 endObjectProperties
@@ -640,7 +640,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp):UPDATE"
+controlPv "$(P)$(mp):UPDATE"
 pressValue "0"
 releaseValue "1"
 onLabel "O"
@@ -873,7 +873,7 @@ x 65
 y 63
 w 170
 h 35
-controlPv "$(mp):SELECT.ZRST"
+controlPv "$(P)$(mp):SELECT.ZRST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -951,7 +951,7 @@ x 65
 y 103
 w 170
 h 35
-controlPv "$(mp):SELECT.ONST"
+controlPv "$(P)$(mp):SELECT.ONST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -969,7 +969,7 @@ x 65
 y 143
 w 170
 h 35
-controlPv "$(mp):SELECT.TWST"
+controlPv "$(P)$(mp):SELECT.TWST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1007,7 +1007,7 @@ x 65
 y 183
 w 170
 h 35
-controlPv "$(mp):SELECT.THST"
+controlPv "$(P)$(mp):SELECT.THST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1045,7 +1045,7 @@ x 65
 y 223
 w 170
 h 35
-controlPv "$(mp):SELECT.FRST"
+controlPv "$(P)$(mp):SELECT.FRST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1083,7 +1083,7 @@ x 65
 y 263
 w 170
 h 35
-controlPv "$(mp):SELECT.FVST"
+controlPv "$(P)$(mp):SELECT.FVST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1121,7 +1121,7 @@ x 65
 y 303
 w 170
 h 35
-controlPv "$(mp):SELECT.SXST"
+controlPv "$(P)$(mp):SELECT.SXST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1159,7 +1159,7 @@ x 65
 y 343
 w 170
 h 35
-controlPv "$(mp):SELECT.SVST"
+controlPv "$(P)$(mp):SELECT.SVST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1197,7 +1197,7 @@ x 65
 y 383
 w 170
 h 35
-controlPv "$(mp):SELECT.EIST"
+controlPv "$(P)$(mp):SELECT.EIST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1235,7 +1235,7 @@ x 65
 y 423
 w 170
 h 35
-controlPv "$(mp):SELECT.NIST"
+controlPv "$(P)$(mp):SELECT.NIST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1273,7 +1273,7 @@ x 65
 y 463
 w 170
 h 35
-controlPv "$(mp):SELECT.TEST"
+controlPv "$(P)$(mp):SELECT.TEST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1311,7 +1311,7 @@ x 65
 y 503
 w 170
 h 35
-controlPv "$(mp):SELECT.ELST"
+controlPv "$(P)$(mp):SELECT.ELST"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1354,7 +1354,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp):UPDATE"
+controlPv "$(P)$(mp):UPDATE"
 pressValue "0"
 releaseValue "1"
 onLabel "EXIT"
@@ -1403,7 +1403,7 @@ x 5
 y 3
 w 240
 h 24
-controlPv "$(mp):SELECT.DESC"
+controlPv "$(P)$(mp):SELECT.DESC"
 fgColor index 14
 fgAlarm
 bgColor index 48

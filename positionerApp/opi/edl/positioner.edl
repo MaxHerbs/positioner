@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 211
-y 215
+x 216
+y 237
 w 360
 h 670
 font "arial-medium-r-18.0"
@@ -19,7 +19,7 @@ ctlBgColor1 index 0
 ctlBgColor2 index 14
 topShadowColor index 0
 botShadowColor index 14
-title "$(mp)$(ps)"
+title "$(P)$(ps)"
 showGrid
 snapToGrid
 gridSize 5
@@ -71,7 +71,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "11"
 visMax "12"
 endObjectProperties
@@ -121,7 +121,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "10"
 visMax "11"
 endObjectProperties
@@ -171,7 +171,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "9"
 visMax "10"
 endObjectProperties
@@ -221,7 +221,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "8"
 visMax "9"
 endObjectProperties
@@ -271,7 +271,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "7"
 visMax "8"
 endObjectProperties
@@ -321,7 +321,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "6"
 visMax "7"
 endObjectProperties
@@ -371,7 +371,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "5"
 visMax "6"
 endObjectProperties
@@ -421,7 +421,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "4"
 visMax "5"
 endObjectProperties
@@ -471,7 +471,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "3"
 visMax "4"
 endObjectProperties
@@ -521,7 +521,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "2"
 visMax "3"
 endObjectProperties
@@ -571,7 +571,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -621,7 +621,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(mp)$(ps):SEL.SELN"
+visPv "$(P)$(ps):SEL.SELN"
 visMin "0"
 visMax "1"
 endObjectProperties
@@ -863,7 +863,7 @@ x 25
 y 3
 w 330
 h 24
-controlPv "$(mp)$(ps):SEL.DESC"
+controlPv "$(P)$(ps):SEL.DESC"
 fgColor index 14
 fgAlarm
 bgColor index 48
@@ -973,7 +973,7 @@ fgColour index 14
 bgColour index 0
 topShadowColour index 0
 botShadowColour index 14
-controlPv "$(mp)$(ps):SETINPUT4.VAL"
+controlPv "$(P)$(ps):SETINPUT4.VAL"
 font "arial-medium-r-18.0"
 initialState "1"
 numItems 3
@@ -988,9 +988,9 @@ symbol0 {
   2 "motor"
 }
 PV0 {
-  0 "$(mp)$(ps):DEVNAME"
-  1 "$(mp)$(ps):DEVNAME"
-  2 "$(mp)$(ps):DEVNAME"
+  0 "$(P)$(ps):DEVNAME"
+  1 "$(P)$(ps):DEVNAME"
+  2 "$(P)$(ps):DEVNAME"
 }
 endObjectProperties
 
@@ -1008,7 +1008,7 @@ fgColor index 14
 bgColor index 0
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(mp)$(ps):SETINPUT4.VAL"
+controlPv "$(P)$(ps):SETINPUT4.VAL"
 font "arial-medium-r-18.0"
 initialState "1"
 numItems 3
@@ -1068,7 +1068,7 @@ h 41
 lineColor index 3
 fill
 fillColor index 3
-visPv "$(mp)$(ps):SETINPUT4.VAL"
+visPv "$(P)$(ps):SETINPUT4.VAL"
 visInvert
 visMin "2"
 visMax "5"
@@ -1199,7 +1199,7 @@ x 90
 y 50
 w 127
 h 36
-controlPv "$(mp)$(ps):SETVALUE2.VAL"
+controlPv "$(P)$(ps):SETVALUE2.VAL"
 precision 4
 fgColor index 25
 bgColor index 3
@@ -1220,7 +1220,7 @@ x 93
 y 90
 w 120
 h 22
-controlPv "$(mp)$(ps):UPDATE.D"
+controlPv "$(P)$(ps):UPD.D"
 font "arial-bold-r-14.0"
 fontAlign "center"
 fgColor index 15
@@ -1365,7 +1365,7 @@ maxValues {
   4 1
 }
 controlPvs {
-  0 "$(mp)$(ps):INPOS"
+  0 "$(P)$(ps):INPOS"
 }
 numPvs 1
 useOriginalSize
@@ -1400,8 +1400,8 @@ maxValues {
   5 1
 }
 controlPvs {
-  0 "$(mp)$(ps):DMOV"
-  1 "$(mp):ERROR.A"
+  0 "$(P)$(ps):DMOV"
+  1 "$(P)$(mp):ERROR.A"
 }
 numPvs 2
 shiftCount {
@@ -1546,7 +1546,7 @@ x 30
 y 200
 w 125
 h 25
-controlPv "$(mp):SELECT.ONST"
+controlPv "$(P)$(mp):SELECT.ONST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -1568,7 +1568,7 @@ x 160
 y 193
 w 135
 h 36
-controlPv "$(mp)$(ps):VALB"
+controlPv "$(P)$(ps):VALB"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1591,7 +1591,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETB.PROC"
+controlPv "$(P)$(ps):SETB.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -1646,7 +1646,7 @@ x 30
 y 240
 w 125
 h 25
-controlPv "$(mp):SELECT.TWST"
+controlPv "$(P)$(mp):SELECT.TWST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -1668,7 +1668,7 @@ x 160
 y 233
 w 135
 h 36
-controlPv "$(mp)$(ps):VALC"
+controlPv "$(P)$(ps):VALC"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1691,7 +1691,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETC.PROC"
+controlPv "$(P)$(ps):SETC.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -1746,7 +1746,7 @@ x 30
 y 280
 w 125
 h 25
-controlPv "$(mp):SELECT.THST"
+controlPv "$(P)$(mp):SELECT.THST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -1768,7 +1768,7 @@ x 160
 y 273
 w 135
 h 36
-controlPv "$(mp)$(ps):VALD"
+controlPv "$(P)$(ps):VALD"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1791,7 +1791,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETD.PROC"
+controlPv "$(P)$(ps):SETD.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -1846,7 +1846,7 @@ x 30
 y 320
 w 125
 h 25
-controlPv "$(mp):SELECT.FRST"
+controlPv "$(P)$(mp):SELECT.FRST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -1868,7 +1868,7 @@ x 160
 y 313
 w 135
 h 36
-controlPv "$(mp)$(ps):VALE"
+controlPv "$(P)$(ps):VALE"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1891,7 +1891,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETE.PROC"
+controlPv "$(P)$(ps):SETE.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -1946,7 +1946,7 @@ x 30
 y 360
 w 125
 h 25
-controlPv "$(mp):SELECT.FVST"
+controlPv "$(P)$(mp):SELECT.FVST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -1968,7 +1968,7 @@ x 160
 y 353
 w 135
 h 36
-controlPv "$(mp)$(ps):VALF"
+controlPv "$(P)$(ps):VALF"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -1991,7 +1991,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETF.PROC"
+controlPv "$(P)$(ps):SETF.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -2046,7 +2046,7 @@ x 30
 y 400
 w 125
 h 25
-controlPv "$(mp):SELECT.SXST"
+controlPv "$(P)$(mp):SELECT.SXST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -2068,7 +2068,7 @@ x 160
 y 393
 w 135
 h 36
-controlPv "$(mp)$(ps):VALG"
+controlPv "$(P)$(ps):VALG"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -2091,7 +2091,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETG.PROC"
+controlPv "$(P)$(ps):SETG.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -2146,7 +2146,7 @@ x 30
 y 440
 w 125
 h 25
-controlPv "$(mp):SELECT.SVST"
+controlPv "$(P)$(mp):SELECT.SVST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -2168,7 +2168,7 @@ x 160
 y 433
 w 135
 h 36
-controlPv "$(mp)$(ps):VALH"
+controlPv "$(P)$(ps):VALH"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -2191,7 +2191,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETH.PROC"
+controlPv "$(P)$(ps):SETH.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -2246,7 +2246,7 @@ x 30
 y 480
 w 125
 h 25
-controlPv "$(mp):SELECT.EIST"
+controlPv "$(P)$(mp):SELECT.EIST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -2268,7 +2268,7 @@ x 160
 y 473
 w 135
 h 36
-controlPv "$(mp)$(ps):VALI"
+controlPv "$(P)$(ps):VALI"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -2291,7 +2291,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETI.PROC"
+controlPv "$(P)$(ps):SETI.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -2346,7 +2346,7 @@ x 30
 y 520
 w 125
 h 25
-controlPv "$(mp):SELECT.NIST"
+controlPv "$(P)$(mp):SELECT.NIST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -2368,7 +2368,7 @@ x 160
 y 513
 w 135
 h 36
-controlPv "$(mp)$(ps):VALJ"
+controlPv "$(P)$(ps):VALJ"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -2391,7 +2391,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETJ.PROC"
+controlPv "$(P)$(ps):SETJ.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -2446,7 +2446,7 @@ x 30
 y 560
 w 125
 h 25
-controlPv "$(mp):SELECT.TEST"
+controlPv "$(P)$(mp):SELECT.TEST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -2468,7 +2468,7 @@ x 160
 y 553
 w 135
 h 36
-controlPv "$(mp)$(ps):VALK"
+controlPv "$(P)$(ps):VALK"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -2491,7 +2491,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETK.PROC"
+controlPv "$(P)$(ps):SETK.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -2546,7 +2546,7 @@ x 30
 y 600
 w 125
 h 25
-controlPv "$(mp):SELECT.ELST"
+controlPv "$(P)$(mp):SELECT.ELST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -2568,7 +2568,7 @@ x 160
 y 593
 w 135
 h 36
-controlPv "$(mp)$(ps):VALL"
+controlPv "$(P)$(ps):VALL"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -2591,7 +2591,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETL.PROC"
+controlPv "$(P)$(ps):SETL.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"
@@ -2666,7 +2666,7 @@ x 30
 y 160
 w 125
 h 25
-controlPv "$(mp):SELECT.ZRST"
+controlPv "$(P)$(mp):SELECT.ZRST"
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 0
@@ -2688,7 +2688,7 @@ x 160
 y 153
 w 135
 h 36
-controlPv "$(mp)$(ps):VALA"
+controlPv "$(P)$(ps):VALA"
 fgColor index 14
 fgAlarm
 bgColor index 2
@@ -2711,7 +2711,7 @@ onColor index 3
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp)$(ps):SETA.PROC"
+controlPv "$(P)$(ps):SETA.PROC"
 releaseValue "1"
 onLabel "Set"
 offLabel "Set"

@@ -21,11 +21,11 @@ pattern { P                  ,DESC                , STRA    ,STRB     ,STRC     
 # Positioners controlling motors.
 # Each is names and has list of values for the positions
 # Macro     - Description
-# P         - Name of the multipositioner
+# P         - Name of the device
+# MP        - Name of the multipositioner
 # Q         - Name of the positioner
 # DESC      - description
 # motor     - Name of the motor
-# READBACK  - readback link (normally same as motor with '.RBK' on end)
 # pos       - Letter from A-H giving position within the multipositioner.
 # VALA-VALL - 12 position values
 # PREC      - precision to be used on GUI
@@ -33,10 +33,10 @@ pattern { P                  ,DESC                , STRA    ,STRB     ,STRC     
 #
 file motorpositioner.template
 {
-pattern { P                 , Q    , DESC   , motor                  , READBACK          , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
-        {BLPOS-OP-COLM-01:MP, :X   , "X motor", BLPOS-OP-COLM-01:X     , BLPOS-OP-COLM-01:X.RBV     , A  ,  0.1,100.1,  0.1,  0.1,200.1,  0.1,  0.1,    0,    0,    0,    0    ,0,    5,  mm}
-        {BLPOS-OP-COLM-01:MP, :Y   , "Y motor", BLPOS-OP-COLM-01:Y     , BLPOS-OP-COLM-01:Y.RBV     , B  ,  0.2,  0.2,100.2,  0.2,  0.2,200.2,  0.2,    0,    0,    0,    0    ,0,    3, rad}
-        {BLPOS-OP-COLM-01:MP, :Z   , "Z motor", BLPOS-OP-COLM-01:Z     , BLPOS-OP-COLM-01:Z.RBV     , C  ,  0.3,  0.3,  0.3,100.3,  0.3,  0.3,200.3,    0,    0,    0,    0    ,0,    5,  km}
+pattern { P              , MP , Q    , DESC   , motor    , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
+        {BLPOS-OP-COLM-01, :MP, :PX  , "X motor", :X     , A  ,  0.1,100.1,  0.1,  0.1,200.1,  0.1,  0.1,    0,    0,    0,    0    ,0,    5,  mm}
+        {BLPOS-OP-COLM-01, :MP, :PY  , "Y motor", :Y     , B  ,  0.2,  0.2,100.2,  0.2,  0.2,200.2,  0.2,    0,    0,    0,    0    ,0,    3, rad}
+        {BLPOS-OP-COLM-01, :MP, :PZ  , "Z motor", :Z     , C  ,  0.3,  0.3,  0.3,100.3,  0.3,  0.3,200.3,    0,    0,    0,    0    ,0,    5,  km}
 }
 
 
@@ -58,12 +58,12 @@ pattern { P                 , Q    , DESC   , motor                  , READBACK 
 #
 file positioner.template
 {
-pattern { P                 , Q    , DESC    , SET                        , READBACK                      , DEADBAND , STOPVAL               , STOP                         , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
-# This is an instant change so the STOP part doesn't need to do anything.
-        {BLPOS-OP-COLM-01:MP, :OFF , "X offset", BLPOS-OP-COLM-01:X.OFF   , BLPOS-OP-COLM-01:X.OFF          , 0.0001 , 0                     , BLPOS-OP-COLM-01:MP:OFF:STOP , D  , 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07,    0,    0,    0,    0    ,0,    5,  mm}
-        {BLPOS-OP-COLM-01:MP, :FP  , "Fine Pitch", BLPOS-OP-COLM-01:FP    , BLPOS-OP-COLM-01:FP.RBV         , 0.1    , 1                     , BLPOS-OP-COLM-01:FP.STOP     , E  , 10  , 20  , 30  , 40  , 30  , 20  , 10  ,    0,    0,    0,    0    ,0,    5,  urad}
+pattern { P              , MP , Q    , DESC        , SET    , READBACK , DEADBAND , STOPVAL, STOP      , pos, VALA, VALB, VALC, VALD, VALE, VALF, VALG, VALH, VALI, VALJ, VALK ,VALL, PREC, EGU}
+# Stop the motor (incase change in offset has started moving it)
+        {BLPOS-OP-COLM-01, :MP, :POFF, "X offset"  , :X.OFF , :X.OFF   , 0.0001  , 1       , :X:STOP   , D  , 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07,    0,    0,    0,    0    ,0,    5,  mm}
+        {BLPOS-OP-COLM-01, :MP, :PFP , "Fine Pitch", :FP    , :FP.RBV  , 0.1     , 1       , :FP.STOP  , E  , 10  , 20  , 30  , 40  , 30  , 20  , 10  ,    0,    0,    0,    0    ,0,    5,  urad}
 # This sets the set point to the readback. Not as nice as the above line since the motor has moved on, but this can be used as a last resort.
-#        {BLPOS-OP-COLM-01:MP, :FP  , "Fine Pitch", BLPOS-OP-COLM-01:FP    , BLPOS-OP-COLM-01:FP.RBV         , 0.1    , BLPOS-OP-COLM-01:FP.RBV, BLPOS-OP-COLM-01:FP        , E  , 10  , 20  , 30  , 40  , 30  , 20  , 10  ,    0,    0,    0,    0    ,0,    5,  urad}
+#        {BLPOS-OP-COLM-01, :MP, :PFP , "Fine Pitch", :FP    , :FP.RBV  , 0.1     , BLPOS-OP-COLM-01:FP.RBV , :FP       , E  , 10  , 20  , 30  , 40  , 30  , 20  , 10  ,    0,    0,    0,    0    ,0,    5,  urad}
 }
 
 #

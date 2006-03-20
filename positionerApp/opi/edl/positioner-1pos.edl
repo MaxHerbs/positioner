@@ -85,7 +85,7 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(mp):SELECT"
+controlPv "$(P)$(mp):SELECT"
 font "arial-bold-r-14.0"
 endObjectProperties
 
@@ -109,7 +109,7 @@ maxValues {
   4 1
 }
 controlPvs {
-  0 "$(mp):INPOS"
+  0 "$(P)$(mp):INPOS"
 }
 numPvs 1
 useOriginalSize
@@ -144,8 +144,8 @@ maxValues {
   5 1
 }
 controlPvs {
-  0 "$(mp):DMOV"
-  1 "$(mp):ERROR"
+  0 "$(P)$(mp):DMOV"
+  1 "$(P)$(mp):ERROR"
 }
 numPvs 2
 shiftCount {
@@ -190,7 +190,7 @@ fgColour index 14
 bgColour index 3
 topShadowColour index 1
 botShadowColour index 11
-controlPv "$(mp):UPDATE"
+controlPv "$(P)$(mp):UPDATE"
 font "helvetica-medium-r-14.0"
 numItems 1
 symbolTag {
@@ -200,7 +200,7 @@ symbol0 {
   0 "label"
 }
 PV0 {
-  0 "$(mp):SELECT.DESC"
+  0 "$(P)$(mp):SELECT.DESC"
 }
 endObjectProperties
 
@@ -307,7 +307,7 @@ onColor index 4
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(mp):STOP.PROC"
+controlPv "$(P)$(mp):STOP.PROC"
 pressValue "1"
 onLabel "STOP"
 offLabel "STOP"

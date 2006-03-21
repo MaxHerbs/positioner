@@ -33,7 +33,7 @@ x 65
 y 43
 w 20
 h 20
-controlPv "$(P)$(mp):DMOV"
+controlPv "$(P)$(MP):DMOV"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -54,7 +54,7 @@ fgColor index 14
 bgColor index 0
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(P)$(mp):UPDATE"
+controlPv "$(P)$(MP):UPDATE"
 font "arial-medium-r-18.0"
 initialState "1"
 numItems 1
@@ -93,7 +93,7 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(P)$(mp):SELECT"
+controlPv "$(P)$(MP):SELECT"
 font "arial-medium-r-18.0"
 endObjectProperties
 
@@ -107,7 +107,7 @@ x 141
 y 43
 w 20
 h 20
-controlPv "$(P)$(mp):INPOS"
+controlPv "$(P)$(MP):INPOS"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -200,7 +200,7 @@ x 151
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.G"
+controlPv "$(P)$(MP):INPOS.G"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -217,7 +217,7 @@ x 141
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.G"
+controlPv "$(P)$(MP):DMOV.G"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -246,7 +246,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p7)"
+  0 "PS=$(p7)"
 }
 endObjectProperties
 
@@ -264,14 +264,14 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.G"
+visPv "$(P)$(MP):ERROR.G"
 visMin "1"
 visMax "5"
 endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.G"
+visPv "$(P)$(MP):TYPE.G"
 visInvert
 visMin "0"
 visMax "1"
@@ -300,7 +300,7 @@ x 173
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.H"
+controlPv "$(P)$(MP):INPOS.H"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -317,7 +317,7 @@ x 163
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.H"
+controlPv "$(P)$(MP):DMOV.H"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -346,7 +346,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p8)"
+  0 "PS=$(p8)"
 }
 endObjectProperties
 
@@ -364,14 +364,14 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.H"
+visPv "$(P)$(MP):ERROR.H"
 visMin "1"
 visMax "5"
 endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.H"
+visPv "$(P)$(MP):TYPE.H"
 visInvert
 visMin "0"
 visMax "1"
@@ -400,7 +400,7 @@ x 129
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.F"
+controlPv "$(P)$(MP):INPOS.F"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -421,7 +421,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.F"
+visPv "$(P)$(MP):ERROR.F"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -448,7 +448,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p6)"
+  0 "PS=$(p6)"
 }
 endObjectProperties
 
@@ -462,7 +462,7 @@ x 119
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.F"
+controlPv "$(P)$(MP):DMOV.F"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -471,7 +471,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.F"
+visPv "$(P)$(MP):TYPE.F"
 visInvert
 visMin "0"
 visMax "1"
@@ -504,7 +504,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.E"
+visPv "$(P)$(MP):ERROR.E"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -531,7 +531,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p5)"
+  0 "PS=$(p5)"
 }
 endObjectProperties
 
@@ -545,7 +545,7 @@ x 97
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.E"
+controlPv "$(P)$(MP):DMOV.E"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -562,7 +562,7 @@ x 107
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.E"
+controlPv "$(P)$(MP):INPOS.E"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -571,7 +571,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.E"
+visPv "$(P)$(MP):TYPE.E"
 visInvert
 visMin "0"
 visMax "1"
@@ -604,7 +604,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.D"
+visPv "$(P)$(MP):ERROR.D"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -631,7 +631,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p4)"
+  0 "PS=$(p4)"
 }
 endObjectProperties
 
@@ -645,7 +645,7 @@ x 75
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.D"
+controlPv "$(P)$(MP):DMOV.D"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -662,7 +662,7 @@ x 85
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.D"
+controlPv "$(P)$(MP):INPOS.D"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -671,7 +671,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.D"
+visPv "$(P)$(MP):TYPE.D"
 visInvert
 visMin "0"
 visMax "1"
@@ -704,7 +704,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.B"
+visPv "$(P)$(MP):ERROR.B"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -731,7 +731,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p2)"
+  0 "PS=$(p2)"
 }
 endObjectProperties
 
@@ -745,7 +745,7 @@ x 31
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.B"
+controlPv "$(P)$(MP):DMOV.B"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -762,7 +762,7 @@ x 41
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.B"
+controlPv "$(P)$(MP):INPOS.B"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -771,7 +771,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.B"
+visPv "$(P)$(MP):TYPE.B"
 visInvert
 visMin "0"
 visMax "1"
@@ -804,7 +804,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.A"
+visPv "$(P)$(MP):ERROR.A"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -831,7 +831,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p1)"
+  0 "PS=$(p1)"
 }
 endObjectProperties
 
@@ -845,7 +845,7 @@ x 9
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.A"
+controlPv "$(P)$(MP):DMOV.A"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -862,7 +862,7 @@ x 19
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.A"
+controlPv "$(P)$(MP):INPOS.A"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -871,7 +871,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.A"
+visPv "$(P)$(MP):TYPE.A"
 visInvert
 visMin "0"
 visMax "1"
@@ -904,7 +904,7 @@ lineColor index 14
 fill
 fillColor index 20
 lineWidth 0
-visPv "$(P)$(mp):ERROR.C"
+visPv "$(P)$(MP):ERROR.C"
 visMin "1"
 visMax "5"
 endObjectProperties
@@ -931,7 +931,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p3)"
+  0 "PS=$(p3)"
 }
 endObjectProperties
 
@@ -945,7 +945,7 @@ x 53
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):DMOV.C"
+controlPv "$(P)$(MP):DMOV.C"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -962,7 +962,7 @@ x 63
 y 96
 w 8
 h 8
-controlPv "$(P)$(mp):INPOS.C"
+controlPv "$(P)$(MP):INPOS.C"
 lineColor index 14
 onColor index 15
 offColor index 19
@@ -971,7 +971,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(mp):TYPE.C"
+visPv "$(P)$(MP):TYPE.C"
 visInvert
 visMin "0"
 visMax "1"

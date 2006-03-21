@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 80
-y 678
+x 311
+y 175
 w 190
 h 110
 font "helvetica-medium-r-14.0"
@@ -85,7 +85,7 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 14
-controlPv "$(P)$(mp):SELECT"
+controlPv "$(P)$(MP):SELECT"
 font "arial-bold-r-14.0"
 endObjectProperties
 
@@ -109,7 +109,7 @@ maxValues {
   4 1
 }
 controlPvs {
-  0 "$(P)$(mp):INPOS"
+  0 "$(P)$(MP):INPOS"
 }
 numPvs 1
 useOriginalSize
@@ -144,8 +144,8 @@ maxValues {
   5 1
 }
 controlPvs {
-  0 "$(P)$(mp):DMOV"
-  1 "$(P)$(mp):ERROR"
+  0 "$(P)$(MP):DMOV"
+  1 "$(P)$(MP):ERROR"
 }
 numPvs 2
 shiftCount {
@@ -190,7 +190,7 @@ fgColour index 14
 bgColour index 3
 topShadowColour index 1
 botShadowColour index 11
-controlPv "$(P)$(mp):UPDATE"
+controlPv "$(P)$(MP):UPDATE"
 font "helvetica-medium-r-14.0"
 numItems 1
 symbolTag {
@@ -200,7 +200,7 @@ symbol0 {
   0 "label"
 }
 PV0 {
-  0 "$(P)$(mp):SELECT.DESC"
+  0 "$(P)$(MP):SELECT.DESC"
 }
 endObjectProperties
 
@@ -226,7 +226,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "ps=$(p1)"
+  0 "PS=$(P1)"
 }
 endObjectProperties
 
@@ -307,7 +307,7 @@ onColor index 4
 offColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(P)$(mp):STOP.PROC"
+controlPv "$(P)$(MP):STOP.PROC"
 pressValue "1"
 onLabel "STOP"
 offLabel "STOP"

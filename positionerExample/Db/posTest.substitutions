@@ -14,8 +14,8 @@
 #
 file multipositioner.template
 {
-pattern { P                  ,DESC                , STRA    ,STRB     ,STRC     ,STRD     ,STRE   ,STRF   ,STRG   ,STRH,STRI,STRJ,STRK,STRL}
-        { BLPOS-OP-COLM-01:MP,"Example positioner", "Centre","Small X","Small Y","Small Z","Big X","Big Y","Big Z",""  ,""  ,""  ,""  ,""  }
+pattern { P               , MP , DESC                , STRA    ,STRB     ,STRC     ,STRD     ,STRE   ,STRF   ,STRG   ,STRH,STRI,STRJ,STRK,STRL}
+        { BLPOS-OP-COLM-01, :MP, "Example positioner", "Centre","Small X","Small Y","Small Z","Big X","Big Y","Big Z",""  ,""  ,""  ,""  ,""  }
 }
 
 # Positioners controlling motors.

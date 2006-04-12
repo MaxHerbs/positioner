@@ -4,4 +4,4 @@
 # mp is the device name of the multipositioner
 # p1-p8 are the sub-names of the positioners
 # 
-edm -x -eolc -m mp=BLPOS-OP-COLM-01:MP,p1=:X,p2=:Y,p3=:Z,p4=:OFF,p5=:FP pos.edl
+edm -x -eolc -m P=BLPOS-OP-COLM-01,MP=:MP,p1=:PX,p2=:PY,p3=:PZ,p4=:POFF,p5=:PFP pos.edl

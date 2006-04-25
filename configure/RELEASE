@@ -26,7 +26,7 @@ CALC=$(SUPPORT)/calc/2-4dls2
 
 # Python scripting environment variables
 # To build the example application uncomment the next 2 lines
-PYTHONPATH=$(MOTOR)/bin/linux-x86
+#PYTHONPATH=$(MOTOR)/bin/linux-x86
 
 
 # EPICS_BASE usually appears last so other apps can override stuff:

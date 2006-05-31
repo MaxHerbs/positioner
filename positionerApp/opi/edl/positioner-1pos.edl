@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 311
-y 175
+x 586
+y 660
 w 190
 h 110
 font "helvetica-medium-r-14.0"
@@ -33,18 +33,18 @@ minor 0
 release 0
 x 0
 y 0
-w 190
-h 110
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
+w 189
+h 109
+fgColor index 0
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 0
 font "helvetica-medium-r-14.0"
-xPosOffset -20
-yPosOffset -30
+xPosOffset -50
+yPosOffset -50
 button3Popup
 invisible
-buttonLabel "Tooltip"
+buttonLabel "HELP"
 numPvs 4
 numDsps 1
 displayFileName {
@@ -52,6 +52,9 @@ displayFileName {
 }
 setPosition {
   0 "button"
+}
+symbols {
+  0 "label#<N>#=$(label#<N>#)"
 }
 endObjectProperties
 
@@ -66,7 +69,8 @@ y 5
 w 189
 h 104
 lineColor index 14
-fillColor index 50
+fill
+fillColor index 5
 endObjectProperties
 
 # (Menu Button)
@@ -157,33 +161,14 @@ fgColor index 14
 bgColor index 3
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 6
-y 0
-w 2
-h 0
-font "arial-medium-r-12.0"
-fgColor index 14
-bgColor index 3
-value {
-  "$(label)"
-}
-autoSize
-endObjectProperties
-
 # (Menu Mux PV)
 object menuMuxPVClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 50
-y 249
+x 2000
+y 2000
 w 20
 h 20
 fgColour index 14
@@ -197,7 +182,7 @@ symbolTag {
   0 "."
 }
 symbol0 {
-  0 "label"
+  0 "label#<N>#"
 }
 PV0 {
   0 "$(P)$(MP):SELECT.DESC"
@@ -226,7 +211,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "PS=$(P1)"
+  0 "PS=$(P1),MP=$(MP)"
 }
 endObjectProperties
 
@@ -250,6 +235,9 @@ numPvs 4
 numDsps 1
 displayFileName {
   0 "posNames.edl"
+}
+symbols {
+  0 "P=$(P),MP=$(MP)"
 }
 endObjectProperties
 
@@ -313,5 +301,25 @@ onLabel "STOP"
 offLabel "STOP"
 3d
 font "arial-bold-r-18.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 0
+y 0
+w 95
+h 14
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  $(label#<N>#)  "
+}
+autoSize
+border
 endObjectProperties
 

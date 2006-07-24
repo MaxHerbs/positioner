@@ -9,7 +9,8 @@
 # module defined in the RELEASE file is rebuilt.
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
-SUPPORT=/home/diamond/R3.14.7/prod/support
+SUPPORT=/home/diamond/R3.14.8.2/prod/support
+WORK=/home/diamond/R3.14.8.2/work/support
 
 # If you don't want to install into $(TOP) then
 # define INSTALL_LOCATION_APP here
@@ -17,10 +18,10 @@ SUPPORT=/home/diamond/R3.14.7/prod/support
 
 #If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
-CALC=$(SUPPORT)/calc/2-4dls2
+CALC=$(WORK)/calc
 
 # To build the example application uncomment the next 3 lines
-#MOTOR=/home/diamond/R3.14.7/prod/support/motor/5-7dls4
+#MOTOR=$(SUPPORT)/motor/5-7dls4
 #SYMBOL=$(SUPPORT)/symbols/1-4
 #POSITIONER=$(TOP)
 
@@ -30,7 +31,7 @@ CALC=$(SUPPORT)/calc/2-4dls2
 
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/home/epics/R3.14.7/base
+EPICS_BASE=/home/epics/R3.14.8.2/base
 
 #Capfast users may need the following definitions
 #CAPFAST_TEMPLATES=

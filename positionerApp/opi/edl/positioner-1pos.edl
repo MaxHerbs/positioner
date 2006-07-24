@@ -40,8 +40,8 @@ bgColor index 0
 topShadowColor index 0
 botShadowColor index 0
 font "helvetica-medium-r-14.0"
-xPosOffset -50
-yPosOffset -50
+xPosOffset -85
+yPosOffset -60
 button3Popup
 invisible
 buttonLabel "HELP"
@@ -54,7 +54,7 @@ setPosition {
   0 "button"
 }
 symbols {
-  0 "label#<N>#=$(label#<N>#)"
+  0 "auto-label=$(auto-label),MP=$(MP)"
 }
 endObjectProperties
 
@@ -182,7 +182,7 @@ symbolTag {
   0 "."
 }
 symbol0 {
-  0 "label#<N>#"
+  0 "auto-label"
 }
 PV0 {
   0 "$(P)$(MP):SELECT.DESC"
@@ -311,13 +311,13 @@ minor 1
 release 0
 x 0
 y 0
-w 95
+w 84
 h 14
 font "arial-medium-r-12.0"
 fgColor index 14
 bgColor index 8
 value {
-  "  $(label#<N>#)  "
+  "  $(auto-label)  "
 }
 autoSize
 border

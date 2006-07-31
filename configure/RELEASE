@@ -21,6 +21,7 @@ WORK=/home/diamond/R3.14.8.2/work/support
 CALC=$(WORK)/calc
 
 # To build the example application uncomment the next 3 lines
+
 #MOTOR=$(SUPPORT)/motor/5-7dls4
 #SYMBOL=$(SUPPORT)/symbols/1-4
 #POSITIONER=$(TOP)

@@ -18,12 +18,12 @@ WORK=/home/diamond/R3.14.8.2/work/support
 
 #If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
-CALC=$(WORK)/calc
+CALC=	$(SUPPORT)/calc/2-6-1dls1
 
 # To build the example application uncomment the next 3 lines
 
-#MOTOR=$(SUPPORT)/motor/5-7dls4
-#SYMBOL=$(SUPPORT)/symbols/1-4
+#MOTOR=$(SUPPORT)/motor/6-0dls1
+#SYMBOL=$(SUPPORT)/symbols/1-7
 #POSITIONER=$(TOP)
 
 # Python scripting environment variables

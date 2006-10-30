@@ -7,6 +7,7 @@
 # List of names for selection by user.
 # Severity is returned via DISA.
 # DISV set to 2 to stop disabling.
+#% autosave 0 VAL ZRST ONST TWST THST FRST FVST SXST SVST EIST NIST TEST ELST
 record(mbbo, "$(P)$(MP):SELECT") {
   field(DESC, "$(DESC)")
   field(SCAN, "Passive")

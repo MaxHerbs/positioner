@@ -9,8 +9,8 @@
 # module defined in the RELEASE file is rebuilt.
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
-SUPPORT=/home/diamond/R3.14.8.2/prod/support
-WORK=/home/diamond/R3.14.8.2/work/support
+SUPPORT=/dls_sw/prod/R3.14.8.2/support
+WORK=/dls_sw/work/R3.14.8.2/support
 
 # If you don't want to install into $(TOP) then
 # define INSTALL_LOCATION_APP here
@@ -22,7 +22,7 @@ CALC=	$(SUPPORT)/calc/2-6-1dls1
 
 # To build the example application uncomment the next 3 lines
 
-#MOTOR=$(SUPPORT)/motor/6-0dls1
+#MOTOR=$(SUPPORT)/motor/6-0dls6
 #SYMBOL=$(SUPPORT)/symbols/1-7
 #POSITIONER=$(TOP)
 
@@ -32,7 +32,7 @@ CALC=	$(SUPPORT)/calc/2-6-1dls1
 
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/home/epics/R3.14.8.2/base
+EPICS_BASE=/dls_sw/epics/R3.14.8.2/base
 
 #Capfast users may need the following definitions
 #CAPFAST_TEMPLATES=

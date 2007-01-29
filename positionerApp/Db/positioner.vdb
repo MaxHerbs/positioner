@@ -45,7 +45,7 @@ record(bo, "$(P)$(Q):SETUPDISABLE") {
   field(OUT, "$(P)$(Q):SETINPUT.DISA")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALA") {
   field(DESC, "First position")
   field(DTYP, "Soft Channel")
@@ -56,7 +56,7 @@ record(ao, "$(P)$(Q):VALA") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALB") {
   field(DESC, "Second position")
   field(DTYP, "Soft Channel")
@@ -67,7 +67,7 @@ record(ao, "$(P)$(Q):VALB") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALC") {
   field(DESC, "Third position")
   field(DTYP, "Soft Channel")
@@ -78,7 +78,7 @@ record(ao, "$(P)$(Q):VALC") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALD") {
   field(DESC, "Fourth position")
   field(DTYP, "Soft Channel")
@@ -89,7 +89,7 @@ record(ao, "$(P)$(Q):VALD") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALE") {
   field(DESC, "Fifth position")
   field(DTYP, "Soft Channel")
@@ -100,7 +100,7 @@ record(ao, "$(P)$(Q):VALE") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALF") {
   field(DESC, "Sixth position")
   field(DTYP, "Soft Channel")
@@ -111,7 +111,7 @@ record(ao, "$(P)$(Q):VALF") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALG") {
   field(DESC, "Seventh position")
   field(DTYP, "Soft Channel")
@@ -122,7 +122,7 @@ record(ao, "$(P)$(Q):VALG") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALH") {
   field(DESC, "Eigth position")
   field(DTYP, "Soft Channel")
@@ -133,7 +133,7 @@ record(ao, "$(P)$(Q):VALH") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALI") {
   field(DESC, "Ninth position")
   field(DTYP, "Soft Channel")
@@ -144,7 +144,7 @@ record(ao, "$(P)$(Q):VALI") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALJ") {
   field(DESC, "Tenth position")
   field(DTYP, "Soft Channel")
@@ -155,7 +155,7 @@ record(ao, "$(P)$(Q):VALJ") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALK") {
   field(DESC, "Eleventh position")
   field(DTYP, "Soft Channel")
@@ -166,7 +166,7 @@ record(ao, "$(P)$(Q):VALK") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALL") {
   field(DESC, "Twelth position")
   field(DTYP, "Soft Channel")
@@ -177,7 +177,7 @@ record(ao, "$(P)$(Q):VALL") {
   field(EGU, "$(EGU)")
 }
 
-#% autosave 0 VAL
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):SETVALUE") {
   field(DOL, "$(P)$(Q):SEL.VAL")
   field(OMSL, "closed_loop")

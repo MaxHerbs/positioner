@@ -22,7 +22,7 @@ CALC=	$(SUPPORT)/calc/2-6-1dls1
 
 # To build the example application uncomment the next 3 lines
 
-#MOTOR=$(SUPPORT)/motor/6-0dls6
+#MOTOR=$(SUPPORT)/motor/6-0dls7
 #SYMBOL=$(SUPPORT)/symbols/1-7
 #POSITIONER=$(TOP)
 

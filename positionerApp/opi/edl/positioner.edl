@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 221
-y 259
+x 808
+y 242
 w 360
 h 670
 font "arial-medium-r-18.0"
@@ -965,8 +965,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 58
-y 862
+x 600
+y 90
 w 67
 h 26
 fgColour index 14
@@ -994,46 +994,11 @@ PV0 {
 }
 endObjectProperties
 
-# (Menu Mux)
-object menuMuxClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 130
-y 860
-w 67
-h 27
-fgColor index 14
-bgColor index 0
-topShadowColor index 0
-botShadowColor index 14
-controlPv "$(P)$(PS):SETINPUT4.VAL"
-font "arial-medium-r-18.0"
-initialState "1"
-numItems 3
-symbolTag {
-  0 "Not used"
-  1 "non-motor"
-  2 "Motor"
-}
-symbol0 {
-  0 "filename"
-  1 "filename"
-  2 "filename"
-}
-value0 {
-  0 "dummy.edl"
-  1 "pos.edl"
-  2 "motor.edl"
-}
-endObjectProperties
-
 # (Related Display)
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 0
+minor 2
 release 0
 x 225
 y 55

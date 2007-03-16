@@ -16,6 +16,7 @@ template() {
 # This decouples the two templates.
 # The output can only be set after initialisation. Hence this runs on a scan.
 # After running once it is disabled.
+#% autosave 0 DISA
 record(stringout, "$(P)$(Q):SETINPUT") {
   field(DESC, "Set output link from above")
   field(DTYP, "Soft Channel")
@@ -46,6 +47,7 @@ record(bo, "$(P)$(Q):SETUPDISABLE") {
 
 # This record contains the list of positions for motor.
 # The multipositioner writes to the SELN field to select one.
+#% autosave 0 VAL
 record(sel, "$(P)$(Q):SEL") {
   field(DESC, "$(DESC)")
   field(FLNK, "$(P)$(Q):SETVALUE PP")
@@ -186,6 +188,7 @@ record(ao, "$(P)$(Q):VALL") {
   field(EGU, "$(EGU)")
 }
 
+#% autosave 0 VAL
 record(ao, "$(P)$(Q):SETVALUE") {
   field(DOL, "$(P)$(Q):SEL.VAL")
   field(OMSL, "closed_loop")
@@ -307,6 +310,7 @@ record(stringout, "$(P)$(Q):SETINPUT3") {
   field(OUT, "$(P)$(MP):ERROR.INP$(pos) CA")
 }
 
+#% autosave 0 VAL
 record(ao, "$(P)$(Q):SETVALUE2") {
   field(PREC, "$(PREC)")
   field(OUT, "$(P)$(motor) PP")

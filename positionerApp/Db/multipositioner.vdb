@@ -7,7 +7,8 @@
 # List of names for selection by user.
 # Severity is returned via DISA.
 # DISV set to 2 to stop disabling.
-#% autosave 2 VAL ZRST ONST TWST THST FRST FVST SXST SVST EIST NIST TEST ELST
+#% autosave 0 VAL
+#% autosave 2 ZRST ONST TWST THST FRST FVST SXST SVST EIST NIST TEST ELST
 record(mbbo, "$(P)$(MP):SELECT") {
   field(DESC, "$(DESC)")
   field(SCAN, "Passive")
@@ -19,19 +20,20 @@ record(mbbo, "$(P)$(MP):SELECT") {
   field(FRST, "$(STRE)")
   field(FVST, "$(STRF)")
   field(SXST, "$(STRG)")
-  field(PINI, "YES")
   field(FLNK, "$(P)$(MP):GATE PP MS")
   field(SVST, "$(STRH)")
   field(EIST, "$(STRI)")
   field(NIST, "$(STRJ)")
   field(TEST, "$(STRK)")
   field(ELST, "$(STRL)")
+  field(PINI, "YES")
   field(DISV, "2")
   field(VAL, "0")
 }
 
 # Fans selected position number to each separate controller
 # The outlinks are filled by the positioners.
+#% autosave 0 OUTA OUTB OUTC OUTD OUTE OUTF OUTG OUTH
 record(dfanout, "$(P)$(MP):DFANOUT") {
   field(DESC, "Fanout selection")
   field(SELM, "All")
@@ -41,6 +43,7 @@ record(dfanout, "$(P)$(MP):DFANOUT") {
 
 # Open a gate on each positioner.
 # The outlinks are filled by the positioners.
+#% autosave 0 OUTA OUTB OUTC OUTD OUTE OUTF OUTG OUTH
 record(dfanout, "$(P)$(MP):SFANOUT") {
   field(DESC, "Fanout start motion")
   field(SELM, "All")
@@ -82,6 +85,7 @@ record(seq, "$(P)$(MP):FANOUT2") {
   field(LNK2, "$(P)$(MP):DFANOUT.PROC PP MS")
 }
 
+#% autosave 0 INPA INPB INPC INPD INPE INPF INPG INPH
 record(transform, "$(P)$(MP):ERROR") {
   field(DESC, "Errors from positioners")
   field(FLNK, "$(P)$(MP):SETERROR1 PP MS")
@@ -100,6 +104,7 @@ record(transform, "$(P)$(MP):ERROR") {
 
 # Check if value has changed from previous call.
 # This stops infinite loops when passing MS back
+#% autosave 0 VAL
 record(calcout, "$(P)$(MP):GATE") {
   field(DESC, "Stop repeated output")
   field(DTYP, "Soft Channel")
@@ -114,6 +119,7 @@ record(calcout, "$(P)$(MP):GATE") {
 
 # Stores last selected value. This enables the gate record to check if the value has changed.
 # Initially set to -1 to ensure first value is selected correctly.
+#% autosave 0 VAL
 record(longout, "$(P)$(MP):VALUE") {
   field(DESC, "Value selected")
   field(DTYP, "Soft Channel")
@@ -178,6 +184,7 @@ record(seq, "$(P)$(MP):SETERROR1") {
 # 0 = Undefined
 # 1 = Normal
 # 2 = Motor
+#% autosave 0 A B C D E F G H
 record(calcout, "$(P)$(MP):TYPE") {
   field(CALC, "A&B&C&D&E&F&G&H")
   field(A, "0")
@@ -217,6 +224,7 @@ record(calcout, "$(P)$(MP):INPOS") {
   field(DESC, "Combined in position monitor")
 }
 
+#% autosave 0 OUTA OUTB OUTC OUTD OUTE OUTF OUTG OUTH
 record(dfanout, "$(P)$(MP):STOP") {
   field(DESC, "Stop all motors")
   field(VAL, "1")

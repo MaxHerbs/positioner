@@ -9,6 +9,8 @@
 # DISV set to 2 to stop disabling.
 #% autosave 0 VAL
 #% autosave 2 ZRST ONST TWST THST FRST FVST SXST SVST EIST NIST TEST ELST
+#% gdatag,template,positioner,$(gda_name),$(gda_desc)
+#% gdatag,mbbinary,rw,$(gda_name),SELECT,Position Selection
 record(mbbo, "$(P)$(MP):SELECT") {
   field(DESC, "$(DESC)")
   field(SCAN, "Passive")
@@ -60,6 +62,7 @@ record(fanout, "$(P)$(MP):FANOUT") {
 # Combined done moving indicator.
 # Value from AND of all 8 possible inputs.
 # The fixed values of 1 are overwritten by each positioner.
+#% gdatag,pv,ro,$(gda_name),DMOV,Done Moving Indicator
 record(calcout, "$(P)$(MP):DMOV") {
   field(CALC, "A&B&C&D&E&F&G&H")
   field(A, "1")
@@ -86,6 +89,7 @@ record(seq, "$(P)$(MP):FANOUT2") {
 }
 
 #% autosave 0 INPA INPB INPC INPD INPE INPF INPG INPH
+#% gdatag,pv,ro,$(gda_name),ERROR,Error Indicator
 record(transform, "$(P)$(MP):ERROR") {
   field(DESC, "Errors from positioners")
   field(FLNK, "$(P)$(MP):SETERROR1 PP MS")
@@ -211,6 +215,7 @@ record(bo, "$(P)$(MP):UPDATE") {
 # Combined in position indicator.
 # Value from AND of all 8 possible inputs.
 # The fixed values of 1 are overwritten by each positioner.
+#% gdatag,pv,ro,$(gda_name),INPOS,In Position Indicator
 record(calcout, "$(P)$(MP):INPOS") {
   field(CALC, "A&B&C&D&E&F&G&H")
   field(A, "1")

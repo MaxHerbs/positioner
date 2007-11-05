@@ -149,7 +149,7 @@ maxValues {
 }
 controlPvs {
   0 "$(P)$(MP):DMOV"
-  1 "$(P)$(MP):ERROR"
+  1 "$(P)$(MP):ERROR.K"
 }
 numPvs 2
 shiftCount {

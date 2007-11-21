@@ -22,7 +22,7 @@ CALC=	$(SUPPORT)/calc/2-6-3dls1
 
 # To build the example application uncomment the next 3 lines
 
-#MOTOR=$(SUPPORT)/motor/6-2-2dls1
+#MOTOR=$(SUPPORT)/motor/6-2-2dls2
 #POSITIONER=$(TOP)
 
 # Python scripting environment variables

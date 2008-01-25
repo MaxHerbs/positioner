@@ -124,6 +124,7 @@ record(calcout, "$(P)$(MP):GATE") {
 # Stores last selected value. This enables the gate record to check if the value has changed.
 # Initially set to -1 to ensure first value is selected correctly.
 #% autosave 0 VAL
+#% gdatag,pv,rw,$(gda_name),GO,Go Button,$(%pv).PROC
 record(longout, "$(P)$(MP):VALUE") {
   field(DESC, "Value selected")
   field(DTYP, "Soft Channel")

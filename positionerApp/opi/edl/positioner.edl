@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 808
-y 242
+x 422
+y 311
 w 360
 h 670
 font "arial-medium-r-18.0"
@@ -994,51 +994,6 @@ PV0 {
 }
 endObjectProperties
 
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 225
-y 55
-w 27
-h 25
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-font "arial-medium-r-18.0"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "$(filename)"
-}
-symbols {
-  0 "motor=$(motor)"
-}
-icon
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 220
-y 50
-w 34
-h 41
-lineColor index 3
-fill
-fillColor index 3
-visPv "$(P)$(PS):SETINPUT4.VAL"
-visInvert
-visMin "2"
-visMax "5"
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties
@@ -1160,7 +1115,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 90
+x 95
 y 50
 w 127
 h 36
@@ -1181,8 +1136,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 93
-y 90
+x 97
+y 89
 w 120
 h 22
 controlPv "$(P)$(PS):UPD.D"
@@ -2709,5 +2664,51 @@ onLabel "Move"
 offLabel "Move"
 3d
 font "arial-bold-r-16.0"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 55
+w 27
+h 25
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 225
+y 55
+w 27
+h 25
+fgColor index 14
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(filename)"
+}
+symbols {
+  0 "motor=$(motor)"
+}
+icon
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(PS):SETINPUT4.VAL"
+visMin "2"
+visMax "5"
 endObjectProperties
 

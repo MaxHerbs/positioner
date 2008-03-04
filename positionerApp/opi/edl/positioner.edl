@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 422
-y 311
+x 963
+y 447
 w 360
 h 670
 font "arial-medium-r-18.0"
@@ -2710,5 +2710,48 @@ endGroup
 visPv "$(P)$(PS):SETINPUT4.VAL"
 visMin "2"
 visMax "5"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 85
+w 27
+h 25
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 85
+w 27
+h 25
+fgColor index 14
+onColor index 21
+offColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(motor):ELOSSRC.A"
+pressValue "0"
+onLabel "ELoss"
+offLabel "ELoss"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(motor):ELOSS"
+visMin "1"
+visMax "2"
 endObjectProperties
 

@@ -14,6 +14,8 @@ DBD += positioner.dbd
 # positioner.dbd will be made up from these files:
 positioner_DBD += base.dbd
 positioner_DBD += transformRecord.dbd
+positioner_DBD += busyRecord.dbd
+
 #include definitions for any other support applications needed
 # These are only needed for the example application - removed to reduce
 # dependencies

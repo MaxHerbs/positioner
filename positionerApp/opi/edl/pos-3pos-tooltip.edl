@@ -1,0 +1,1187 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1037
+y 284
+w 380
+h 235
+font "helvetica-medium-r-14.0"
+ctlFont "courier-bold-r-14.0"
+btnFont "helvetica-medium-r-14.0"
+fgColor index 14
+bgColor index 58
+textColor index 14
+ctlFgColor1 index 25
+ctlFgColor2 index 30
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 1
+botShadowColor index 11
+title "Tooltip"
+showGrid
+gridSize 5
+endScreenProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 0
+y 0
+w 379
+h 234
+lineColor index 14
+fillColor index 11
+lineWidth 2
+numPoints 3
+xPoints {
+  0 0
+  1 379
+  2 379
+}
+yPoints {
+  0 234
+  1 234
+  2 0
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 1
+y 1
+w 380
+h 235
+lineColor index 1
+fillColor index 3
+lineWidth 2
+numPoints 3
+xPoints {
+  0 1
+  1 1
+  2 381
+}
+yPoints {
+  0 236
+  1 1
+  2 1
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 120
+y 10
+w 70
+h 25
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 0
+bgColor index 9
+value {
+  "Help"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 15
+w 91
+h 14
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Positioner Label"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 190
+y 10
+w 189
+h 42
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Each positioner has a set of "
+  "positions it can be in. Use this "
+  "menu to select the current position"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 40
+w 89
+h 14
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Positioner State"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 40
+y 60
+w 50
+h 20
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Invalid"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 40
+y 110
+w 50
+h 20
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Minor"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 40
+y 135
+w 50
+h 20
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Major"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 40
+y 85
+w 50
+h 20
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Good"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 190
+w 57
+h 14
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Error Text"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 210
+w 245
+h 20
+controlPv "$(P)$(MP):ERROR.STAT"
+font "arial-bold-r-12.0"
+fontAlign "center"
+fgColor index 15
+fgAlarm
+bgColor index 10
+limitsFromDb
+precision 4
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 70
+y 178
+w 107
+h 28
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Setup the Values"
+  "of Positioners 1,2,3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 185
+y 175
+w 97
+h 28
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Setup the Names"
+  "of Positions"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 295
+y 165
+w 67
+h 28
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Stop motors"
+  "moving"
+}
+autoSize
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 350
+y 95
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  1 1
+}
+maxValues {
+  1 2
+  4 1
+}
+controlPvs {
+  0 "LOC\\dummy1=i:1"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 285
+y 75
+w 84
+h 14
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Position Status"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 290
+y 95
+w 60
+h 20
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "In Position:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 290
+y 115
+w 60
+h 25
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Out of "
+  "Position:"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 85
+y 65
+w 189
+h 104
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 247
+y 113
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  1 1
+}
+maxValues {
+  1 2
+  4 1
+}
+controlPvs {
+  0 "$(P)$(MP):INPOS"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Menu Mux PV)
+object menuMuxPVClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 2085
+y 2060
+w 20
+h 20
+fgColour index 14
+bgColour index 3
+topShadowColour index 1
+botShadowColour index 11
+controlPv "$(P)$(MP):UPDATE"
+font "helvetica-medium-r-14.0"
+numItems 1
+symbolTag {
+  0 "."
+}
+symbol0 {
+  0 "auto-label"
+}
+PV0 {
+  0 "$(P)$(MP):SELECT.DESC"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 149
+y 111
+w 61
+h 24
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Names"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "posNames.edl"
+}
+symbols {
+  0 "P=$(P),MP=$(MP)"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 212
+y 115
+w 33
+h 20
+font "arial-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "InPos"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 115
+y 115
+w 33
+h 20
+font "arial-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "State "
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 85
+y 60
+w 84
+h 14
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  $(auto-label)  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 105
+y 25
+w 25
+h 35
+lineColor index 14
+fillColor index 3
+arrows "to"
+numPoints 2
+xPoints {
+  0 105
+  1 130
+}
+yPoints {
+  0 25
+  1 60
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 75
+y 50
+w 15
+h 65
+lineColor index 14
+fillColor index 3
+arrows "to"
+numPoints 2
+xPoints {
+  0 75
+  1 90
+}
+yPoints {
+  0 50
+  1 115
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 205
+y 50
+w 25
+h 25
+lineColor index 14
+fillColor index 3
+arrows "to"
+numPoints 2
+xPoints {
+  0 230
+  1 205
+}
+yPoints {
+  0 50
+  1 75
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 265
+y 90
+w 25
+h 25
+lineColor index 14
+fillColor index 3
+arrows "to"
+numPoints 2
+xPoints {
+  0 290
+  1 265
+}
+yPoints {
+  0 90
+  1 115
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 270
+y 150
+w 20
+h 20
+lineColor index 14
+fillColor index 3
+arrows "to"
+numPoints 2
+xPoints {
+  0 290
+  1 270
+}
+yPoints {
+  0 170
+  1 150
+}
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 350
+y 120
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  1 1
+}
+maxValues {
+  1 2
+  4 1
+}
+controlPvs {
+  0 "LOC\\dummy0=i:0"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 15
+y 135
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "LOC\\dummy2=i:2"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 15
+y 110
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "LOC\\dummy1=i:1"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 15
+y 85
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "LOC\\dummy0=i:0"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 15
+y 60
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "LOC\\dummy3=i:3"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 15
+y 160
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  0 3
+  2 1
+  3 2
+  4 4
+  5 5
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 5
+  5 6
+}
+controlPvs {
+  0 "LOC\\dummy5=i:5"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 40
+y 160
+w 50
+h 20
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+useDisplayBg
+value {
+  "Moving"
+}
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 90
+y 75
+w 180
+h 30
+fgColor index 14
+fgAlarm
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(MP):SELECT"
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 92
+y 113
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  0 6
+  2 2
+  3 4
+  4 1
+}
+maxValues {
+  0 8
+  2 4
+  3 6
+  4 2
+  5 1
+}
+controlPvs {
+  0 "$(P)$(MP):DMOV"
+  1 "$(P)$(MP):ERROR.K"
+}
+numPvs 2
+shiftCount {
+  1 1
+}
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 140
+w 45
+h 25
+fgColor index 21
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P)$(MP):STOP.PROC"
+pressValue "1"
+onLabel "STOP"
+offLabel "STOP"
+3d
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 180
+y 140
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+buttonLabel "P3 Val"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "PS=$(P3),MP=$(MP),filename=$(filename3)"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 135
+y 140
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+buttonLabel "P2 Val"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "PS=$(P2),MP=$(MP),filename=$(filename2)"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 90
+y 140
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+buttonLabel "P1 Val"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "PS=$(P1),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 208
+y 134
+w 27
+h 43
+lineColor index 14
+fillColor index 3
+arrows "to"
+numPoints 2
+xPoints {
+  0 235
+  1 208
+}
+yPoints {
+  0 177
+  1 134
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 95
+y 160
+w 5
+h 20
+lineColor index 14
+fillColor index 3
+arrows "to"
+numPoints 2
+xPoints {
+  0 100
+  1 95
+}
+yPoints {
+  0 180
+  1 160
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 135
+y 163
+w 6
+h 20
+lineColor index 14
+fillColor index 3
+arrows "from"
+numPoints 2
+xPoints {
+  0 141
+  1 135
+}
+yPoints {
+  0 163
+  1 183
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 170
+y 161
+w 19
+h 20
+lineColor index 14
+fillColor index 3
+arrows "from"
+numPoints 2
+xPoints {
+  0 189
+  1 170
+}
+yPoints {
+  0 161
+  1 181
+}
+endObjectProperties
+

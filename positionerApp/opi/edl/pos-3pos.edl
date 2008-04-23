@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 586
-y 660
+x 808
+y 354
 w 190
 h 110
 font "helvetica-medium-r-14.0"
@@ -48,7 +48,7 @@ buttonLabel "HELP"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "BLGui-pos-tooltip"
+  0 "pos-3pos-tooltip"
 }
 setPosition {
   0 "button"
@@ -81,7 +81,7 @@ minor 0
 release 0
 x 5
 y 15
-w 155
+w 180
 h 30
 fgColor index 14
 fgAlarm
@@ -321,29 +321,6 @@ value {
 }
 autoSize
 border
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 160
-y 15
-w 25
-h 30
-fgColor index 19
-onColor index 4
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(P)$(MP):VALUE.PROC"
-pressValue "1"
-onLabel "Go"
-offLabel "Go"
-3d
-font "helvetica-bold-r-14.0"
 endObjectProperties
 
 # (Related Display)

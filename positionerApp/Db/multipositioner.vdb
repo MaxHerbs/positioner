@@ -93,7 +93,7 @@ record(seq, "$(P)$(MP):FANOUT2") {
 }
 
 #% autosave 0 INPA INPB INPC INPD INPE INPF INPG INPH
-#% gdatag,pv,ro,$(gda_name),ERROR,Error Indicator,$(%pv).K
+#% gdatag,pv,ro,$(gda_name),ERROR,Error Indicator,<pv>.K
 record(transform, "$(P)$(MP):ERROR") {
   field(DESC, "Errors from positioners")
   field(FLNK, "$(P)$(MP):SETERROR1 PP MS")
@@ -235,7 +235,7 @@ record(calcout, "$(P)$(MP):INPOS") {
   field(DESC, "Combined in position monitor")
 }
 
-#% gdatag,pv,rw,$(gda_name),STOP,Stop Button,$(%pv).PROC
+#% gdatag,pv,rw,$(gda_name),STOP,Stop Button,<pv>.PROC
 #% autosave 0 OUTA OUTB OUTC OUTD OUTE OUTF OUTG OUTH
 record(dfanout, "$(P)$(MP):STOP") {
   field(DESC, "Stop all motors")

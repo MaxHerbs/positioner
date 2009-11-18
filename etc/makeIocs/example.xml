@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<tpmac.GeoBrick IP="172.23.111.111" name="BRICK1"/>
+	<motor.basic_asyn_motor ADDR="1" Controller="BRICK1" DESC="Test motor 1" M=":M1" MRES="0.001" P="TESTPOS" name="M1"/>
+	<motor.basic_asyn_motor ADDR="2" Controller="BRICK1" DESC="Test motor 2" M=":M2" MRES="0.001" P="TESTPOS" name="M2"/>
+	<positioner.multipositioner DESC="Test Positioner" MP=":MP" P="TESTPOS" STRS.0="POS 1" STRS.1="POS 2" STRS.2="POS 3" name="MP"/>
+	<positioner.motorpositioner DESC="Motor 1" MP="MP" PREC="3" Q=":P1" VALS.1="1" VALS.2="45" VALS.3="3" motor="M1"/>
+	<positioner.motorpositioner DESC="Motor 2" MP="MP" PREC="5" Q=":P2" VALS.0="1" VALS.1="2" VALS.2="3" VALS.3="4" motor="M2" pos="B"/>
+</components>

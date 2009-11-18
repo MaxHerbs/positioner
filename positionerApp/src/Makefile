@@ -8,21 +8,11 @@ include $(TOP)/configure/CONFIG
 #=============================
 # build an ioc application
 
-LIBRARY_IOC += positioner
-
-DBD += positioner.dbd
+DBD += positioner_vdct.dbd
 # positioner.dbd will be made up from these files:
-positioner_DBD += base.dbd
-positioner_DBD += transformRecord.dbd
-positioner_DBD += busyRecord.dbd
-
-#include definitions for any other support applications needed
-# These are only needed for the example application - removed to reduce
-# dependencies
-#positioner_DBD += motorSupport.dbd
-#positioner_DBD += devSoftMotor.dbd
-#positioner_DBD += devDeltaTau.dbd
-
+positioner_vdct_DBD += base.dbd
+positioner_vdct_DBD += transformRecord.dbd
+positioner_vdct_DBD += busyRecord.dbd
 
 # <name>_registerRecordDeviceDriver.cpp will be created from <name>.dbd
 positioner_SRCS += positioner_registerRecordDeviceDriver.cpp
@@ -35,28 +25,7 @@ positioner_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
 #add a definition for each support application used by this application
 #positioner_LIBS += xxx
 
-#NOTES:
-#      1)It is not possible to build sncExample both as a component of positioner
-#        and standalone. You must choose only one.
-#      2)To build sncExample SNCSEQ must be defined in <top>/configure/RELEASE
-
-#The following builds sncExample as a component of positioner
-#positioner_SRCS += sncExample.stt
-#positioner_LIBS += seq pv
-
 positioner_LIBS += $(EPICS_BASE_IOC_LIBS)
-# These are only needed for the example application - removed to reduce
-# dependencies
-#positioner_LIBS += motor
-#positioner_LIBS += softMotor
-#positioner_LIBS += DeltaTau
-
-#The following builds sncExample as a standalone application
-#PROD_HOST += sncExample
-#sncExample_SNCFLAGS += +m
-#sncExample_SRCS += sncExample.stt
-#sncExample_LIBS += seq pv
-#sncExample_LIBS += $(EPICS_BASE_HOST_LIBS)
 
 #===========================
 

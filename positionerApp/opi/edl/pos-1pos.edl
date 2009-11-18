@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 808
-y 354
+x 1012
+y 480
 w 190
 h 110
 font "helvetica-medium-r-14.0"
@@ -48,7 +48,7 @@ buttonLabel "HELP"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "pos-3pos-tooltip"
+  0 "pos-1pos-tooltip"
 }
 setPosition {
   0 "button"
@@ -177,15 +177,18 @@ topShadowColour index 1
 botShadowColour index 11
 controlPv "$(P)$(MP):UPDATE"
 font "helvetica-medium-r-14.0"
-numItems 1
+numItems 2
 symbolTag {
   0 "."
+  1 "?"
 }
 symbol0 {
   0 "auto-label"
+  1 "auto-label"
 }
 PV0 {
   0 "$(P)$(MP):SELECT.DESC"
+  1 "$(P)$(MP):SELECT.DESC"
 }
 endObjectProperties
 
@@ -195,16 +198,16 @@ beginObjectProperties
 major 4
 minor 2
 release 0
-x 5
+x 6
 y 80
-w 45
-h 25
+w 85
+h 24
 fgColor index 43
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-12.0"
-buttonLabel "P1 Val"
+font "arial-bold-r-14.0"
+buttonLabel "Values"
 numPvs 4
 numDsps 1
 displayFileName {
@@ -286,9 +289,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 140
+x 100
 y 80
-w 45
+w 85
 h 25
 fgColor index 21
 onColor index 4
@@ -300,7 +303,7 @@ pressValue "1"
 onLabel "STOP"
 offLabel "STOP"
 3d
-font "arial-bold-r-14.0"
+font "arial-bold-r-18.0"
 endObjectProperties
 
 # (Static Text)
@@ -321,57 +324,5 @@ value {
 }
 autoSize
 border
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 50
-y 80
-w 45
-h 25
-fgColor index 43
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-font "arial-bold-r-12.0"
-buttonLabel "P2 Val"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "positioner.edl"
-}
-symbols {
-  0 "P=$(P),PS=$(P2),MP=$(MP),filename=$(filename2)"
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 2
-release 0
-x 95
-y 80
-w 45
-h 25
-fgColor index 43
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-font "arial-bold-r-12.0"
-buttonLabel "P3 Val"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "positioner.edl"
-}
-symbols {
-  0 "P=$(P),PS=$(P3),MP=$(MP),filename=$(filename3)"
-}
 endObjectProperties
 

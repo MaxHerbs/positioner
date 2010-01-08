@@ -3,14 +3,29 @@
 #! DBD("../../dbd/positioner_vdct.dbd")
 #! DBDEND
 
-
-template() {
-
-  #! InputMacro(Q,"Name of positioner",960,980,16777215,1,false)
-  #! InputMacro(MP,"Name of multipositioner",860,980,16777215,1,false)
-  #! InputMacro(P,"Name of positioner",760,980,16777215,1,false)
-  #! InputMacro(pos,"Position in multipositioner",1060,980,16777215,1,false)
-}
+# % macro, __doc__, Template for wrapping a motor as a positioner. This allows 
+# it to be controlled by a multipositioner, mapping a list of names onto a 
+# list of motor positions
+# % macro, P, Device prefix, must match P of multipositioner
+# % macro, Q, Device suffix
+# % macro, MP, Multipositioner suffix, must match MP of multipositioner
+# % macro, DESC, Positioner description
+# % macro, EGU, Engineering units
+# % macro, PREC, Precision to display to
+# % macro, motor, Motor record pv
+# % macro, VALA, Positioner value for position 1
+# % macro, VALB, Positioner value for position 2
+# % macro, VALC, Positioner value for position 3
+# % macro, VALD, Positioner value for position 4
+# % macro, VALE, Positioner value for position 5
+# % macro, VALF, Positioner value for position 6
+# % macro, VALG, Positioner value for position 7
+# % macro, VALH, Positioner value for position 8
+# % macro, VALI, Positioner value for position 9
+# % macro, VALJ, Positioner value for position 10
+# % macro, VALK, Positioner value for position 11
+# % macro, VALL, Positioner value for position 12
+# % macro, pos, Positioner letter (A..H)
 
 # This record sets the first input link from the multipositioner.
 # This decouples the two templates.
@@ -60,7 +75,7 @@ record(sel, "$(P)$(Q):SEL") {
 record(ao, "$(P)$(Q):VALA") {
   field(DESC, "First position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALA)")
+  field(VAL, "$(VALA=0)")
   field(OUT, "$(P)$(Q):SEL.A")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -71,7 +86,7 @@ record(ao, "$(P)$(Q):VALA") {
 record(ao, "$(P)$(Q):VALB") {
   field(DESC, "Second position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALB)")
+  field(VAL, "$(VALB=0)")
   field(OUT, "$(P)$(Q):SEL.B")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -82,7 +97,7 @@ record(ao, "$(P)$(Q):VALB") {
 record(ao, "$(P)$(Q):VALC") {
   field(DESC, "Third position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALC)")
+  field(VAL, "$(VALC=0)")
   field(OUT, "$(P)$(Q):SEL.C")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -93,7 +108,7 @@ record(ao, "$(P)$(Q):VALC") {
 record(ao, "$(P)$(Q):VALD") {
   field(DESC, "Fourth position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALD)")
+  field(VAL, "$(VALD=0)")
   field(OUT, "$(P)$(Q):SEL.D")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -104,7 +119,7 @@ record(ao, "$(P)$(Q):VALD") {
 record(ao, "$(P)$(Q):VALE") {
   field(DESC, "Fifth position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALE)")
+  field(VAL, "$(VALE=0)")
   field(OUT, "$(P)$(Q):SEL.E")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -115,7 +130,7 @@ record(ao, "$(P)$(Q):VALE") {
 record(ao, "$(P)$(Q):VALF") {
   field(DESC, "Sixth position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALF)")
+  field(VAL, "$(VALF=0)")
   field(OUT, "$(P)$(Q):SEL.F")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -126,7 +141,7 @@ record(ao, "$(P)$(Q):VALF") {
 record(ao, "$(P)$(Q):VALG") {
   field(DESC, "Seventh position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALG)")
+  field(VAL, "$(VALG=0)")
   field(OUT, "$(P)$(Q):SEL.G")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -137,7 +152,7 @@ record(ao, "$(P)$(Q):VALG") {
 record(ao, "$(P)$(Q):VALH") {
   field(DESC, "Eigth position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALH)")
+  field(VAL, "$(VALH=0)")
   field(OUT, "$(P)$(Q):SEL.H")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -148,7 +163,7 @@ record(ao, "$(P)$(Q):VALH") {
 record(ao, "$(P)$(Q):VALI") {
   field(DESC, "Ninth position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALI)")
+  field(VAL, "$(VALI=0)")
   field(OUT, "$(P)$(Q):SEL.I")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -159,7 +174,7 @@ record(ao, "$(P)$(Q):VALI") {
 record(ao, "$(P)$(Q):VALJ") {
   field(DESC, "Tenth position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALJ)")
+  field(VAL, "$(VALJ=0)")
   field(OUT, "$(P)$(Q):SEL.J")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -170,7 +185,7 @@ record(ao, "$(P)$(Q):VALJ") {
 record(ao, "$(P)$(Q):VALK") {
   field(DESC, "Eleventh position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALK)")
+  field(VAL, "$(VALK=0)")
   field(OUT, "$(P)$(Q):SEL.K")
   field(PINI, "YES")
   field(PREC, "$(PREC)")
@@ -181,7 +196,7 @@ record(ao, "$(P)$(Q):VALK") {
 record(ao, "$(P)$(Q):VALL") {
   field(DESC, "Twelth position")
   field(DTYP, "Soft Channel")
-  field(VAL, "$(VALL)")
+  field(VAL, "$(VALL=0)")
   field(OUT, "$(P)$(Q):SEL.L")
   field(PINI, "YES")
   field(PREC, "$(PREC)")

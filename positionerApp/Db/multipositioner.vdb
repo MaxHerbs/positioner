@@ -3,6 +3,46 @@
 #! DBD("../../dbd/positioner_vdct.dbd")
 #! DBDEND
 
+# % macro, __doc__, Template for controlling many positioner or 
+motorpositioner objects 
+# it to be controlled by a multipositioner, mapping a list of names onto a 
+# list of motor positions
+# % macro, P, Device prefix
+# % macro, MP, Device suffix
+# % macro, DESC, Multipositioner description
+# % macro, STRA, String description for position 1
+# % macro, STRB, String description for position 2
+# % macro, STRC, String description for position 3
+# % macro, STRD, String description for position 4
+# % macro, STRE, String description for position 5
+# % macro, STRF, String description for position 6
+# % macro, STRG, String description for position 7
+# % macro, STRH, String description for position 8
+# % macro, STRI, String description for position 9
+# % macro, STRJ, String description for position 10
+# % macro, STRK, String description for position 11
+# % macro, STRL, String description for position 12
+# % macro, name, Object name and gui association name
+# % macro, gda_name, If set, export to GDA with this name
+# % macro, gda_desc, Description for GDA
+# % macro, NPOS, Number of positioners, used to work out which screen to use. 
+#                Only specify if not using the builder object.
+# % macro, P1, Positioner 1 suffix for screen. 
+#              Only specify if not using the builder object.
+# % macro, P2, Positioner 2 suffix for screen. 
+#              Only specify if not using the builder object.
+# % macro, P3, Positioner 3 suffix for screen. 
+#              Only specify if not using the builder object.
+# % macro, P4, Positioner 4 suffix for screen. 
+#              Only specify if not using the builder object.
+# % macro, P5, Positioner 5 suffix for screen. 
+#              Only specify if not using the builder object.
+# % macro, P6, Positioner 6 suffix for screen. 
+#              Only specify if not using the builder object.
+#% macro, P7, Positioner 7 suffix for screen. 
+#              Only specify if not using the builder object.
+# % macro, P8, Positioner 8 suffix for screen. 
+#              Only specify if not using the builder object.
 
 # This associates an edm screen with the template
 # % gui, $(name), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
@@ -12,25 +52,25 @@
 # DISV set to 2 to stop disabling.
 #% autosave 0 VAL
 #% autosave 2 ZRST ONST TWST THST FRST FVST SXST SVST EIST NIST TEST ELST
-#% gdatag,template,positioner,$(gda_name),$(gda_desc)
+#% gdatag,template,positioner,$(gda_name),$(gda_desc=$(DESC))
 #% gdatag,mbbinary,rw,$(gda_name),SELECT,Position Selection
 record(mbbo, "$(P)$(MP):SELECT") {
   field(DESC, "$(DESC)")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(ZRST, "$(STRA)")
-  field(ONST, "$(STRB)")
-  field(TWST, "$(STRC)")
-  field(THST, "$(STRD)")
-  field(FRST, "$(STRE)")
-  field(FVST, "$(STRF)")
-  field(SXST, "$(STRG)")
+  field(ZRST, "$(STRA=)")
+  field(ONST, "$(STRB=)")
+  field(TWST, "$(STRC=)")
+  field(THST, "$(STRD=)")
+  field(FRST, "$(STRE=)")
+  field(FVST, "$(STRF=)")
+  field(SXST, "$(STRG=)")
   field(FLNK, "$(P)$(MP):START PP MS")
-  field(SVST, "$(STRH)")
-  field(EIST, "$(STRI)")
-  field(NIST, "$(STRJ)")
-  field(TEST, "$(STRK)")
-  field(ELST, "$(STRL)")
+  field(SVST, "$(STRH=)")
+  field(EIST, "$(STRI=)")
+  field(NIST, "$(STRJ=)")
+  field(TEST, "$(STRK=)")
+  field(ELST, "$(STRL=)")
   field(PINI, "YES")
   field(DISV, "2")
   field(VAL, "0")

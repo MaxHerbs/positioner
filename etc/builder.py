@@ -1,134 +1,74 @@
-from iocbuilder import Substitution
+from iocbuilder import AutoSubstitution
 from iocbuilder.arginfo import *
 from iocbuilder.modules.calc import Calc
 
-
-class multipositioner(Substitution):
-    '''A brief description for this class goes here'''
+class multipositioner(AutoSubstitution):
     Dependencies = (Calc,)
-
-    # The __init__ method specifies arguments and defaults
-    def __init__(self, P, MP, DESC, STRS = [''], name = '', gda = True):
-        # If gda then define gda_name and gda_desc
-        if gda:
-            gda_name, gda_desc = name, DESC
-        else:
-            gda_name, gda_desc = '', ''
-        # set strs to defaults
-        for v,x in zip(self._strs, STRS + [""] * 12):
-            locals()[v] = x          
-        self.positioners = []
-        # Filter the list of local variables by the argument list,
-        # then initialise the super class
-        self.__super.__init__(NPOS = 0, **filter_dict(locals(), self.Arguments))
-
-    def addPositioner(self, Q):
-        assert Q not in self.positioners, "Positioner %s already added to %s" % (Q, self.args["P"])
-        self.positioners.append(Q)
-        return chr(64+len(self.positioners))
-        
-    def Finalise(self):
-        self.args["NPOS"] = len(self.positioners)
-        for i, q in enumerate(self.positioners):
-            self.Arguments.append("P%d"%(i+1))
-            self.args["P%d"%(i+1)]= q
-
-    # __init__ arguments
-    ArgInfo = makeArgInfo(__init__,
-        P    = Simple('PV prefix', str),
-        MP   = Simple('PV suffix', str),
-        DESC = Simple('Object description, also used for gda_desc if gda', str),
-        STRS = List  ('Position Labels', 12, Simple, str),
-        name = Simple('Object name, also used for gda_name if gda', str),
-        gda  = Simple('Set to True to make available to gda', bool))
-
     # Substitution attributes
     TemplateFile = 'multipositioner.template'
-    _strs = ["STR%s" % chr(65+i) for i in range(12)]    
-    Arguments = ArgInfo.Names(without = ["STRS"]) + _strs + ["NPOS", "gda_name", "gda_desc"]
+    
+    def addPositioner(self, Q):
+        # register a positioner object with this
+        if "positioners" not in self.__dict__:
+            self.positioners = []    
+        assert Q not in self.positioners, \
+        	"Positioner %s already added to %s" % (Q, self.args["P"])
+        self.positioners.append(Q)
+        return chr(64+len(self.positioners))
 
+    def Finalise(self):
+        # create the args needed for the gui
+        self.args["NPOS"] = len(self.positioners)
+        for i, q in enumerate(self.positioners):
+            self.args["P%d"%(i+1)]= q.args["Q"]
 
-class _positionerBase(Substitution):
-    '''A brief description for this class goes here'''
-
-    # The __init__ method specifies arguments and defaults
-    def __init__(self, MP, Q, DESC, VALS = [0.0], PREC = 4, EGU="mm", **args):    
-        # check positioner number is ok
-        pos = MP.addPositioner(Q)        
-        # grab P and MP from multipositioner
-        P = MP.args["P"]
-        MP = MP.args["MP"]
-        # set vals to defaults
-        for v,x in zip(self._vals, VALS + [0.0] * 12):
-            locals()[v] = x
-        # Filter the list of local variables by the argument list,
-        # then initialise the super class
-        locals().update(args)        
-        self.__super.__init__(**filter_dict(locals(), self.Arguments))
-
-    # __init__ arguments
-    _ArgInfo = makeArgInfo(__init__,
-        MP    = Ident ('Multipositioner object', multipositioner),
-        Q     = Simple('Positioner suffix', str),
-        DESC  = Simple('Positioner description', str),
-        PREC  = Simple('Display Precision', int),
-        EGU   = Simple('Display Engineering Units', str),
-        VALS  = List  ('Motor positions', 12, Simple, float))
-
+class _motorpositionerTemplate(AutoSubstitution):
     # Substitution attributes
-    _vals = ["VAL%s" % chr(65+i) for i in range(12)]
-    Arguments = ["P", "pos"] + _ArgInfo.Names(without = ["VALS"]) + _vals
+    TemplateFile = 'motorpositioner.template'
 
 try:
-    from iocbuilder.modules.motor import basic_asyn_motor
-    
-    class motorpositioner(_positionerBase):
-        '''Positioner that wraps a motor record'''
+    from iocbuilder.modules.motor import MotorRecord
 
-        # The __init__ method specifies arguments and defaults
-        def __init__(self, motor, **args):
-            # Grab the motor record name from the motor object
-            motor = motor.args["P"] + motor.args["M"]
-            assert motor.startswith(args["MP"].args["P"]), "Motor record must have the same prefix as multipositioner object"
-            motor = motor[len(args["MP"].args["P"]):]
-            # Filter the list of local variables by the argument list,
-            # then initialise the super class
-            args.update(locals())
-            args.pop("self")
+    # this is a motorpositioner object
+    class motorpositioner(_motorpositionerTemplate):
+        __doc__ = _motorpositionerTemplate.__doc__
+        def __init__(self, MP, motor, **args):
+            # get PV prefixes from parent
+            args['P'], args['MP'] = MP.args['P'], MP.args['MP']
+            # register as multipositioner object
+            args['pos'] = MP.addPositioner(self)
+            # strip out the motor record pv and egu from the object
+            assert motor.args['P'] == args['P'], \
+                "Motor prefix must match motor positioner prefix"
+            args['motor'] = motor.args['M']
+            args['EGU'] = motor.args['EGU']
             self.__super.__init__(**args)
+            
+        # construct the ArgInfo        
+        ArgInfo = makeArgInfo(__init__,
+            MP    = Ident('Parent multipositioner object', multipositioner),
+            motor = Ident('Motor record object', MotorRecord)) + \
+            _motorpositionerTemplate.ArgInfo.filtered(
+                without = ('P', 'MP', 'pos', 'motor', 'EGU'))        
 
-        # __init__ arguments
-        ArgInfo = _positionerBase._ArgInfo + makeArgInfo(__init__,
-            motor = Ident ('Motor object', basic_asyn_motor))
-
-        # Substitution attributes
-        TemplateFile = 'motorpositioner.template'
-        Arguments = ["motor"] + _positionerBase.Arguments    
-        
-except ImportError, e:
-    pass
-
-class positioner(_positionerBase):
-    '''Positioner that wraps a motor record'''
-
-    # The __init__ method specifies arguments and defaults
-    def __init__(self, READBACK, SET, DEADBAND, STOP, STOPVAL, **args):
-        # Filter the list of local variables by the argument list,
-        # then initialise the super class
-        args.update(locals())
-        args.pop("self")
-        self.__super.__init__(**args)
-
-    # __init__ arguments
-    ArgInfo = _positionerBase._ArgInfo + makeArgInfo(__init__,
-        READBACK = Simple('Readback Positioner Pv = $(MP.P)$(READBACK)', str),
-        SET      = Simple('Set Positioner Pv = $(MP.P)$(READBACK)', str),
-        DEADBAND = Simple('Deadband allowable between Readback and Set', float),
-        STOP     = Simple('Stop Positioner Pv = $(MP.P)$(READBACK)', str),
-        STOPVAL  = Simple('Value to send on stop', str))
-
+except ImportError:
+    print "# motor not included, cannot make motorpositioner object"             
+                                                                        
+class _positionerTemplate(AutoSubstitution):
     # Substitution attributes
     TemplateFile = 'positioner.template'
-    Arguments = ['READBACK', 'SET', 'DEADBAND', 'STOP', 'STOPVAL'] + \
-        _positionerBase.Arguments    
 
+# this is a positioner object
+class positioner(_positionerTemplate):
+    __doc__ = _positionerTemplate.__doc__
+    def __init__(self, MP, **args):
+        # get PV prefixes from parent
+        args['P'], args['MP'] = MP.args['P'], MP.args['MP']
+        # register as multipositioner object
+        args['pos'] = MP.addPositioner(self)
+        self.__super.__init__(**args)
+        
+    # construct the ArgInfo        
+    ArgInfo = makeArgInfo(__init__,
+        MP = Ident('Parent multipositioner object', multipositioner)) + \
+        _positionerTemplate.ArgInfo.filtered(without = ('P', 'MP', 'pos'))        

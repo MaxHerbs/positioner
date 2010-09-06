@@ -2,4 +2,4 @@ SUPPORT=/dls_sw/prod/R3.14.11/support
 WORK=/dls_sw/work/R3.14.11/support
 
 # Place any example specific dependencies here
-TPMAC=$(SUPPORT)/tpmac/3-7dls1
+TPMAC=$(SUPPORT)/tpmac/3-7dls3

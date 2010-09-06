@@ -10,7 +10,7 @@
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 SUPPORT=/dls_sw/prod/R3.14.11/support
-WORK=/dls_sw/work/R3.14.11/support
+#WORK=/dls_sw/work/R3.14.11/support
 
 # If you don't want to install into $(TOP) then
 # define INSTALL_LOCATION_APP here
@@ -18,8 +18,8 @@ WORK=/dls_sw/work/R3.14.11/support
 
 #If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
-BUSY=   $(SUPPORT)/busy/1-3dls1
-CALC=	$(SUPPORT)/calc/2-8dls1
+BUSY=   $(SUPPORT)/busy/1-3dls3
+CALC=	$(SUPPORT)/calc/2-8dls2
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 EPICS_BASE=/dls_sw/epics/R3.14.11/base

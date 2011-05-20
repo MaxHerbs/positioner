@@ -120,7 +120,7 @@ record(calcout, "$(P)$(MP):DMOV") {
   field(G, "1")
   field(H, "1")
   field(DESC, "Positioner done moving")
-  field(OUT, "$(P)$(MP):BUSY")
+  field(OUT, "$(P)$(MP):BUSY CA")
   field(OOPT, "Every Time")
   field(DOPT, "Use OCAL")
   field(OCAL, "(A&B&C&D&E&F&G&H)?0:1")

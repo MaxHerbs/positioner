@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 185
-y 332
+x 876
+y 264
 w 250
-h 580
+h 740
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -32,7 +32,7 @@ major 4
 minor 0
 release 0
 x 10
-y 100
+y 660
 w 230
 h 40
 
@@ -45,7 +45,7 @@ major 4
 minor 0
 release 0
 x 60
-y 100
+y 660
 w 180
 h 40
 lineColor index 14
@@ -60,7 +60,7 @@ major 4
 minor 0
 release 0
 x 10
-y 100
+y 660
 w 50
 h 40
 lineColor index 14
@@ -71,8 +71,8 @@ endObjectProperties
 endGroup
 
 visPv "$(P)$(MP):SELECT.VAL"
-visMin "1"
-visMax "2"
+visMin "11"
+visMax "12"
 endObjectProperties
 
 # (Group)
@@ -82,7 +82,7 @@ major 4
 minor 0
 release 0
 x 10
-y 140
+y 620
 w 230
 h 40
 
@@ -95,7 +95,7 @@ major 4
 minor 0
 release 0
 x 60
-y 140
+y 620
 w 180
 h 40
 lineColor index 14
@@ -110,7 +110,7 @@ major 4
 minor 0
 release 0
 x 10
-y 140
+y 620
 w 50
 h 40
 lineColor index 14
@@ -121,8 +121,8 @@ endObjectProperties
 endGroup
 
 visPv "$(P)$(MP):SELECT.VAL"
-visMin "2"
-visMax "3"
+visMin "11"
+visMax "12"
 endObjectProperties
 
 # (Group)
@@ -132,7 +132,7 @@ major 4
 minor 0
 release 0
 x 10
-y 180
+y 580
 w 230
 h 40
 
@@ -145,7 +145,7 @@ major 4
 minor 0
 release 0
 x 60
-y 180
+y 580
 w 180
 h 40
 lineColor index 14
@@ -160,7 +160,7 @@ major 4
 minor 0
 release 0
 x 10
-y 180
+y 580
 w 50
 h 40
 lineColor index 14
@@ -171,8 +171,8 @@ endObjectProperties
 endGroup
 
 visPv "$(P)$(MP):SELECT.VAL"
-visMin "3"
-visMax "4"
+visMin "11"
+visMax "12"
 endObjectProperties
 
 # (Group)
@@ -182,7 +182,7 @@ major 4
 minor 0
 release 0
 x 10
-y 220
+y 540
 w 230
 h 40
 
@@ -195,7 +195,7 @@ major 4
 minor 0
 release 0
 x 60
-y 220
+y 540
 w 180
 h 40
 lineColor index 14
@@ -210,7 +210,7 @@ major 4
 minor 0
 release 0
 x 10
-y 220
+y 540
 w 50
 h 40
 lineColor index 14
@@ -221,308 +221,8 @@ endObjectProperties
 endGroup
 
 visPv "$(P)$(MP):SELECT.VAL"
-visMin "4"
-visMax "5"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 260
-w 230
-h 40
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 60
-y 260
-w 180
-h 40
-lineColor index 14
-fill
-fillColor index 4
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 260
-w 50
-h 40
-lineColor index 14
-fill
-fillColor index 48
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(MP):SELECT.VAL"
-visMin "5"
-visMax "6"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 300
-w 230
-h 40
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 60
-y 300
-w 180
-h 40
-lineColor index 14
-fill
-fillColor index 4
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 300
-w 50
-h 40
-lineColor index 14
-fill
-fillColor index 48
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(MP):SELECT.VAL"
-visMin "6"
-visMax "7"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 340
-w 230
-h 40
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 60
-y 340
-w 180
-h 40
-lineColor index 14
-fill
-fillColor index 4
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 340
-w 50
-h 40
-lineColor index 14
-fill
-fillColor index 48
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(MP):SELECT.VAL"
-visMin "7"
-visMax "8"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 380
-w 230
-h 40
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 60
-y 380
-w 180
-h 40
-lineColor index 14
-fill
-fillColor index 4
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 380
-w 50
-h 40
-lineColor index 14
-fill
-fillColor index 48
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(MP):SELECT.VAL"
-visMin "8"
-visMax "9"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 420
-w 230
-h 40
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 60
-y 420
-w 180
-h 40
-lineColor index 14
-fill
-fillColor index 4
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 420
-w 50
-h 40
-lineColor index 14
-fill
-fillColor index 48
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(MP):SELECT.VAL"
-visMin "9"
-visMax "10"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 460
-w 230
-h 40
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 60
-y 460
-w 180
-h 40
-lineColor index 14
-fill
-fillColor index 4
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 460
-w 50
-h 40
-lineColor index 14
-fill
-fillColor index 48
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(MP):SELECT.VAL"
-visMin "10"
-visMax "11"
+visMin "11"
+visMax "12"
 endObjectProperties
 
 # (Group)
@@ -582,6 +282,506 @@ major 4
 minor 0
 release 0
 x 10
+y 460
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 460
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 460
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "10"
+visMax "11"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 420
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 420
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 420
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "9"
+visMax "10"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 380
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 380
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 380
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "8"
+visMax "9"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 340
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 340
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 340
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "7"
+visMax "8"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 300
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 300
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 300
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "6"
+visMax "7"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 260
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 260
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 260
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "5"
+visMax "6"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 220
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 220
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 220
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "4"
+visMax "5"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 180
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 180
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 180
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "3"
+visMax "4"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 140
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 140
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 140
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "2"
+visMax "3"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 100
+w 230
+h 40
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 100
+w 180
+h 40
+lineColor index 14
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 100
+w 50
+h 40
+lineColor index 14
+fill
+fillColor index 48
+endObjectProperties
+
+endGroup
+
+visPv "$(P)$(MP):SELECT.VAL"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
 y 60
 w 230
 h 40
@@ -632,7 +832,7 @@ major 4
 minor 0
 release 0
 x 145
-y 550
+y 710
 w 25
 h 25
 fgColor index 25
@@ -648,191 +848,6 @@ offLabel "O"
 3d
 useEnumNumeric
 font "arial-medium-r-18.0"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 60
-w 230
-h 480
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 100
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 500
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 460
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 420
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 380
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 340
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 300
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 260
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 220
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 180
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 140
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 60
-w 230
-h 40
-lineColor index 14
-fillColor index 3
-endObjectProperties
-
-endGroup
-
 endObjectProperties
 
 # (Rectangle)
@@ -858,7 +873,7 @@ release 0
 x 10
 y 40
 w 50
-h 500
+h 660
 lineColor index 14
 fillColor index 3
 endObjectProperties
@@ -1346,7 +1361,7 @@ major 4
 minor 0
 release 0
 x 175
-y 550
+y 710
 w 70
 h 25
 fgColor index 46
@@ -1493,7 +1508,7 @@ major 4
 minor 1
 release 0
 x 10
-y 550
+y 710
 w 130
 h 25
 font "arial-medium-r-12.0"
@@ -1511,10 +1526,403 @@ major 4
 minor 0
 release 0
 x 150
-y 555
+y 715
 w 15
 h 15
 file "refresh.png"
 uniformSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 545
+w 40
+h 35
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "13"
+}
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 65
+y 545
+w 170
+h 35
+controlPv "$(P)$(MP):SELECT.TVST"
+fgColor index 14
+fgAlarm
+bgColor index 2
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 585
+w 40
+h 35
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "14"
+}
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 65
+y 585
+w 170
+h 35
+controlPv "$(P)$(MP):SELECT.TTST"
+fgColor index 14
+fgAlarm
+bgColor index 2
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 625
+w 40
+h 35
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "15"
+}
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 65
+y 625
+w 170
+h 35
+controlPv "$(P)$(MP):SELECT.FTST"
+fgColor index 14
+fgAlarm
+bgColor index 2
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 665
+w 40
+h 35
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "16"
+}
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 65
+y 665
+w 170
+h 35
+controlPv "$(P)$(MP):SELECT.FFST"
+fgColor index 14
+fgAlarm
+bgColor index 2
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 60
+w 230
+h 640
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 60
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 100
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 140
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 260
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 220
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 180
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 300
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 340
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 380
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 420
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 460
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 580
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 540
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 500
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 620
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 660
+w 230
+h 40
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+endGroup
+
 endObjectProperties
 

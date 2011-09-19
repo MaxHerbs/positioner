@@ -442,7 +442,7 @@ record(ao, "$(P)$(Q):VALM") {
 record(ao, "$(P)$(Q):SETM") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALM.VAL PP")
-  field(DOL, "$(P)$(motor).RBV")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
@@ -459,7 +459,7 @@ record(ao, "$(P)$(Q):VALN") {
 record(ao, "$(P)$(Q):SETN") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALN.VAL PP")
-  field(DOL, "$(P)$(motor).RBV")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
@@ -476,7 +476,7 @@ record(ao, "$(P)$(Q):VALO") {
 record(ao, "$(P)$(Q):SETO") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALO.VAL PP")
-  field(DOL, "$(P)$(motor).RBV")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 
@@ -493,7 +493,7 @@ record(ao, "$(P)$(Q):VALP") {
 record(ao, "$(P)$(Q):SETP") {
   field(DESC, "Set VALA")
   field(OUT, "$(P)$(Q):VALP.VAL PP")
-  field(DOL, "$(P)$(motor).RBV")
+  field(DOL, "$(P)$(READBACK)")
   field(OMSL, "closed_loop")
 }
 

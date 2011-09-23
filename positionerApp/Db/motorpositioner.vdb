@@ -375,9 +375,6 @@ record(sel, "$(P)$(Q):SEL2") {
   field(EGU, "$(EGU)")
 }
 
-# This record contains the list of positions for motor.
-# The multipositioner writes to the SELN field to select one.
-#% autosave 0 VAL
 record(sel, "$(P)$(Q):SEL1") {
   field(DESC, "$(DESC)")
   field(FLNK, "$(P)$(Q):SEL1COPY PP")
@@ -405,6 +402,9 @@ record(calcout, "$(P)$(Q):SELCALC2") {
   field(OCAL, "A-12")
 }
 
+# This record contains the list of positions for motor.
+# The multipositioner writes to the VAL field to select one.
+#% autosave 0 VAL
 record(longout, "$(P)$(Q):SEL") {
   field(DESC, "$(DESC)")
   field(FLNK, "$(P)$(Q):SELCALC1")
@@ -426,6 +426,7 @@ record(ao, "$(P)$(Q):SEL2COPY") {
   field(EGU, "$(EGU)")
 }
 
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALM") {
   field(DESC, "First position")
   field(DTYP, "Soft Channel")
@@ -443,6 +444,7 @@ record(ao, "$(P)$(Q):SETM") {
   field(OMSL, "closed_loop")
 }
 
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALN") {
   field(DESC, "Second position")
   field(DTYP, "Soft Channel")
@@ -460,6 +462,7 @@ record(ao, "$(P)$(Q):SETN") {
   field(OMSL, "closed_loop")
 }
 
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALO") {
   field(DESC, "Third position")
   field(DTYP, "Soft Channel")
@@ -477,6 +480,7 @@ record(ao, "$(P)$(Q):SETO") {
   field(OMSL, "closed_loop")
 }
 
+#% autosave 2 VAL
 record(ao, "$(P)$(Q):VALP") {
   field(DESC, "Fourth position")
   field(DTYP, "Soft Channel")

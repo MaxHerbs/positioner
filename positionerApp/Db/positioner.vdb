@@ -4,51 +4,6 @@
 #! DBDEND
 
 
-# % macro, __doc__, Template for wrapping any pv as a positioner. This allows 
-# it to be controlled by a multipositioner, mapping a list of names onto a 
-# list of values for this pv
-# % macro, P, Device prefix, must match P of multipositioner
-# % macro, Q, Device suffix
-# % macro, MP, Multipositioner suffix, must match MP of multipositioner
-# % macro, DESC, Positioner description
-# % macro, SET, Pv used to set the value
-# % macro, EGU, Engineering units
-# % macro, PREC, Precision to display to
-# % macro, READBACK, Pv used to readback the value
-# % macro, STOP, STOPVAL written to this Pv to stop movement
-# % macro, STOPVAL, The value written to STOP to stop movement
-# % macro, DEADBAND, In position if abs(demand - readback) < DEADBAND
-# % macro, VALA, Positioner value for position 1
-# % macro, VALB, Positioner value for position 2
-# % macro, VALC, Positioner value for position 3
-# % macro, VALD, Positioner value for position 4
-# % macro, VALE, Positioner value for position 5
-# % macro, VALF, Positioner value for position 6
-# % macro, VALG, Positioner value for position 7
-# % macro, VALH, Positioner value for position 8
-# % macro, VALI, Positioner value for position 9
-# % macro, VALJ, Positioner value for position 10
-# % macro, VALK, Positioner value for position 11
-# % macro, VALL, Positioner value for position 12
-# % macro, VALM, Positioner value for position 13
-# % macro, VALN, Positioner value for position 14
-# % macro, VALO, Positioner value for position 15
-# % macro, VALP, Positioner value for position 16
-# % macro, pos, Positioner letter (A..H)
-# This record sets the first input link from the multipositioner.
-# This decouples the two templates.
-# The output can only be set after initialisation. Hence this runs on a scan.
-# After running once it is disabled.
-#% autosave 0 DISA
-record(stringout, "$(P)$(Q):SETINPUT") {
-  field(DESC, "Set output link from above")
-  field(DTYP, "Soft Channel")
-  field(FLNK, "$(P)$(Q):SETINPUT2")
-  field(VAL, "$(P)$(Q):SEL PP")
-  field(OUT, "$(P)$(MP):DFANOUT.OUT$(pos=A) CA")
-  field(SCAN, "1 second")
-}
-
 record(stringout, "$(P)$(Q):SETINPUT2") {
   field(DESC, "Create open gate link")
   field(DTYP, "Soft Channel")
@@ -65,7 +20,7 @@ record(bo, "$(P)$(Q):SETUPDISABLE") {
   field(DTYP, "Soft Channel")
   field(FLNK, "$(P)$(MP):FANOUT.PROC CA")
   field(VAL, "1")
-  field(OUT, "$(P)$(Q):SETINPUT.DISA")
+  field(OUT, "$(P)$(Q):SETINPUT1.DISA")
 }
 
 #% autosave 2 VAL
@@ -501,16 +456,52 @@ record(ao, "$(P)$(Q):SETP") {
   field(OMSL, "closed_loop")
 }
 
+# % macro, __doc__, Template for wrapping any pv as a positioner. This allows 
+# it to be controlled by a multipositioner, mapping a list of names onto a 
+# list of values for this pv
+# % macro, P, Device prefix, must match P of multipositioner
+# % macro, Q, Device suffix
+# % macro, MP, Multipositioner suffix, must match MP of multipositioner
+# % macro, DESC, Positioner description
+# % macro, SET, Pv used to set the value
+# % macro, EGU, Engineering units
+# % macro, PREC, Precision to display to
+# % macro, READBACK, Pv used to readback the value
+# % macro, STOP, STOPVAL written to this Pv to stop movement
+# % macro, STOPVAL, The value written to STOP to stop movement
+# % macro, DEADBAND, In position if abs(demand - readback) < DEADBAND
+# % macro, VALA, Positioner value for position 1
+# % macro, VALB, Positioner value for position 2
+# % macro, VALC, Positioner value for position 3
+# % macro, VALD, Positioner value for position 4
+# % macro, VALE, Positioner value for position 5
+# % macro, VALF, Positioner value for position 6
+# % macro, VALG, Positioner value for position 7
+# % macro, VALH, Positioner value for position 8
+# % macro, VALI, Positioner value for position 9
+# % macro, VALJ, Positioner value for position 10
+# % macro, VALK, Positioner value for position 11
+# % macro, VALL, Positioner value for position 12
+# % macro, VALM, Positioner value for position 13
+# % macro, VALN, Positioner value for position 14
+# % macro, VALO, Positioner value for position 15
+# % macro, VALP, Positioner value for position 16
+# % macro, pos, Positioner letter (A..H)
+# This record sets the first input link from the multipositioner.
+# This decouples the two templates.
+# The output can only be set after initialisation. Hence this runs on a scan.
+# After running once it is disabled.
+record(stringout, "$(P)$(Q):SETINPUT1") {
+  field(DESC, "Set output link from above")
+  field(DTYP, "Soft Channel")
+  field(FLNK, "$(P)$(Q):SETINPUT2")
+  field(VAL, "$(P)$(Q):SEL PP")
+  field(OUT, "$(P)$(MP):DFANOUTA.OUT$(pos=A) CA")
+  field(SCAN, "1 second")
+}
+
 #! Further lines contain data used by VisualDCT
-#! View(2109,1444,1.0)
-#! Record("$(P)$(Q):SETINPUT",760,1140,0,0,"$(P)$(Q):SETINPUT")
-#! Field("$(P)$(Q):SETINPUT.OUT",16777215,1,"$(P)$(Q):SETINPUT.OUT")
-#! Link("$(P)$(Q):SETINPUT.OUT","$(P)$(Q):SETINPUT/OUT1")
-#! Field("$(P)$(Q):SETINPUT.FLNK",16777215,1,"$(P)$(Q):SETINPUT.FLNK")
-#! Link("$(P)$(Q):SETINPUT.FLNK","$(P)$(Q):SETINPUT2")
-#! Field("$(P)$(Q):SETINPUT.DISA",16777215,1,"$(P)$(Q):SETINPUT.DISA")
-#! Connector("$(P)$(Q):SETINPUT/OUT1","$(P)$(Q):SETINPUT/OUT",980,1185,16777215,"",0)
-#! Connector("$(P)$(Q):SETINPUT/OUT",null,2280,1080,16777215,"",2)
+#! View(415,815,1.0)
 #! Record("$(P)$(Q):SETINPUT2",1020,1154,0,0,"$(P)$(Q):SETINPUT2")
 #! Field("$(P)$(Q):SETINPUT2.OUT",16777215,1,"$(P)$(Q):SETINPUT2.OUT")
 #! Link("$(P)$(Q):SETINPUT2.OUT","$(P)$(Q):SETINPUT2/OUT1")
@@ -522,7 +513,7 @@ record(ao, "$(P)$(Q):SETP") {
 #! Field("$(P)$(Q):SETUPDISABLE.FLNK",16777215,1,"$(P)$(Q):SETUPDISABLE.FLNK")
 #! Link("$(P)$(Q):SETUPDISABLE.FLNK","$(P)$(Q):SETUPDISABLE/FLNK")
 #! Field("$(P)$(Q):SETUPDISABLE.OUT",16777215,0,"$(P)$(Q):SETUPDISABLE.OUT")
-#! Link("$(P)$(Q):SETUPDISABLE.OUT","$(P)$(Q):SETINPUT.DISA")
+#! Link("$(P)$(Q):SETUPDISABLE.OUT","$(P)$(Q):SETINPUT1.DISA")
 #! Connector("$(P)$(Q):SETUPDISABLE/FLNK",null,2280,1180,16777215,"",2)
 #! Record("$(P)$(Q):VALA",1900,1466,0,1,"$(P)$(Q):VALA")
 #! Field("$(P)$(Q):VALA.VAL",16777215,0,"$(P)$(Q):VALA.VAL")
@@ -801,3 +792,11 @@ record(ao, "$(P)$(Q):SETP") {
 #! TextBox(TB3,2340,2480,2540,2540,0,"Dialog",20,1,16777215,"Outputs to multipositioner",null)
 #! TextBox(TB2,760,1400,1200,1440,0,"Dialog",20,1,16777215,"Inputs from template and set buttons",null)
 #! TextBox(TB1,2340,1540,2520,1600,0,"Dialog",20,1,16777215,"Inputs from multipositioner",null)
+#! Record("$(P)$(Q):SETINPUT1",760,1140,0,0,"$(P)$(Q):SETINPUT1")
+#! Field("$(P)$(Q):SETINPUT1.OUT",16777215,1,"$(P)$(Q):SETINPUT1.OUT")
+#! Link("$(P)$(Q):SETINPUT1.OUT","$(P)$(Q):SETINPUT/OUT1")
+#! Field("$(P)$(Q):SETINPUT1.FLNK",16777215,1,"$(P)$(Q):SETINPUT1.FLNK")
+#! Link("$(P)$(Q):SETINPUT1.FLNK","$(P)$(Q):SETINPUT2")
+#! Field("$(P)$(Q):SETINPUT1.DISA",16777215,1,"$(P)$(Q):SETINPUT1.DISA")
+#! Connector("$(P)$(Q):SETINPUT/OUT1","$(P)$(Q):SETINPUT/OUT",980,1185,16777215,"",0)
+#! Connector("$(P)$(Q):SETINPUT/OUT",null,2280,1080,16777215,"",2)

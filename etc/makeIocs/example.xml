@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
-	<tpmac.GeoBrick IP="172.23.111.111" name="BRICK1"/>
+	<tpmac.pmacAsynIPPort IP="172.23.243.164" name="BRICK1port"/>
+	<tpmac.GeoBrick Port="BRICK1port" name="BRICK1"/>
 	<motor.basic_asyn_motor ADDR="1" DESC="Test motor 1" DHLM="1000" DLLM="-1000" EGU="mm" M=":M1" MRES="0.001" P="TESTPOS" PORT="BRICK1" PREC="3" TWV="0.1" VELO="1" name="M1"/>
 	<motor.basic_asyn_motor ADDR="2" DESC="Test motor 2" DHLM="1000" DLLM="-1000" EGU="mm" M=":M2" MRES="0.001" P="TESTPOS" PORT="BRICK1" PREC="3" TWV="0.1" VELO="1" name="M2"/>
 	<positioner.multipositioner DESC="Test Positioner" MP=":MP" P="TESTPOS" STRA="POS 1" STRB="POS 2" STRC="POS 3" name="MP"/>

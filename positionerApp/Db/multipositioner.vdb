@@ -84,7 +84,6 @@ record(mbbo, "$(P)$(MP):SELECT") {
 
 # Open a gate on each positioner.
 # The outlinks are filled by the positioners.
-#% autosave 0 OUTA OUTB OUTC OUTD OUTE OUTF OUTG OUTH
 record(dfanout, "$(P)$(MP):SFANOUT") {
   field(DESC, "Fanout start motion")
   field(SELM, "All")
@@ -133,7 +132,6 @@ record(seq, "$(P)$(MP):FANOUT2") {
   field(LNK2, "$(P)$(MP):DFANOUTA.PROC PP MS")
 }
 
-#% autosave 0 INPA INPB INPC INPD INPE INPF INPG INPH
 #% gdatag,pv,ro,$(gda_name=),ERROR,Error Indicator,<pv>.K
 record(transform, "$(P)$(MP):ERROR") {
   field(DESC, "Errors from positioners")
@@ -153,7 +151,6 @@ record(transform, "$(P)$(MP):ERROR") {
 
 # Check if value has changed from previous call.
 # This stops infinite loops when passing MS back
-# % autosave 0 VAL
 record(calcout, "$(P)$(MP):GATE") {
   field(DESC, "Stop repeated output")
   field(DTYP, "Soft Channel")
@@ -170,7 +167,6 @@ record(calcout, "$(P)$(MP):GATE") {
 
 # Stores last selected value. This enables the gate record to check if the value has changed.
 # Initially set to -1 to ensure first value is selected correctly.
-#% autosave 0 VAL
 record(longout, "$(P)$(MP):VALUE") {
   field(DESC, "Value selected")
   field(DTYP, "Soft Channel")
@@ -243,7 +239,6 @@ record(seq, "$(P)$(MP):SETERROR1") {
 # 0 = Undefined
 # 1 = Normal
 # 2 = Motor
-#% autosave 0 A B C D E F G H
 record(calcout, "$(P)$(MP):TYPE") {
   field(CALC, "A&B&C&D&E&F&G&H")
   field(A, "0")
@@ -285,7 +280,6 @@ record(calcout, "$(P)$(MP):INPOS") {
 }
 
 #% gdatag,pv,rw,$(gda_name=),STOP,Stop Button,<pv>.PROC
-#% autosave 0 OUTA OUTB OUTC OUTD OUTE OUTF OUTG OUTH
 record(dfanout, "$(P)$(MP):STOP") {
   field(DESC, "Stop all motors")
   field(VAL, "1")
@@ -300,11 +294,11 @@ record(busy, "$(P)$(MP):BUSY") {
 record(fanout, "$(P)$(MP):START") {
   field(LNK1, "$(P)$(MP):GATE PP MS")
   field(LNK2, "$(P)$(MP):BUSY")
+  field(SDIS, "$(P)$(MP):ERRPROC PP")
 }
 
 # Fans selected position number to each separate controller
 # The outlinks are filled by the positioners.
-#% autosave 0 OUTA OUTB OUTC OUTD OUTE OUTF OUTG OUTH
 record(dfanout, "$(P)$(MP):DFANOUTA") {
   field(DESC, "Fanout selection")
   field(SELM, "All")
@@ -312,8 +306,14 @@ record(dfanout, "$(P)$(MP):DFANOUTA") {
   field(OMSL, "closed_loop")
 }
 
+record(calc, "$(P)$(MP):ERRPROC") {
+  field(CALC, "A||B")
+  field(INPA, "$(P)$(MP):SETERROR1.PACT")
+  field(INPB, "$(P)$(MP):SETERROR2.PACT")
+}
+
 #! Further lines contain data used by VisualDCT
-#! View(2232,1581,1.0)
+#! View(1455,1332,1.0)
 #! Record("$(P)$(MP):SELECT",1980,1704,0,0,"$(P)$(MP):SELECT")
 #! Field("$(P)$(MP):SELECT.FLNK",16777215,1,"$(P)$(MP):SELECT.FLNK")
 #! Link("$(P)$(MP):SELECT.FLNK","$(P)$(MP):START")
@@ -334,9 +334,9 @@ record(dfanout, "$(P)$(MP):DFANOUTA") {
 #! Field("$(P)$(MP):SELECT.TTSV",16777215,0,"$(P)$(MP):SELECT.TTSV")
 #! Field("$(P)$(MP):SELECT.FTSV",16777215,0,"$(P)$(MP):SELECT.FTSV")
 #! Field("$(P)$(MP):SELECT.FFSV",16777215,0,"$(P)$(MP):SELECT.FFSV")
-#! Record("$(P)$(MP):SFANOUT",3340,1842,0,0,"$(P)$(MP):SFANOUT")
+#! Record("$(P)$(MP):SFANOUT",3340,1848,0,0,"$(P)$(MP):SFANOUT")
 #! Field("$(P)$(MP):SFANOUT.PROC",16777215,0,"$(P)$(MP):SFANOUT.PROC")
-#! Record("$(P)$(MP):FANOUT",3060,1782,0,0,"$(P)$(MP):FANOUT")
+#! Record("$(P)$(MP):FANOUT",3060,1788,0,0,"$(P)$(MP):FANOUT")
 #! Field("$(P)$(MP):FANOUT.LNK1",16777215,1,"$(P)$(MP):FANOUT.LNK1")
 #! Link("$(P)$(MP):FANOUT.LNK1","$(P)$(MP):SFANOUT")
 #! Field("$(P)$(MP):FANOUT.LNK2",16777215,1,"$(P)$(MP):FANOUT.LNK2")
@@ -418,6 +418,7 @@ record(dfanout, "$(P)$(MP):DFANOUTA") {
 #! Connector("$(P)$(MP):SETERROR2/LNK3","$(P)$(MP):SELECT.TESV",1820,2500,16777215,"",0)
 #! Connector("$(P)$(MP):SETERROR2/LNK2","$(P)$(MP):SELECT.NISV",1800,2480,16777215,"",0)
 #! Connector("$(P)$(MP):SETERROR2/LNK1","$(P)$(MP):SELECT.EISV",1780,2460,16777215,"",0)
+#! Field("$(P)$(MP):SETERROR2.PACT",16777215,1,"$(P)$(MP):SETERROR2.PACT")
 #! Record("$(P)$(MP):SELECT2",1320,2342,0,1,"$(P)$(MP):SELECT2")
 #! Field("$(P)$(MP):SELECT2.INPA",16777215,1,"$(P)$(MP):SELECT2.INPA")
 #! Link("$(P)$(MP):SELECT2.INPA","$(P)$(MP):SELECT2/INPA")
@@ -466,6 +467,7 @@ record(dfanout, "$(P)$(MP):DFANOUTA") {
 #! Connector("$(P)$(MP):SETERROR/LNK3","$(P)$(MP):SELECT.TWSV",1880,2150,16777215,"",0)
 #! Connector("$(P)$(MP):SETERROR/LNK2","$(P)$(MP):SELECT.ONSV",1900,2130,16777215,"",0)
 #! Connector("$(P)$(MP):SETERROR/LNK1","$(P)$(MP):SELECT.ZRSV",1920,2110,16777215,"",0)
+#! Field("$(P)$(MP):SETERROR1.PACT",16777215,1,"$(P)$(MP):SETERROR1.PACT")
 #! Record("$(P)$(MP):TYPE",2860,2705,0,1,"$(P)$(MP):TYPE")
 #! Record("$(P)$(MP):UPDATE",2860,2540,0,1,"$(P)$(MP):UPDATE")
 #! Record("$(P)$(MP):INPOS",2580,2525,0,1,"$(P)$(MP):INPOS")
@@ -473,11 +475,17 @@ record(dfanout, "$(P)$(MP):DFANOUTA") {
 #! Record("$(P)$(MP):STOP",3040,2542,0,1,"$(P)$(MP):STOP")
 #! Record("$(P)$(MP):BUSY",2280,2083,0,1,"$(P)$(MP):BUSY")
 #! Field("$(P)$(MP):BUSY.VAL",16777215,1,"$(P)$(MP):BUSY.VAL")
-#! Record("$(P)$(MP):START",2240,1916,0,0,"$(P)$(MP):START")
+#! Record("$(P)$(MP):START",2240,1902,0,0,"$(P)$(MP):START")
 #! Field("$(P)$(MP):START.LNK1",16777215,1,"$(P)$(MP):START.LNK1")
 #! Link("$(P)$(MP):START.LNK1","$(P)$(MP):GATE")
 #! Field("$(P)$(MP):START.LNK2",16777215,1,"$(P)$(MP):START.LNK2")
 #! Link("$(P)$(MP):START.LNK2","$(P)$(MP):BUSY")
+#! Field("$(P)$(MP):START.SDIS",16777215,0,"$(P)$(MP):START.SDIS")
+#! Link("$(P)$(MP):START.SDIS","$(P)$(MP):ERRPROC.VAL")
+#! Record("$(P)$(MP):DFANOUTA",3340,2128,0,0,"$(P)$(MP):DFANOUTA")
+#! Field("$(P)$(MP):DFANOUTA.PROC",16777215,0,"$(P)$(MP):DFANOUTA.PROC")
+#! Field("$(P)$(MP):DFANOUTA.DOL",16777215,0,"$(P)$(MP):DFANOUTA.DOL")
+#! Link("$(P)$(MP):DFANOUTA.DOL","$(P)$(MP):VALUE.VAL")
 #! Box(Box0,2220,2460,2820,2820,1,65280,null)
 #! Box(Box4,2460,1900,2980,2340,1,16711680,null)
 #! Box(Box3,760,1600,1940,2800,1,65280,null)
@@ -488,7 +496,9 @@ record(dfanout, "$(P)$(MP):DFANOUTA") {
 #! TextBox(TB3,1020,1640,1200,1680,0,"Dialog",12,1,16777215,"Calculation of error state",null)
 #! TextBox(TB2,3060,2000,3260,2020,0,"Dialog",12,1,16777215,"Record for testing of DMOV.",null)
 #! TextBox(TB1,2160,1700,2660,1740,0,"Dialog",12,1,16777215,"Take user selection and fanout to start motion and the selection to positioners\nThe positioners set the output links from the dfanouts themselves",null)
-#! Record("$(P)$(MP):DFANOUTA",3340,2128,0,0,"$(P)$(MP):DFANOUTA")
-#! Field("$(P)$(MP):DFANOUTA.PROC",16777215,0,"$(P)$(MP):DFANOUTA.PROC")
-#! Field("$(P)$(MP):DFANOUTA.DOL",16777215,0,"$(P)$(MP):DFANOUTA.DOL")
-#! Link("$(P)$(MP):DFANOUTA.DOL","$(P)$(MP):VALUE.VAL")
+#! Record("$(P)$(MP):ERRPROC",1960,1482,0,1,"$(P)$(MP):ERRPROC")
+#! Field("$(P)$(MP):ERRPROC.INPA",16777215,0,"$(P)$(MP):ERRPROC.INPA")
+#! Link("$(P)$(MP):ERRPROC.INPA","$(P)$(MP):SETERROR1.PACT")
+#! Field("$(P)$(MP):ERRPROC.INPB",16777215,0,"$(P)$(MP):ERRPROC.INPB")
+#! Link("$(P)$(MP):ERRPROC.INPB","$(P)$(MP):SETERROR2.PACT")
+#! Field("$(P)$(MP):ERRPROC.VAL",16777215,1,"$(P)$(MP):ERRPROC.VAL")

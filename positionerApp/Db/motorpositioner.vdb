@@ -18,7 +18,7 @@ record(stringout, "$(P)$(Q):SETINPUT2") {
 record(bo, "$(P)$(Q):SETUPDISABLE") {
   field(DESC, "Disable proc once done")
   field(DTYP, "Soft Channel")
-  field(FLNK, "$(P)$(MP):FANOUT.PROC CA")
+  field(FLNK, "$(P)$(Q):CALCSEL")
   field(VAL, "1")
   field(OUT, "$(P)$(Q):SETINPUT1.DISA")
 }
@@ -32,6 +32,7 @@ record(ao, "$(P)$(Q):VALA") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -43,6 +44,7 @@ record(ao, "$(P)$(Q):VALB") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -54,6 +56,7 @@ record(ao, "$(P)$(Q):VALC") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -65,6 +68,7 @@ record(ao, "$(P)$(Q):VALD") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -76,6 +80,7 @@ record(ao, "$(P)$(Q):VALE") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -87,6 +92,7 @@ record(ao, "$(P)$(Q):VALF") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -98,6 +104,7 @@ record(ao, "$(P)$(Q):VALG") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -109,6 +116,7 @@ record(ao, "$(P)$(Q):VALH") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -120,6 +128,7 @@ record(ao, "$(P)$(Q):VALI") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -131,6 +140,7 @@ record(ao, "$(P)$(Q):VALJ") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -142,6 +152,7 @@ record(ao, "$(P)$(Q):VALK") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 #% autosave 2 VAL
@@ -153,14 +164,15 @@ record(ao, "$(P)$(Q):VALL") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
-# % autosave 0 VAL
 record(ao, "$(P)$(Q):SETVALUE") {
   field(OMSL, "supervisory")
   field(PREC, "$(PREC)")
   field(OUT, "$(P)$(Q):SETVALUE2 PP")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):UPD")
 }
 
 # Takes readback and sets value field
@@ -276,12 +288,11 @@ record(stringout, "$(P)$(Q):SETINPUT3") {
   field(OUT, "$(P)$(MP):ERROR.INP$(pos) CA")
 }
 
-#% autosave 0 VAL
 record(ao, "$(P)$(Q):SETVALUE2") {
   field(PREC, "$(PREC)")
   field(OUT, "$(P)$(motor) PP")
   field(EGU, "$(EGU)")
-  field(FLNK, "$(P)$(Q):UPD")
+  field(SDIS, "$(P)$(Q):CALCSEL.PACT")
 }
 
 record(stringout, "$(P)$(Q):SETINPUT4") {
@@ -301,7 +312,7 @@ record(transform, "$(P)$(Q):UPD") {
   field(CLCE, "A")
   field(CLCF, "ABS(D-B)<=C")
   field(INPA, "$(P)$(motor).DMOV CP")
-  field(INPB, "$(P)$(Q):SETVALUE.VAL")
+  field(INPB, "$(P)$(Q):SETVALUE")
   field(INPC, "$(P)$(motor).RDBD")
   field(INPD, "$(P)$(motor).RBV CP MS")
   field(OUTE, "$(P)$(Q):DMOV PP")
@@ -363,7 +374,6 @@ record(calcout, "$(P)$(Q):SELCALC2") {
 
 # This record contains the list of positions for motor.
 # The multipositioner writes to the VAL field to select one.
-#% autosave 0 VAL
 record(longout, "$(P)$(Q):SEL") {
   field(DESC, "$(DESC)")
   field(FLNK, "$(P)$(Q):SELCALC1")
@@ -394,6 +404,7 @@ record(ao, "$(P)$(Q):VALM") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 record(ao, "$(P)$(Q):SETM") {
@@ -412,6 +423,7 @@ record(ao, "$(P)$(Q):VALN") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 record(ao, "$(P)$(Q):SETN") {
@@ -430,6 +442,7 @@ record(ao, "$(P)$(Q):VALO") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 record(ao, "$(P)$(Q):SETO") {
@@ -448,6 +461,7 @@ record(ao, "$(P)$(Q):VALP") {
   field(PINI, "YES")
   field(PREC, "$(PREC)")
   field(EGU, "$(EGU)")
+  field(FLNK, "$(P)$(Q):CALCSEL")
 }
 
 record(ao, "$(P)$(Q):SETP") {
@@ -497,8 +511,16 @@ record(stringout, "$(P)$(Q):SETINPUT1") {
   field(SCAN, "1 second")
 }
 
+record(calcout, "$(P)$(Q):CALCSEL") {
+  field(CALC, "A")
+  field(INPA, "$(P)$(MP):SELECT")
+  field(OUT, "$(P)$(Q):SEL PP")
+  field(DISV, "0")
+  field(SDIS, "$(P)$(Q):SETINPUT1.DISA")
+}
+
 #! Further lines contain data used by VisualDCT
-#! View(669,916,1.0)
+#! View(1646,919,1.0)
 #! Record("$(P)$(Q):SETINPUT2",1020,1154,0,0,"$(P)$(Q):SETINPUT2")
 #! Field("$(P)$(Q):SETINPUT2.OUT",16777215,1,"$(P)$(Q):SETINPUT2.OUT")
 #! Link("$(P)$(Q):SETINPUT2.OUT","$(P)$(Q):SETINPUT2/OUT1")
@@ -506,76 +528,101 @@ record(stringout, "$(P)$(Q):SETINPUT1") {
 #! Link("$(P)$(Q):SETINPUT2.FLNK","$(P)$(Q):SETINPUT3")
 #! Connector("$(P)$(Q):SETINPUT2/OUT1","$(P)$(Q):SETINPUT2/OUT",1240,1195,16777215,"",0)
 #! Connector("$(P)$(Q):SETINPUT2/OUT",null,2280,1100,16777215,"",2)
-#! Record("$(P)$(Q):SETUPDISABLE",2060,1174,0,0,"$(P)$(Q):SETUPDISABLE")
+#! Record("$(P)$(Q):SETUPDISABLE",2060,1194,0,0,"$(P)$(Q):SETUPDISABLE")
 #! Field("$(P)$(Q):SETUPDISABLE.FLNK",16777215,1,"$(P)$(Q):SETUPDISABLE.FLNK")
-#! Link("$(P)$(Q):SETUPDISABLE.FLNK","$(P)$(Q):SETUPDISABLE/FLNK")
+#! Link("$(P)$(Q):SETUPDISABLE.FLNK","$(P)$(Q):CALCSEL")
 #! Field("$(P)$(Q):SETUPDISABLE.OUT",16777215,0,"$(P)$(Q):SETUPDISABLE.OUT")
 #! Link("$(P)$(Q):SETUPDISABLE.OUT","$(P)$(Q):SETINPUT1.DISA")
-#! Connector("$(P)$(Q):SETUPDISABLE/FLNK",null,2280,1180,16777215,"",2)
-#! Record("$(P)$(Q):VALA",1900,1466,0,1,"$(P)$(Q):VALA")
+#! Record("$(P)$(Q):VALA",1900,1472,0,1,"$(P)$(Q):VALA")
 #! Field("$(P)$(Q):VALA.VAL",16777215,1,"$(P)$(Q):VALA.VAL")
 #! Field("$(P)$(Q):VALA.OUT",16777215,1,"$(P)$(Q):VALA.OUT")
 #! Link("$(P)$(Q):VALA.OUT","$(P)$(Q):VALA/OUT")
-#! Connector("$(P)$(Q):VALA/OUT","$(P)$(Q):SEL1.A",2180,1830,16777215,"",0)
-#! Record("$(P)$(Q):VALB",1460,1486,0,1,"$(P)$(Q):VALB")
+#! Connector("$(P)$(Q):VALA/OUT","$(P)$(Q):SEL1.A",2180,1840,16777215,"",0)
+#! Field("$(P)$(Q):VALA.FLNK",16777215,1,"$(P)$(Q):VALA.FLNK")
+#! Link("$(P)$(Q):VALA.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALB",1460,1492,0,1,"$(P)$(Q):VALB")
 #! Field("$(P)$(Q):VALB.VAL",16777215,1,"$(P)$(Q):VALB.VAL")
 #! Field("$(P)$(Q):VALB.OUT",16777215,1,"$(P)$(Q):VALB.OUT")
 #! Link("$(P)$(Q):VALB.OUT","$(P)$(Q):VALB/OUT")
-#! Connector("$(P)$(Q):VALB/OUT","$(P)$(Q):SEL1.B",2160,1850,16777215,"",0)
-#! Record("$(P)$(Q):VALC",1020,1506,0,1,"$(P)$(Q):VALC")
+#! Connector("$(P)$(Q):VALB/OUT","$(P)$(Q):SEL1.B",2160,1860,16777215,"",0)
+#! Field("$(P)$(Q):VALB.FLNK",16777215,1,"$(P)$(Q):VALB.FLNK")
+#! Link("$(P)$(Q):VALB.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALC",1020,1512,0,1,"$(P)$(Q):VALC")
 #! Field("$(P)$(Q):VALC.VAL",16777215,1,"$(P)$(Q):VALC.VAL")
 #! Field("$(P)$(Q):VALC.OUT",16777215,1,"$(P)$(Q):VALC.OUT")
 #! Link("$(P)$(Q):VALC.OUT","$(P)$(Q):VALC/OUT")
-#! Connector("$(P)$(Q):VALC/OUT","$(P)$(Q):SEL1.C",2140,1870,16777215,"",0)
-#! Record("$(P)$(Q):VALD",1900,1706,0,1,"$(P)$(Q):VALD")
+#! Connector("$(P)$(Q):VALC/OUT","$(P)$(Q):SEL1.C",2140,1880,16777215,"",0)
+#! Field("$(P)$(Q):VALC.FLNK",16777215,1,"$(P)$(Q):VALC.FLNK")
+#! Link("$(P)$(Q):VALC.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALD",1900,1712,0,1,"$(P)$(Q):VALD")
 #! Field("$(P)$(Q):VALD.VAL",16777215,1,"$(P)$(Q):VALD.VAL")
 #! Field("$(P)$(Q):VALD.OUT",16777215,1,"$(P)$(Q):VALD.OUT")
 #! Link("$(P)$(Q):VALD.OUT","$(P)$(Q):VALD/OUT")
-#! Connector("$(P)$(Q):VALD/OUT","$(P)$(Q):SEL1.D",2120,1980,16777215,"",0)
-#! Record("$(P)$(Q):VALE",1460,1726,0,1,"$(P)$(Q):VALE")
+#! Connector("$(P)$(Q):VALD/OUT","$(P)$(Q):SEL1.D",2120,1990,16777215,"",0)
+#! Field("$(P)$(Q):VALD.FLNK",16777215,1,"$(P)$(Q):VALD.FLNK")
+#! Link("$(P)$(Q):VALD.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALE",1460,1732,0,1,"$(P)$(Q):VALE")
 #! Field("$(P)$(Q):VALE.VAL",16777215,1,"$(P)$(Q):VALE.VAL")
 #! Field("$(P)$(Q):VALE.OUT",16777215,1,"$(P)$(Q):VALE.OUT")
 #! Link("$(P)$(Q):VALE.OUT","$(P)$(Q):VALE/OUT")
-#! Connector("$(P)$(Q):VALE/OUT","$(P)$(Q):SEL1.E",2100,2000,16777215,"",0)
-#! Record("$(P)$(Q):VALF",1020,1746,0,1,"$(P)$(Q):VALF")
+#! Connector("$(P)$(Q):VALE/OUT","$(P)$(Q):SEL1.E",2100,2010,16777215,"",0)
+#! Field("$(P)$(Q):VALE.FLNK",16777215,1,"$(P)$(Q):VALE.FLNK")
+#! Link("$(P)$(Q):VALE.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALF",1020,1732,0,1,"$(P)$(Q):VALF")
 #! Field("$(P)$(Q):VALF.VAL",16777215,1,"$(P)$(Q):VALF.VAL")
 #! Field("$(P)$(Q):VALF.OUT",16777215,1,"$(P)$(Q):VALF.OUT")
 #! Link("$(P)$(Q):VALF.OUT","$(P)$(Q):VALF/OUT")
+#! Field("$(P)$(Q):VALF.FLNK",16777215,1,"$(P)$(Q):VALF.FLNK")
+#! Link("$(P)$(Q):VALF.FLNK","$(P)$(Q):CALCSEL")
 #! Connector("$(P)$(Q):VALF/OUT","$(P)$(Q):SEL1.F",2080,2020,16777215,"",0)
-#! Record("$(P)$(Q):VALG",1900,1946,0,1,"$(P)$(Q):VALG")
+#! Record("$(P)$(Q):VALG",1900,1952,0,1,"$(P)$(Q):VALG")
 #! Field("$(P)$(Q):VALG.VAL",16777215,1,"$(P)$(Q):VALG.VAL")
 #! Field("$(P)$(Q):VALG.OUT",16777215,1,"$(P)$(Q):VALG.OUT")
 #! Link("$(P)$(Q):VALG.OUT","$(P)$(Q):VALG/OUT")
-#! Connector("$(P)$(Q):VALG/OUT","$(P)$(Q):SEL1.G",2120,2130,16777215,"",0)
-#! Record("$(P)$(Q):VALH",1460,1966,0,1,"$(P)$(Q):VALH")
+#! Connector("$(P)$(Q):VALG/OUT","$(P)$(Q):SEL1.G",2120,2140,16777215,"",0)
+#! Field("$(P)$(Q):VALG.FLNK",16777215,1,"$(P)$(Q):VALG.FLNK")
+#! Link("$(P)$(Q):VALG.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALH",1460,1972,0,1,"$(P)$(Q):VALH")
 #! Field("$(P)$(Q):VALH.VAL",16777215,1,"$(P)$(Q):VALH.VAL")
 #! Field("$(P)$(Q):VALH.OUT",16777215,1,"$(P)$(Q):VALH.OUT")
 #! Link("$(P)$(Q):VALH.OUT","$(P)$(Q):VALH/OUT")
-#! Connector("$(P)$(Q):VALH/OUT","$(P)$(Q):SEL1.H",2140,2150,16777215,"",0)
-#! Record("$(P)$(Q):VALI",1020,1986,0,1,"$(P)$(Q):VALI")
+#! Connector("$(P)$(Q):VALH/OUT","$(P)$(Q):SEL1.H",2140,2160,16777215,"",0)
+#! Field("$(P)$(Q):VALH.FLNK",16777215,1,"$(P)$(Q):VALH.FLNK")
+#! Link("$(P)$(Q):VALH.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALI",1020,1992,0,1,"$(P)$(Q):VALI")
 #! Field("$(P)$(Q):VALI.VAL",16777215,1,"$(P)$(Q):VALI.VAL")
 #! Field("$(P)$(Q):VALI.OUT",16777215,1,"$(P)$(Q):VALI.OUT")
 #! Link("$(P)$(Q):VALI.OUT","$(P)$(Q):VALI/OUT")
-#! Connector("$(P)$(Q):VALI/OUT","$(P)$(Q):SEL1.I",2160,2170,16777215,"",0)
-#! Record("$(P)$(Q):VALJ",1900,2186,0,1,"$(P)$(Q):VALJ")
+#! Connector("$(P)$(Q):VALI/OUT","$(P)$(Q):SEL1.I",2160,2180,16777215,"",0)
+#! Field("$(P)$(Q):VALI.FLNK",16777215,1,"$(P)$(Q):VALI.FLNK")
+#! Link("$(P)$(Q):VALI.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALJ",1900,2192,0,1,"$(P)$(Q):VALJ")
 #! Field("$(P)$(Q):VALJ.VAL",16777215,1,"$(P)$(Q):VALJ.VAL")
 #! Field("$(P)$(Q):VALJ.OUT",16777215,1,"$(P)$(Q):VALJ.OUT")
 #! Link("$(P)$(Q):VALJ.OUT","$(P)$(Q):VALJ/OUT")
-#! Connector("$(P)$(Q):VALJ/OUT","$(P)$(Q):SEL1.J",2140,2280,16777215,"",0)
-#! Record("$(P)$(Q):VALK",1460,2206,0,1,"$(P)$(Q):VALK")
+#! Connector("$(P)$(Q):VALJ/OUT","$(P)$(Q):SEL1.J",2140,2290,16777215,"",0)
+#! Field("$(P)$(Q):VALJ.FLNK",16777215,1,"$(P)$(Q):VALJ.FLNK")
+#! Link("$(P)$(Q):VALJ.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALK",1460,2212,0,1,"$(P)$(Q):VALK")
 #! Field("$(P)$(Q):VALK.VAL",16777215,1,"$(P)$(Q):VALK.VAL")
 #! Field("$(P)$(Q):VALK.OUT",16777215,1,"$(P)$(Q):VALK.OUT")
 #! Link("$(P)$(Q):VALK.OUT","$(P)$(Q):VALK/OUT")
-#! Connector("$(P)$(Q):VALK/OUT","$(P)$(Q):SEL1.K",2160,2300,16777215,"",0)
-#! Record("$(P)$(Q):VALL",1020,2226,0,1,"$(P)$(Q):VALL")
+#! Connector("$(P)$(Q):VALK/OUT","$(P)$(Q):SEL1.K",2160,2310,16777215,"",0)
+#! Field("$(P)$(Q):VALK.FLNK",16777215,1,"$(P)$(Q):VALK.FLNK")
+#! Link("$(P)$(Q):VALK.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):VALL",1020,2232,0,1,"$(P)$(Q):VALL")
 #! Field("$(P)$(Q):VALL.VAL",16777215,1,"$(P)$(Q):VALL.VAL")
 #! Field("$(P)$(Q):VALL.OUT",16777215,1,"$(P)$(Q):VALL.OUT")
 #! Link("$(P)$(Q):VALL.OUT","$(P)$(Q):VALL/OUT")
-#! Connector("$(P)$(Q):VALL/OUT","$(P)$(Q):SEL1.L",2180,2320,16777215,"",0)
-#! Record("$(P)$(Q):SETVALUE",2940,1848,0,0,"$(P)$(Q):SETVALUE")
+#! Connector("$(P)$(Q):VALL/OUT","$(P)$(Q):SEL1.L",2180,2330,16777215,"",0)
+#! Field("$(P)$(Q):VALL.FLNK",16777215,1,"$(P)$(Q):VALL.FLNK")
+#! Link("$(P)$(Q):VALL.FLNK","$(P)$(Q):CALCSEL")
+#! Record("$(P)$(Q):SETVALUE",2940,1840,0,0,"$(P)$(Q):SETVALUE")
 #! Field("$(P)$(Q):SETVALUE.OUT",16777215,1,"$(P)$(Q):SETVALUE.OUT")
 #! Link("$(P)$(Q):SETVALUE.OUT","$(P)$(Q):SETVALUE2.VAL")
 #! Field("$(P)$(Q):SETVALUE.VAL",16777215,1,"$(P)$(Q):SETVALUE.VAL")
+#! Field("$(P)$(Q):SETVALUE.FLNK",16777215,1,"$(P)$(Q):SETVALUE.FLNK")
+#! Link("$(P)$(Q):SETVALUE.FLNK","$(P)$(Q):UPD")
 #! Record("$(P)$(Q):SETA",1640,1488,0,1,"$(P)$(Q):SETA")
 #! Field("$(P)$(Q):SETA.DOL",16777215,1,"$(P)$(Q):SETA.DOL")
 #! Field("$(P)$(Q):SETA.OUT",16777215,1,"$(P)$(Q):SETA.OUT")
@@ -652,8 +699,8 @@ record(stringout, "$(P)$(Q):SETINPUT1") {
 #! Field("$(P)$(Q):SETVALUE2.VAL",16777215,0,"$(P)$(Q):SETVALUE2.VAL")
 #! Field("$(P)$(Q):SETVALUE2.OUT",16777215,1,"$(P)$(Q):SETVALUE2.OUT")
 #! Link("$(P)$(Q):SETVALUE2.OUT","$(P)$(Q):SETVALUE2/OUT")
-#! Field("$(P)$(Q):SETVALUE2.FLNK",16777215,0,"$(P)$(Q):SETVALUE2.FLNK")
-#! Link("$(P)$(Q):SETVALUE2.FLNK","$(P)$(Q):UPD")
+#! Field("$(P)$(Q):SETVALUE2.SDIS",16777215,0,"$(P)$(Q):SETVALUE2.SDIS")
+#! Link("$(P)$(Q):SETVALUE2.SDIS","$(P)$(Q):CALCSEL.PACT")
 #! Connector("$(P)$(Q):SETVALUE2/OUT",null,3460,2080,16777215,"",2)
 #! Record("$(P)$(Q):SETINPUT4",1540,1154,0,0,"$(P)$(Q):SETINPUT4")
 #! Field("$(P)$(Q):SETINPUT4.OUT",16777215,1,"$(P)$(Q):SETINPUT4.OUT")
@@ -744,38 +791,61 @@ record(stringout, "$(P)$(Q):SETINPUT1") {
 #! Link("$(P)$(Q):SEL2COPY.DOL","$(P)$(Q):SEL2.VAL")
 #! Field("$(P)$(Q):SEL2COPY.OUT",16777215,1,"$(P)$(Q):SEL2COPY.OUT")
 #! Link("$(P)$(Q):SEL2COPY.OUT","$(P)$(Q):SETVALUE.VAL")
-#! Record("$(P)$(Q):VALM",1900,2666,0,1,"$(P)$(Q):VALM")
+#! Record("$(P)$(Q):VALM",1900,2672,0,1,"$(P)$(Q):VALM")
 #! Field("$(P)$(Q):VALM.OUT",16777215,1,"$(P)$(Q):VALM.OUT")
 #! Link("$(P)$(Q):VALM.OUT","$(P)$(Q):SEL2.A")
 #! Field("$(P)$(Q):VALM.VAL",16777215,1,"$(P)$(Q):VALM.VAL")
+#! Field("$(P)$(Q):VALM.FLNK",16777215,1,"$(P)$(Q):VALM.FLNK")
+#! Link("$(P)$(Q):VALM.FLNK","$(P)$(Q):CALCSEL")
 #! Record("$(P)$(Q):SETM",1640,2688,0,1,"$(P)$(Q):SETM")
 #! Field("$(P)$(Q):SETM.OUT",16777215,1,"$(P)$(Q):SETM.OUT")
 #! Link("$(P)$(Q):SETM.OUT","$(P)$(Q):VALM.VAL")
 #! Field("$(P)$(Q):SETM.DOL",16777215,1,"$(P)$(Q):SETM.DOL")
-#! Record("$(P)$(Q):VALN",1460,2706,0,1,"$(P)$(Q):VALN")
+#! Record("$(P)$(Q):VALN",1460,2712,0,1,"$(P)$(Q):VALN")
 #! Field("$(P)$(Q):VALN.OUT",16777215,1,"$(P)$(Q):VALN.OUT")
 #! Link("$(P)$(Q):VALN.OUT","$(P)$(Q):SEL2.B")
 #! Field("$(P)$(Q):VALN.VAL",16777215,1,"$(P)$(Q):VALN.VAL")
+#! Field("$(P)$(Q):VALN.FLNK",16777215,1,"$(P)$(Q):VALN.FLNK")
+#! Link("$(P)$(Q):VALN.FLNK","$(P)$(Q):CALCSEL")
 #! Record("$(P)$(Q):SETN",1200,2728,0,1,"$(P)$(Q):SETN")
 #! Field("$(P)$(Q):SETN.OUT",16777215,1,"$(P)$(Q):SETN.OUT")
 #! Link("$(P)$(Q):SETN.OUT","$(P)$(Q):VALN.VAL")
 #! Field("$(P)$(Q):SETN.DOL",16777215,1,"$(P)$(Q):SETN.DOL")
-#! Record("$(P)$(Q):VALO",1020,2746,0,1,"$(P)$(Q):VALO")
+#! Record("$(P)$(Q):VALO",1020,2752,0,1,"$(P)$(Q):VALO")
 #! Field("$(P)$(Q):VALO.OUT",16777215,1,"$(P)$(Q):VALO.OUT")
 #! Link("$(P)$(Q):VALO.OUT","$(P)$(Q):SEL2.C")
 #! Field("$(P)$(Q):VALO.VAL",16777215,1,"$(P)$(Q):VALO.VAL")
+#! Field("$(P)$(Q):VALO.FLNK",16777215,1,"$(P)$(Q):VALO.FLNK")
+#! Link("$(P)$(Q):VALO.FLNK","$(P)$(Q):CALCSEL")
 #! Record("$(P)$(Q):SETO",760,2768,0,1,"$(P)$(Q):SETO")
 #! Field("$(P)$(Q):SETO.OUT",16777215,1,"$(P)$(Q):SETO.OUT")
 #! Link("$(P)$(Q):SETO.OUT","$(P)$(Q):VALO.VAL")
 #! Field("$(P)$(Q):SETO.DOL",16777215,1,"$(P)$(Q):SETO.DOL")
-#! Record("$(P)$(Q):VALP",1900,2946,0,1,"$(P)$(Q):VALP")
+#! Record("$(P)$(Q):VALP",1900,2952,0,1,"$(P)$(Q):VALP")
 #! Field("$(P)$(Q):VALP.OUT",16777215,1,"$(P)$(Q):VALP.OUT")
 #! Link("$(P)$(Q):VALP.OUT","$(P)$(Q):SEL2.D")
 #! Field("$(P)$(Q):VALP.VAL",16777215,1,"$(P)$(Q):VALP.VAL")
+#! Field("$(P)$(Q):VALP.FLNK",16777215,1,"$(P)$(Q):VALP.FLNK")
+#! Link("$(P)$(Q):VALP.FLNK","$(P)$(Q):CALCSEL")
 #! Record("$(P)$(Q):SETP",1640,2968,0,1,"$(P)$(Q):SETP")
 #! Field("$(P)$(Q):SETP.OUT",16777215,1,"$(P)$(Q):SETP.OUT")
 #! Link("$(P)$(Q):SETP.OUT","$(P)$(Q):VALP.VAL")
 #! Field("$(P)$(Q):SETP.DOL",16777215,1,"$(P)$(Q):SETP.DOL")
+#! Record("$(P)$(Q):SETINPUT1",760,1140,0,0,"$(P)$(Q):SETINPUT1")
+#! Field("$(P)$(Q):SETINPUT1.OUT",16777215,1,"$(P)$(Q):SETINPUT1.OUT")
+#! Link("$(P)$(Q):SETINPUT1.OUT","$(P)$(Q):SETINPUT/OUT1")
+#! Field("$(P)$(Q):SETINPUT1.FLNK",16777215,1,"$(P)$(Q):SETINPUT1.FLNK")
+#! Link("$(P)$(Q):SETINPUT1.FLNK","$(P)$(Q):SETINPUT2")
+#! Field("$(P)$(Q):SETINPUT1.DISA",16777215,1,"$(P)$(Q):SETINPUT1.DISA")
+#! Connector("$(P)$(Q):SETINPUT/OUT1","$(P)$(Q):SETINPUT/OUT",980,1185,16777215,"",0)
+#! Connector("$(P)$(Q):SETINPUT/OUT",null,2280,1080,16777215,"",2)
+#! Record("$(P)$(Q):CALCSEL",2320,1154,0,1,"$(P)$(Q):CALCSEL")
+#! Field("$(P)$(Q):CALCSEL.INPA",16777215,1,"$(P)$(Q):CALCSEL.INPA")
+#! Field("$(P)$(Q):CALCSEL.OUT",16777215,1,"$(P)$(Q):CALCSEL.OUT")
+#! Link("$(P)$(Q):CALCSEL.OUT","$(P)$(Q):SEL.VAL")
+#! Field("$(P)$(Q):CALCSEL.PACT",16777215,1,"$(P)$(Q):CALCSEL.PACT")
+#! Field("$(P)$(Q):CALCSEL.SDIS",16777215,0,"$(P)$(Q):CALCSEL.SDIS")
+#! Link("$(P)$(Q):CALCSEL.SDIS","$(P)$(Q):SETINPUT1.DISA")
 #! Box(Box0,740,1040,2460,1360,1,16777215,null)
 #! Box(Box6,2560,1560,2320,2440,1,16711680,null)
 #! Box(Box5,3440,2020,3660,2180,1,3407616,null)
@@ -788,11 +858,3 @@ record(stringout, "$(P)$(Q):SETINPUT1") {
 #! TextBox(TB3,2340,2480,2540,2540,0,"Dialog",20,1,16777215,"Outputs to multipositioner",null)
 #! TextBox(TB2,760,1420,1200,1460,0,"Dialog",20,1,16777215,"Inputs from template and set buttons",null)
 #! TextBox(TB1,2340,1560,2520,1620,0,"Dialog",20,1,16777215,"Inputs from multipositioner",null)
-#! Record("$(P)$(Q):SETINPUT1",760,1140,0,0,"$(P)$(Q):SETINPUT1")
-#! Field("$(P)$(Q):SETINPUT1.OUT",16777215,1,"$(P)$(Q):SETINPUT1.OUT")
-#! Link("$(P)$(Q):SETINPUT1.OUT","$(P)$(Q):SETINPUT/OUT1")
-#! Field("$(P)$(Q):SETINPUT1.FLNK",16777215,1,"$(P)$(Q):SETINPUT1.FLNK")
-#! Link("$(P)$(Q):SETINPUT1.FLNK","$(P)$(Q):SETINPUT2")
-#! Field("$(P)$(Q):SETINPUT1.DISA",16777215,1,"$(P)$(Q):SETINPUT1.DISA")
-#! Connector("$(P)$(Q):SETINPUT/OUT1","$(P)$(Q):SETINPUT/OUT",980,1185,16777215,"",0)
-#! Connector("$(P)$(Q):SETINPUT/OUT",null,2280,1080,16777215,"",2)

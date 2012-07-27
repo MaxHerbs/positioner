@@ -85,9 +85,9 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
-visMin "11"
-visMax "12"
+visPv "$(P)$(PS):SEL"
+visMin "15"
+visMax "16"
 endObjectProperties
 
 # (Group)
@@ -135,9 +135,9 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
-visMin "11"
-visMax "12"
+visPv "$(P)$(PS):SEL"
+visMin "14"
+visMax "15"
 endObjectProperties
 
 # (Group)
@@ -185,9 +185,9 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
-visMin "11"
-visMax "12"
+visPv "$(P)$(PS):SEL"
+visMin "13"
+visMax "14"
 endObjectProperties
 
 # (Group)
@@ -235,9 +235,9 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
-visMin "11"
-visMax "12"
+visPv "$(P)$(PS):SEL"
+visMin "12"
+visMax "13"
 endObjectProperties
 
 # (Group)
@@ -285,7 +285,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "11"
 visMax "12"
 endObjectProperties
@@ -335,7 +335,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "10"
 visMax "11"
 endObjectProperties
@@ -385,7 +385,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "9"
 visMax "10"
 endObjectProperties
@@ -435,7 +435,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "8"
 visMax "9"
 endObjectProperties
@@ -485,7 +485,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "7"
 visMax "8"
 endObjectProperties
@@ -535,7 +535,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "6"
 visMax "7"
 endObjectProperties
@@ -585,7 +585,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "5"
 visMax "6"
 endObjectProperties
@@ -635,7 +635,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "4"
 visMax "5"
 endObjectProperties
@@ -685,7 +685,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "3"
 visMax "4"
 endObjectProperties
@@ -735,7 +735,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "2"
 visMax "3"
 endObjectProperties
@@ -785,7 +785,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -835,7 +835,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(PS):SEL.SELN"
+visPv "$(P)$(PS):SEL"
 visMin "0"
 visMax "1"
 endObjectProperties

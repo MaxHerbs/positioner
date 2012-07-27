@@ -24,11 +24,11 @@ install: $(IOC_DIRS)
 
 # General rule for a Standard IOC
 $(TOP)/iocs/%: %.xml
-	dls-xml-iocbuilder.py $(DEBUG) $<
+	dls-xml-iocbuilder.py $(DEBUG) -e $<
 
 # General rule for a simulation IOC
 $(TOP)/iocs/%_sim: %.xml
-	dls-xml-iocbuilder.py $(DEBUG) --sim=linux-x86 $<
+	dls-xml-iocbuilder.py $(DEBUG) -e --sim=linux-x86 $<
 
 # Remove the generated iocs on clean
 clean:

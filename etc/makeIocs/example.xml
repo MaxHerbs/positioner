@@ -5,6 +5,8 @@
 	<motor.basic_asyn_motor ADDR="1" DESC="Test motor 1" DHLM="1000" DLLM="-1000" EGU="mm" M=":M1" MRES="0.001" P="TESTPOS" PORT="BRICK1" PREC="3" TWV="0.1" VELO="1" name="M1"/>
 	<motor.basic_asyn_motor ADDR="2" DESC="Test motor 2" DHLM="1000" DLLM="-1000" EGU="mm" M=":M2" MRES="0.001" P="TESTPOS" PORT="BRICK1" PREC="3" TWV="0.1" VELO="1" name="M2"/>
 	<positioner.multipositioner DESC="Test Positioner" MP=":MP" P="TESTPOS" STRA="POS 1" STRB="POS 2" STRC="POS 3" name="MP"/>
-	<positioner.motorpositioner DESC="Motor 1" MP="MP" PREC="3" Q=":P1" VALB="1" VALC="45" VALD="3" motor="M1"/>
+	<positioner.motorpositioner DESC="Motor 1" MP="MP" PREC="3" Q=":P1" VALA="5" VALB="1" VALC="45" VALD="3" motor="M1"/>
 	<positioner.motorpositioner DESC="Motor 2" MP="MP" PREC="5" Q=":P2" VALA="1" VALB="2" VALC="3" VALD="4" motor="M2"/>
+	<records.ao PINI="YES" VAL="0.15" record="TESTPOS:AO"/>
+	<positioner.positioner DEADBAND="0" DESC="AO positioner" EGU="mm" MP="MP" PREC="3" Q=":P3" READBACK=":AO" SET=":AO" STOP=":AO.DESC" VALA="1" VALB="2" VALC="3" VALD="4"/>
 </components>

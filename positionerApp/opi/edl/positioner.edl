@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1160
-y 170
+x 1162
+y 196
 w 360
 h 830
 font "arial-medium-r-18.0"
@@ -1111,7 +1111,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 35
 w 142
@@ -1149,7 +1149,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 97
 y 89
@@ -1174,7 +1174,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 60
 w 64
@@ -1194,10 +1194,10 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 15
 y 90
-w 74
+w 75
 h 16
 font "arial-bold-r-14.0"
 fgColor index 14
@@ -1228,7 +1228,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 275
 y 35
 w 40
@@ -1246,7 +1246,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 275
 y 60
 w 50
@@ -1266,7 +1266,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 275
 y 90
 w 43
@@ -1354,7 +1354,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 30
 y 130
 w 115
@@ -1373,7 +1373,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 165
 y 130
 w 110
@@ -1392,7 +1392,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 240
 y 130
 w 110
@@ -1412,7 +1412,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 800
 w 140
@@ -1443,7 +1443,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 195
 w 15
@@ -1462,7 +1462,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 200
@@ -1503,7 +1503,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 195
@@ -1544,7 +1544,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 235
 w 15
@@ -1563,7 +1563,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 240
@@ -1604,7 +1604,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 235
@@ -1645,7 +1645,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 275
 w 15
@@ -1664,7 +1664,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 280
@@ -1705,7 +1705,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 275
@@ -1746,7 +1746,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 315
 w 15
@@ -1765,7 +1765,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 320
@@ -1806,7 +1806,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 315
@@ -1847,7 +1847,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 355
 w 15
@@ -1866,7 +1866,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 360
@@ -1907,7 +1907,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 355
@@ -1948,7 +1948,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 395
 w 15
@@ -1967,7 +1967,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 400
@@ -2008,7 +2008,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 395
@@ -2049,7 +2049,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 435
 w 15
@@ -2068,7 +2068,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 440
@@ -2109,7 +2109,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 435
@@ -2150,7 +2150,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 475
 w 15
@@ -2169,7 +2169,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 480
@@ -2210,7 +2210,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 475
@@ -2251,7 +2251,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 515
 w 15
@@ -2270,7 +2270,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 520
@@ -2311,7 +2311,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 515
@@ -2352,7 +2352,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 555
 w 15
@@ -2371,7 +2371,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 560
@@ -2412,7 +2412,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 555
@@ -2453,7 +2453,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 595
 w 15
@@ -2472,7 +2472,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 600
@@ -2513,7 +2513,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 595
@@ -2541,7 +2541,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 130
 w 15
@@ -2574,7 +2574,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 155
 w 15
@@ -2593,7 +2593,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 160
@@ -2634,7 +2634,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 155
@@ -2661,7 +2661,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 165
 y 800
@@ -2697,7 +2697,7 @@ beginGroup
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 2
+minor 4
 release 0
 x 225
 y 55
@@ -2732,49 +2732,6 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 225
-y 85
-w 27
-h 25
-
-beginGroup
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 225
-y 85
-w 27
-h 25
-fgColor index 14
-onColor index 21
-offColor index 20
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(motor):ELOSSRC.A"
-pressValue "0"
-onLabel "ELoss"
-offLabel "ELoss"
-3d
-font "helvetica-medium-r-8.0"
-endObjectProperties
-
-endGroup
-
-visPv "$(motor):ELOSS"
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
 x 10
 y 675
 w 335
@@ -2787,7 +2744,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 675
 w 15
@@ -2806,7 +2763,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 680
@@ -2847,7 +2804,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 675
@@ -3042,7 +2999,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 635
 w 15
@@ -3061,7 +3018,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 640
@@ -3102,7 +3059,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 635
@@ -3143,7 +3100,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 715
 w 15
@@ -3162,7 +3119,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 720
@@ -3203,7 +3160,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 715
@@ -3244,7 +3201,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 10
 y 755
 w 15
@@ -3263,7 +3220,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 6
 release 0
 x 30
 y 760
@@ -3304,7 +3261,7 @@ endObjectProperties
 object activeMessageButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 300
 y 755
@@ -3395,5 +3352,155 @@ w 15
 h 660
 lineColor index 14
 fillColor index 0
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 90
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  4 1
+}
+maxValues {
+  4 2
+  5 1
+}
+controlPvs {
+  0 "$(motor).DMOV"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 90
+w 30
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 225
+y 90
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "ALoss"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&2\}($(motor):ELOSS)"
+visMin "2"
+visMax "3"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 90
+w 30
+h 20
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 225
+y 90
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "SFail"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&4\}($(motor):ELOSS)"
+visMin "4"
+visMax "5"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 225
+y 90
+w 30
+h 20
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 90
+w 28
+h 21
+fgColor index 14
+onColor index 21
+offColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(motor):ELOSSRC.A"
+pressValue "0"
+onLabel "ELoss"
+offLabel "Eloss"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(motor):ELOSS"
+visMin "1"
+visMax "2"
 endObjectProperties
 

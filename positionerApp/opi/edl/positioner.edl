@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1162
-y 196
+x 1164
+y 222
 w 360
 h 830
 font "arial-medium-r-18.0"
@@ -3499,7 +3499,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(motor):ELOSS"
+visPv "CALC\\\{A&1\}($(motor):ELOSS)"
 visMin "1"
 visMax "2"
 endObjectProperties

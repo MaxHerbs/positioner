@@ -49,6 +49,20 @@
 # Only specify if not using the builder object.
 # This associates an edm screen with the template
 # % gui, $(name=), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
+
+# This associates an edm screen with the template
+# % gui, $(name=), edm, motor.edl, motor=$(P)$(M)
+# % gui, $(name=), edmembed, motor-embed-small.edl, motor=$(P)$(M),filename=motor.edl,box-label=$(DESC)
+
+# This associates a BOY screen with the template
+#### % gui, $(name=), boydetail, motorApp_opi/positioner_detail.opi, P=$(P),M=$(M)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),M=$(M),desc=$(DESC)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),M=$(M)
+
+# This makes the component icon reflect the status and severity
+# % gui, $(name=), status, <pv>.MOVN
+# % gui, $(name=), sevr
+
 # List of names for selection by user.
 # Severity is returned via DISA.
 # DISV set to 2 to stop disabling.

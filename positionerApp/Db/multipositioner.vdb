@@ -55,9 +55,17 @@
 # % gui, $(name=), edmembed, motor-embed-small.edl, motor=$(P)$(M),filename=motor.edl,box-label=$(DESC)
 
 # This associates a BOY screen with the template
-#### % gui, $(name=), boydetail, motorApp_opi/positioner_detail.opi, P=$(P),M=$(M)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),M=$(M),desc=$(DESC)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),M=$(M)
+# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P),MP=$(MP)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),MP=$(MP),DESC=$(DESC)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),MP=$(MP),DESC=$(DESC)
+
+# This provides the list of PVs to show on the details pane
+# % gui, $(name=), demand, String A, low, <pv>.ZRST
+# % gui, $(name=), demand, Value A, low, <pv>.ZRVL
+# % gui, $(name=), demand, String B, low, <pv>.ONST
+# % gui, $(name=), demand, Value B, low, <pv>.ONVL
+# % gui, $(name=), demand, String C, low, <pv>.THST
+# % gui, $(name=), demand, Value C, low, <pv>.THVL
 
 # This makes the component icon reflect the status and severity
 # % gui, $(name=), status, <pv>.MOVN

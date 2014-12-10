@@ -5,7 +5,7 @@
     <include_parent_macros>true</include_parent_macros>
   </macros>
   <wuid>766db807:145d5b2af77:-7e28</wuid>
-  <boy_version>3.2.17.qualifier</boy_version>
+  <boy_version>4.0.103.201412041506</boy_version>
   <scripts />
   <show_ruler>true</show_ruler>
   <height>200</height>
@@ -42,7 +42,7 @@
     <scripts />
     <zoom_to_fit>false</zoom_to_fit>
     <height>66</height>
-    <name>$(desc)</name>
+    <name>$(DESC)</name>
     <scale_options>
       <width_scalable>true</width_scalable>
       <height_scalable>true</height_scalable>

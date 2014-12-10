@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
   <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
   <macros>
     <include_parent_macros>true</include_parent_macros>
   </macros>
   <wuid>766db807:145d5b2af77:-7e28</wuid>
-  <boy_version>3.2.18.qualifier</boy_version>
+  <boy_version>4.0.103.201412041506</boy_version>
   <scripts />
   <show_ruler>true</show_ruler>
   <height>200</height>
-  <name></name>
+  <name />
   <snap_to_geometry>false</snap_to_geometry>
   <show_grid>true</show_grid>
   <background_color>
-    <color red="240" green="240" blue="240" />
+    <color blue="240" green="240" red="240" />
   </background_color>
   <foreground_color>
-    <color red="192" green="192" blue="192" />
+    <color blue="192" green="192" red="192" />
   </foreground_color>
   <widget_type>Display</widget_type>
   <show_close_button>true</show_close_button>
@@ -38,6 +38,7 @@
     <visible>true</visible>
     <wuid>-304029b7:147582c1239:-7967</wuid>
     <auto_size>true</auto_size>
+    <align_to_nearest_second>false</align_to_nearest_second>
     <scripts />
     <height>20</height>
     <name>Icon</name>
@@ -48,10 +49,10 @@
       <keep_wh_ratio>false</keep_wh_ratio>
     </scale_options>
     <background_color>
-      <color red="240" green="240" blue="240" />
+      <color blue="240" green="240" red="240" />
     </background_color>
     <foreground_color>
-      <color red="192" green="192" blue="192" />
+      <color blue="192" green="192" red="192" />
     </foreground_color>
     <widget_type>Image</widget_type>
     <enabled>true</enabled>
@@ -80,20 +81,20 @@
     <border_width>1</border_width>
     <image_file>positioner_dmov 0.gif</image_file>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <actions hook="false" hook_all="true">
       <action type="OPEN_OPI_IN_VIEW">
-        <path>motor_detail.opi</path>
+        <path>positioner_detail.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
         </macros>
         <Position>1</Position>
-        <description></description>
+        <description />
       </action>
     </actions>
     <y>5</y>
-    <tooltip></tooltip>
+    <tooltip />
     <x>20</x>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
@@ -110,13 +111,13 @@
       <height_scalable>true</height_scalable>
       <keep_wh_ratio>false</keep_wh_ratio>
     </scale_options>
-    <pv_name></pv_name>
+    <pv_name />
     <foreground_color>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </foreground_color>
     <widget_type>Action Button</widget_type>
     <enabled>true</enabled>
-    <text></text>
+    <text />
     <font>
       <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
     </font>
@@ -129,9 +130,8 @@
     <toggle_button>false</toggle_button>
     <border_width>1</border_width>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
-    <alarm_pulsing>false</alarm_pulsing>
     <y>5</y>
     <actions hook="false" hook_all="false" />
     <tooltip>$(pv_name)
@@ -151,12 +151,12 @@ $(pv_value)</tooltip>
       <height_scalable>false</height_scalable>
       <keep_wh_ratio>false</keep_wh_ratio>
     </scale_options>
-    <pv_name></pv_name>
+    <pv_name>$(P)$(MP):SELECT</pv_name>
     <background_color>
-      <color red="255" green="255" blue="255" />
+      <color blue="255" green="255" red="255" />
     </background_color>
     <foreground_color>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </foreground_color>
     <widget_type>Combo</widget_type>
     <enabled>true</enabled>
@@ -168,17 +168,12 @@ $(pv_value)</tooltip>
     <border_style>0</border_style>
     <rules />
     <pv_value />
-    <items>
-      <s>Filter 1</s>
-      <s>Filter 2</s>
-      <s>Filter 3</s>
-    </items>
     <border_width>1</border_width>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <alarm_pulsing>false</alarm_pulsing>
-    <items_from_pv>false</items_from_pv>
+    <items_from_pv>true</items_from_pv>
     <actions hook="false" hook_all="false" />
     <y>0</y>
     <tooltip>$(pv_name)
@@ -187,44 +182,22 @@ $(pv_value)</tooltip>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.symbol.multistate.MultistateMonitorWidget" version="1.0.0">
     <border_alarm_sensitive>true</border_alarm_sensitive>
-    <crop_right>0</crop_right>
-    <crop_left>0</crop_left>
     <visible>true</visible>
-    <wuid>54cab30e:14759765be6:-6c48</wuid>
     <auto_size>false</auto_size>
-    <boolean_label_position>0</boolean_label_position>
     <scripts />
-    <on_color>
-      <color red="0" green="0" blue="0" />
-    </on_color>
     <height>20</height>
-    <name>Icon_1</name>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-    <stretch_to_fit>true</stretch_to_fit>
     <show_boolean_label>false</show_boolean_label>
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>true</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <off_color>
-      <color red="0" green="0" blue="0" />
-    </off_color>
-    <pv_name></pv_name>
     <background_color>
-      <color red="240" green="240" blue="240" />
+      <color blue="240" green="240" red="240" />
     </background_color>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
     <widget_type>Multistate Symbol Monitor</widget_type>
     <enabled>true</enabled>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
     <font>
       <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
     </font>
     <width>20</width>
-    <flip_horizontal>false</flip_horizontal>
+    <no_animation>false</no_animation>
     <permutation_matrix>
       <row>
         <col>1.0</col>
@@ -236,20 +209,44 @@ $(pv_value)</tooltip>
       </row>
     </permutation_matrix>
     <border_style>0</border_style>
-    <crop_top>0</crop_top>
-    <rules />
     <pv_value />
     <flip_vertical>false</flip_vertical>
     <crop_bottom>0</crop_bottom>
-    <degree>0</degree>
     <items />
     <border_width>1</border_width>
     <image_file>positioner_inpos 0.svg</image_file>
+    <items_from_pv>true</items_from_pv>
+    <crop_right>0</crop_right>
+    <crop_left>0</crop_left>
+    <wuid>54cab30e:14759765be6:-6c48</wuid>
+    <align_to_nearest_second>false</align_to_nearest_second>
+    <boolean_label_position>0</boolean_label_position>
+    <on_color>
+      <color blue="0" green="0" red="0" />
+    </on_color>
+    <name>Icon_1</name>
+    <stretch_to_fit>true</stretch_to_fit>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <off_color>
+      <color blue="0" green="0" red="0" />
+    </off_color>
+    <pv_name />
+    <foreground_color>
+      <color blue="0" green="0" red="0" />
+    </foreground_color>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <flip_horizontal>false</flip_horizontal>
+    <crop_top>0</crop_top>
+    <rules />
+    <degree>0</degree>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <alarm_pulsing>false</alarm_pulsing>
-    <items_from_pv>true</items_from_pv>
     <actions hook="false" hook_all="true">
       <action type="OPEN_OPI_IN_VIEW">
         <path>motor_summary.opi</path>
@@ -257,11 +254,11 @@ $(pv_value)</tooltip>
           <include_parent_macros>true</include_parent_macros>
         </macros>
         <Position>1</Position>
-        <description></description>
+        <description />
       </action>
     </actions>
     <y>5</y>
-    <tooltip></tooltip>
+    <tooltip />
     <x>0</x>
   </widget>
 </display>

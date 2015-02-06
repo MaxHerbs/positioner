@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
   <show_close_button>true</show_close_button>
   <rules />
@@ -19,17 +19,17 @@
     <min_height>-1</min_height>
   </auto_scale_widgets>
   <background_color>
-    <color name="Canvas" red="200" green="200" blue="200" />
+    <color blue="200" green="200" name="Canvas" red="200" />
   </background_color>
   <width>325</width>
   <x>-1</x>
-  <name></name>
+  <name />
   <grid_space>5</grid_space>
   <show_ruler>true</show_ruler>
   <y>-1</y>
   <snap_to_geometry>false</snap_to_geometry>
   <foreground_color>
-    <color red="192" green="192" blue="192" />
+    <color blue="192" green="192" red="192" />
   </foreground_color>
   <actions hook="false" hook_all="false" />
   <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
@@ -44,7 +44,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <wuid>-5154736:14b49f3f724:-7f86</wuid>
     <pv_value />
-    <text></text>
+    <text />
     <scripts />
     <border_alarm_sensitive>false</border_alarm_sensitive>
     <height>20</height>
@@ -58,12 +58,12 @@ $(pv_value)</tooltip>
     <visible>true</visible>
     <pv_name>$(P)$(M).STOP</pv_name>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <widget_type>Action Button</widget_type>
     <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
     <background_color>
-      <color name="Canvas" red="200" green="200" blue="200" />
+      <color blue="200" green="200" name="Canvas" red="200" />
     </background_color>
     <width>26</width>
     <x>45</x>
@@ -71,15 +71,15 @@ $(pv_value)</tooltip>
     <y>0</y>
     <style>0</style>
     <foreground_color>
-      <color name="Major" red="224" green="0" blue="0" />
+      <color blue="0" green="0" name="Major" red="224" />
     </foreground_color>
     <actions hook="false" hook_all="false">
       <action type="WRITE_PV">
         <pv_name>$(pv_name)</pv_name>
         <value>1</value>
         <timeout>10</timeout>
-        <confirm_message></confirm_message>
-        <description></description>
+        <confirm_message />
+        <description />
       </action>
     </actions>
     <font>
@@ -110,28 +110,28 @@ $(pv_value)</tooltip>
     <visible>true</visible>
     <pv_name>$(P)$(MP):SELECT</pv_name>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
-    <label></label>
+    <label />
     <widget_type>Menu Button</widget_type>
     <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
     <background_color>
-      <color name="Canvas" red="200" green="200" blue="200" />
+      <color blue="200" green="200" name="Canvas" red="200" />
     </background_color>
     <width>186</width>
     <x>75</x>
     <name>Select</name>
     <y>0</y>
     <foreground_color>
-      <color name="Major" red="224" green="0" blue="0" />
+      <color blue="0" green="0" name="Major" red="224" />
     </foreground_color>
     <actions hook="false" hook_all="false">
       <action type="WRITE_PV">
         <pv_name>$(pv_name)</pv_name>
         <value>1</value>
         <timeout>10</timeout>
-        <confirm_message></confirm_message>
-        <description></description>
+        <confirm_message />
+        <description />
       </action>
     </actions>
     <font>
@@ -151,7 +151,7 @@ $(pv_value)</tooltip>
     <visible>true</visible>
     <pv_name>$(P)$(MP):INPOS</pv_name>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <widget_type>LED</widget_type>
     <name>LED</name>
@@ -162,7 +162,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <wuid>-5154736:14b49f3f724:-7f79</wuid>
     <on_color>
-      <color red="0" green="255" blue="0" />
+      <color blue="0" green="255" red="0" />
     </on_color>
     <scripts />
     <border_alarm_sensitive>false</border_alarm_sensitive>
@@ -173,11 +173,11 @@ $(pv_value)</tooltip>
       <keep_wh_ratio>true</keep_wh_ratio>
     </scale_options>
     <off_color>
-      <color red="0" green="100" blue="0" />
+      <color blue="0" green="100" red="0" />
     </off_color>
     <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
     <background_color>
-      <color red="240" green="240" blue="240" />
+      <color blue="240" green="240" red="240" />
     </background_color>
     <square_led>false</square_led>
     <width>20</width>
@@ -185,7 +185,7 @@ $(pv_value)</tooltip>
     <data_type>0</data_type>
     <y>0</y>
     <foreground_color>
-      <color red="192" green="192" blue="192" />
+      <color blue="192" green="192" red="192" />
     </foreground_color>
     <font>
       <opifont.name fontName="Sans" height="10" style="0">Default</opifont.name>
@@ -194,7 +194,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
     <border_style>0</border_style>
-    <tooltip></tooltip>
+    <tooltip />
     <horizontal_alignment>1</horizontal_alignment>
     <rules />
     <enabled>true</enabled>
@@ -213,19 +213,19 @@ $(pv_value)</tooltip>
     <visible>true</visible>
     <vertical_alignment>1</vertical_alignment>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <widget_type>Label</widget_type>
     <wrap_words>false</wrap_words>
     <background_color>
-      <color red="255" green="255" blue="255" />
+      <color blue="255" green="255" red="255" />
     </background_color>
     <width>38</width>
     <x>265</x>
     <name>Label</name>
     <y>0</y>
     <foreground_color>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </foreground_color>
     <actions hook="false" hook_all="false" />
     <font>
@@ -248,7 +248,7 @@ $(pv_value)</tooltip>
     <pv_name>$(P)$(MP):DMOV</pv_name>
     <degree>0</degree>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <widget_type>Multistate Symbol Monitor</widget_type>
     <flip_horizontal>false</flip_horizontal>
@@ -282,7 +282,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <wuid>-5154736:14b49f3f724:-7f5e</wuid>
     <on_color>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </on_color>
     <scripts />
     <border_alarm_sensitive>false</border_alarm_sensitive>
@@ -294,18 +294,18 @@ $(pv_value)</tooltip>
     <crop_bottom>0</crop_bottom>
     <no_animation>false</no_animation>
     <off_color>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </off_color>
     <backcolor_alarm_sensitive>true</backcolor_alarm_sensitive>
     <background_color>
-      <color name="Canvas" red="200" green="200" blue="200" />
+      <color blue="200" green="200" name="Canvas" red="200" />
     </background_color>
     <boolean_label_position>0</boolean_label_position>
     <width>40</width>
     <x>0</x>
     <y>0</y>
     <foreground_color>
-      <color name="Black" red="0" green="0" blue="0" />
+      <color blue="0" green="0" name="Black" red="0" />
     </foreground_color>
     <crop_top>0</crop_top>
     <crop_right>0</crop_right>

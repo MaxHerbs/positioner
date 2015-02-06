@@ -55,9 +55,9 @@
 # % gui, $(name=), edmembed, motor-embed-small.edl, motor=$(P)$(M),filename=motor.edl,box-label=$(DESC)
 
 # This associates a BOY screen with the template
-# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P),MP=$(MP)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),MP=$(MP),DESC=$(DESC)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),MP=$(MP),DESC=$(DESC)
+# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P), MP=$(MP), desc=$(desc), name=$(name)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P), P=$(P), MP=$(MP), desc=$(desc), name=$(name)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P), MP=$(MP), desc=$(desc), name=$(name)
 
 # This provides the list of PVs to show on the details pane
 # % gui, $(name=), demand, String A, low, <pv>.ZRST

@@ -345,7 +345,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "P=$(P),PS=$(P2),MP=$(MP),filename=$(filename2)"
+  0 "P=$(P),PS=$(P2),MP=$(MP),filename=$(filename)"
 }
 endObjectProperties
 
@@ -371,7 +371,7 @@ displayFileName {
   0 "positioner.edl"
 }
 symbols {
-  0 "P=$(P),PS=$(P3),MP=$(MP),filename=$(filename3)"
+  0 "P=$(P),PS=$(P3),MP=$(MP),filename=$(filename)"
 }
 endObjectProperties
 

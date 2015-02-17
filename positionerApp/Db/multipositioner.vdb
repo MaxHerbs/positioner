@@ -50,10 +50,6 @@
 # This associates an edm screen with the template
 # % gui, $(name=), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
 
-# This associates an edm screen with the template
-# % gui, $(name=), edm, motor.edl, motor=$(P)$(M)
-# % gui, $(name=), edmembed, motor-embed-small.edl, motor=$(P)$(M),filename=motor.edl,box-label=$(DESC)
-
 # This associates a BOY screen with the template
 # % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P), MP=$(MP), desc=$(desc), name=$(name)
 # % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P), P=$(P), MP=$(MP), desc=$(desc), name=$(name)

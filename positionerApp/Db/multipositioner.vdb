@@ -51,17 +51,44 @@
 # % gui, $(name=), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
 
 # This associates a BOY screen with the template
-# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P), MP=$(MP), desc=$(desc), name=$(name)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P), P=$(P), MP=$(MP), desc=$(desc), name=$(name)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P), MP=$(MP), desc=$(desc), name=$(name)
+# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3)
 
 # This provides the list of PVs to show on the details pane
-# % gui, $(name=), demand, String A, low, <pv>.ZRST
-# % gui, $(name=), demand, Value A, low, <pv>.ZRVL
-# % gui, $(name=), demand, String B, low, <pv>.ONST
-# % gui, $(name=), demand, Value B, low, <pv>.ONVL
-# % gui, $(name=), demand, String C, low, <pv>.THST
-# % gui, $(name=), demand, Value C, low, <pv>.THVL
+# % gui, $(name=), demand, Name 1, <pv>.ZRST
+# % gui, $(name=), demand, Name 2, <pv>.ONST
+# % gui, $(name=), demand, Name 3, <pv>.TWST
+# % gui, $(name=), demand, Name 4, <pv>.THST
+# % gui, $(name=), demand, Name 5, <pv>.FRST
+# % gui, $(name=), demand, Name 6, <pv>.FVST
+# % gui, $(name=), demand, Name 7, <pv>.SXST
+# % gui, $(name=), demand, Name 8, <pv>.SVST
+# % gui, $(name=), demand, Name 9, <pv>.EIST
+# % gui, $(name=), demand, Name 10, <pv>.NIST
+# % gui, $(name=), demand, Name 11, <pv>.TEST
+# % gui, $(name=), demand, Name 12, <pv>.ELST
+# % gui, $(name=), demand, Name 13, <pv>.TVST
+# % gui, $(name=), demand, Name 14, <pv>.TTST
+# % gui, $(name=), demand, Name 15, <pv>.FTST
+# % gui, $(name=), demand, Name 16, <pv>.FFST
+
+# % gui, $(name=), demand, Value 1, $(P)$(P1):VALA
+# % gui, $(name=), demand, Value 2, $(P)$(P1):VALB
+# % gui, $(name=), demand, Value 3, $(P)$(P1):VALC
+# % gui, $(name=), demand, Value 4, $(P)$(P1):VALD
+# % gui, $(name=), demand, Value 5, $(P)$(P1):VALE
+# % gui, $(name=), demand, Value 6, $(P)$(P1):VALF
+# % gui, $(name=), demand, Value 7, $(P)$(P1):VALG
+# % gui, $(name=), demand, Value 8, $(P)$(P1):VALH
+# % gui, $(name=), demand, Value 9, $(P)$(P1):VALI
+# % gui, $(name=), demand, Value 10, $(P)$(P1):VALJ
+# % gui, $(name=), demand, Value 11, $(P)$(P1):VALK
+# % gui, $(name=), demand, Value 12, $(P)$(P1):VALL
+# % gui, $(name=), demand, Value 13, $(P)$(P1):VALM
+# % gui, $(name=), demand, Value 14, $(P)$(P1):VALN
+# % gui, $(name=), demand, Value 15, $(P)$(P1):VALO
+# % gui, $(name=), demand, Value 16, $(P)$(P1):VALP
 
 # This makes the component icon reflect the status and severity
 # % gui, $(name=), status, <pv>.MOVN

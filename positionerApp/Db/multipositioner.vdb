@@ -51,9 +51,9 @@
 # % gui, $(name=), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
 
 # This associates a BOY screen with the template
-# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3)
+# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),MP=$(MP),desc=$(DESC),name=$(name),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
 
 # This provides the list of PVs to show on the details pane
 # % gui, $(name=), demand, Name 1, <pv>.ZRST

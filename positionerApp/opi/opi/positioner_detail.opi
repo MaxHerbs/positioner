@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
   <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
   <macros>
@@ -13,10 +13,10 @@
   <snap_to_geometry>true</snap_to_geometry>
   <show_grid>true</show_grid>
   <background_color>
-    <color name="Canvas" red="200" green="200" blue="200" />
+    <color blue="200" green="200" name="Canvas" red="200" />
   </background_color>
   <foreground_color>
-    <color red="192" green="192" blue="192" />
+    <color blue="192" green="192" red="192" />
   </foreground_color>
   <widget_type>Display</widget_type>
   <show_close_button>true</show_close_button>
@@ -37,7 +37,7 @@
     <x>0</x>
     <row_5_row_height>27</row_5_row_height>
     <color_odd_row_back>
-      <color name="Controller: BG" red="205" green="205" blue="205" />
+      <color blue="205" green="205" name="Controller: BG" red="205" />
     </color_odd_row_back>
     <row_1_row_mode>3</row_1_row_mode>
     <row_19_row_mode>0</row_19_row_mode>
@@ -84,103 +84,103 @@
     <row_7_row_mode>0</row_7_row_mode>
     <row_12_row_level>0</row_12_row_level>
     <color_odd_row_fore>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </color_odd_row_fore>
     <row_26_row_name>Value 8</row_26_row_name>
     <row_33_row_mode>0</row_33_row_mode>
     <row_12_row_mode>0</row_12_row_mode>
     <rules>
-      <rule name="Set Value 1 Name" prop_id="row_19_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_19_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.ZRST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_20_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_20_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.ONST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_21_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_21_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.TWST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_22_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_22_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.THST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_23_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_23_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.FRST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_24_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_24_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.FVST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_25_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_25_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.SXST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_26_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_26_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.SVST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_27_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_27_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.EIST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_28_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_28_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.NIST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_29_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_29_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.TEST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_30_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_30_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.ELST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_31_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_31_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.TVST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_32_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_32_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.TTST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_33_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_33_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
         <pv trig="true">$(P)$(MP):SELECT.FTST</pv>
       </rule>
-      <rule name="Set Value 1 Name" prop_id="row_34_row_name" out_exp="true">
+      <rule name="Set Value 1 Name" out_exp="true" prop_id="row_34_row_name">
         <exp bool_exp="true">
           <value>pvStr0</value>
         </exp>
@@ -194,7 +194,7 @@
     <row_16_row_level>0</row_16_row_level>
     <row_4_row_mode>0</row_4_row_mode>
     <name>Detail Panel</name>
-    <row_0_row_tooltip></row_0_row_tooltip>
+    <row_0_row_tooltip />
     <row_11_row_height>27</row_11_row_height>
     <row_26_row_mode>0</row_26_row_mode>
     <row_27_row_name>Value 9</row_27_row_name>
@@ -206,13 +206,13 @@
     <row_6_row_name>Name 5</row_6_row_name>
     <row_22_row_mode>0</row_22_row_mode>
     <color_select_back>
-      <color red="217" green="217" blue="255" />
+      <color blue="255" green="217" red="217" />
     </color_select_back>
     <row_10_row_tooltip>Name 9</row_10_row_tooltip>
     <row_33_row_tooltip>Value 15</row_33_row_tooltip>
     <row_2_row_name>Name 1</row_2_row_name>
     <color_even_row_fore>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </color_even_row_fore>
     <row_28_row_height>27</row_28_row_height>
     <row_9_row_mode>0</row_9_row_mode>
@@ -237,7 +237,7 @@
     <row_23_row_mode>0</row_23_row_mode>
     <row_29_row_name>Value 11</row_29_row_name>
     <row_19_row_height>27</row_19_row_height>
-    <row_18_row_tooltip></row_18_row_tooltip>
+    <row_18_row_tooltip />
     <row_14_row_mode>0</row_14_row_mode>
     <row_28_row_mode>0</row_28_row_mode>
     <row_17_row_name>Name 16</row_17_row_name>
@@ -292,7 +292,7 @@
     <row_32_row_tooltip>Value 14</row_32_row_tooltip>
     <row_2_row_height>27</row_2_row_height>
     <border_color>
-      <color red="0" green="128" blue="255" />
+      <color blue="255" green="128" red="0" />
     </border_color>
     <row_4_row_level>0</row_4_row_level>
     <row_9_row_height>27</row_9_row_height>
@@ -307,7 +307,7 @@
     <row_8_row_level>0</row_8_row_level>
     <row_4_row_tooltip>Name 3</row_4_row_tooltip>
     <color_select_fore>
-      <color red="0" green="0" blue="0" />
+      <color blue="0" green="0" red="0" />
     </color_select_fore>
     <row_20_row_name>Value 2</row_20_row_name>
     <row_30_row_level>0</row_30_row_level>
@@ -315,7 +315,7 @@
     <row_10_row_mode>0</row_10_row_mode>
     <row_23_row_height>27</row_23_row_height>
     <row_9_row_level>0</row_9_row_level>
-    <tooltip></tooltip>
+    <tooltip />
     <row_27_row_mode>0</row_27_row_mode>
     <row_16_row_tooltip>Name 15</row_16_row_tooltip>
     <border_style>0</border_style>
@@ -350,11 +350,11 @@
     <row_13_row_mode>0</row_13_row_mode>
     <row_10_row_name>Name 9</row_10_row_name>
     <color_even_row_back>
-      <color name="Canvas" red="200" green="200" blue="200" />
+      <color blue="200" green="200" name="Canvas" red="200" />
     </color_even_row_back>
     <row_21_row_level>0</row_21_row_level>
-    <row_0_row_name></row_0_row_name>
-    <row_1_row_tooltip></row_1_row_tooltip>
+    <row_0_row_name />
+    <row_1_row_tooltip />
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -372,10 +372,10 @@
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -389,12 +389,12 @@
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>0</y>
       <actions hook="false" hook_all="false" />
       <x>0</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
         <macros>
           <include_parent_macros>true</include_parent_macros>
@@ -404,7 +404,7 @@
         <resize_behaviour>1</resize_behaviour>
         <wuid>2d0789c9:14ba0fba74e:-7eca</wuid>
         <scripts />
-        <height>58</height>
+        <height>55</height>
         <name>auto(boyembed)</name>
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -413,27 +413,27 @@
         </scale_options>
         <opi_file>positioner_embed_box.opi</opi_file>
         <background_color>
-          <color red="200" green="200" blue="200" />
+          <color blue="200" green="200" red="200" />
         </background_color>
         <foreground_color>
-          <color name="Text: FG" red="0" green="0" blue="0" />
+          <color blue="0" green="0" name="Text: FG" red="0" />
         </foreground_color>
-        <group_name></group_name>
+        <group_name />
         <widget_type>Linking Container</widget_type>
         <enabled>true</enabled>
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
-        <width>363</width>
+        <width>360</width>
         <border_style>0</border_style>
         <rules />
         <border_width>1</border_width>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <actions hook="false" hook_all="false" />
         <y>0</y>
-        <tooltip></tooltip>
+        <tooltip />
         <x>0</x>
       </widget>
     </widget>
@@ -454,10 +454,10 @@
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -471,12 +471,12 @@
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>58</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <macros>
@@ -495,10 +495,10 @@
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -512,12 +512,12 @@
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>78</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -528,11 +528,11 @@
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -557,17 +557,17 @@
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.ZRST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -593,10 +593,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -610,12 +610,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>105</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -626,11 +626,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -655,17 +655,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.ONST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -691,10 +691,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -708,12 +708,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>132</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -724,11 +724,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -753,17 +753,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.TWST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -789,10 +789,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -806,12 +806,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>159</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -822,11 +822,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -851,17 +851,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.THST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -887,10 +887,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -904,12 +904,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>186</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -920,11 +920,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -949,17 +949,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.FRST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -985,10 +985,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1002,12 +1002,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>213</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1018,11 +1018,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1047,17 +1047,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.FVST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1083,10 +1083,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1100,12 +1100,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>240</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1116,11 +1116,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1145,17 +1145,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.SXST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1181,10 +1181,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1198,12 +1198,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>267</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1214,11 +1214,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1243,17 +1243,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.SVST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1279,10 +1279,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1296,12 +1296,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>294</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1312,11 +1312,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1341,17 +1341,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.EIST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1377,10 +1377,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1394,12 +1394,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>321</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1410,11 +1410,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1439,17 +1439,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.NIST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1475,10 +1475,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1492,12 +1492,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>348</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1508,11 +1508,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1537,17 +1537,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.TEST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1573,10 +1573,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1590,12 +1590,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>375</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1606,11 +1606,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1635,17 +1635,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.ELST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1671,10 +1671,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1688,12 +1688,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>402</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1704,11 +1704,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1733,17 +1733,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.TVST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1769,10 +1769,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1786,12 +1786,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>429</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1802,11 +1802,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1831,17 +1831,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.TTST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1867,10 +1867,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1884,12 +1884,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>456</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1900,11 +1900,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -1929,17 +1929,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.FTST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -1965,10 +1965,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -1982,12 +1982,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>483</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -1998,11 +1998,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2027,17 +2027,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(MP):SELECT.FFST</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2063,10 +2063,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2080,12 +2080,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>510</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <macros>
@@ -2104,10 +2104,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2121,12 +2121,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>530</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2137,11 +2137,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2166,17 +2166,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALA</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2202,10 +2202,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2219,12 +2219,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>557</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2235,11 +2235,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2264,17 +2264,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALB</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2300,10 +2300,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2317,12 +2317,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>584</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2333,11 +2333,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2362,17 +2362,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALC</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2398,10 +2398,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2415,12 +2415,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>611</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2431,11 +2431,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2460,17 +2460,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALD</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2496,10 +2496,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2513,12 +2513,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>638</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2529,11 +2529,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2558,17 +2558,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALE</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2594,10 +2594,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2611,12 +2611,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>665</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2627,11 +2627,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2656,17 +2656,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALF</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2692,10 +2692,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2709,12 +2709,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>692</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2725,11 +2725,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2754,17 +2754,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALG</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2790,10 +2790,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2807,12 +2807,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>719</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2823,11 +2823,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2852,17 +2852,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALH</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2888,10 +2888,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -2905,12 +2905,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>746</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -2921,11 +2921,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -2950,17 +2950,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALI</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -2986,10 +2986,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -3003,12 +3003,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>773</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -3019,11 +3019,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -3048,17 +3048,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALJ</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -3084,10 +3084,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -3101,12 +3101,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>800</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -3117,11 +3117,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -3146,17 +3146,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALK</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -3182,10 +3182,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -3199,12 +3199,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>827</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -3215,11 +3215,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -3244,17 +3244,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALL</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -3280,10 +3280,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -3297,12 +3297,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>854</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -3313,11 +3313,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -3342,17 +3342,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALM</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -3378,10 +3378,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color name="Text: FG" red="0" green="0" blue="0" />
+        <color blue="0" green="0" name="Text: FG" red="0" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -3395,12 +3395,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>881</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -3411,11 +3411,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -3440,17 +3440,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALN</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -3476,10 +3476,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color red="192" green="192" blue="192" />
+        <color blue="192" green="192" red="192" />
       </foreground_color>
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color blue="205" green="205" red="205" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -3493,12 +3493,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>908</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -3509,11 +3509,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -3538,17 +3538,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALO</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />
@@ -3574,10 +3574,10 @@ $(pv_value)</tooltip>
       <transparent>false</transparent>
       <show_scrollbar>false</show_scrollbar>
       <foreground_color>
-        <color red="192" green="192" blue="192" />
+        <color blue="192" green="192" red="192" />
       </foreground_color>
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color blue="200" green="200" red="200" />
       </background_color>
       <enabled>true</enabled>
       <widget_type>Grouping Container</widget_type>
@@ -3591,12 +3591,12 @@ $(pv_value)</tooltip>
       <lock_children>false</lock_children>
       <border_width>1</border_width>
       <border_color>
-        <color red="0" green="128" blue="255" />
+        <color blue="255" green="128" red="0" />
       </border_color>
       <y>935</y>
       <actions hook="false" hook_all="false" />
       <x>160</x>
-      <tooltip></tooltip>
+      <tooltip />
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <border_alarm_sensitive>false</border_alarm_sensitive>
         <visible>true</visible>
@@ -3607,11 +3607,11 @@ $(pv_value)</tooltip>
         <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
         <precision_from_pv>true</precision_from_pv>
         <background_color>
-          <color name="Controller: BG" red="205" green="205" blue="205" />
+          <color blue="205" green="205" name="Controller: BG" red="205" />
         </background_color>
         <enabled>true</enabled>
         <widget_type>Text Input</widget_type>
-        <text></text>
+        <text />
         <font>
           <opifont.name fontName="Arial" height="11" style="0">Default</opifont.name>
         </font>
@@ -3636,17 +3636,17 @@ $(pv_value)</tooltip>
         <transparent>false</transparent>
         <pv_name>$(P)$(P1):VALP</pv_name>
         <foreground_color>
-          <color name="Controller: FG" red="0" green="0" blue="196" />
+          <color blue="196" green="0" name="Controller: FG" red="0" />
         </foreground_color>
         <precision>0</precision>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-        <confirm_message></confirm_message>
+        <confirm_message />
         <rules />
         <limits_from_pv>false</limits_from_pv>
         <horizontal_alignment>1</horizontal_alignment>
         <alarm_pulsing>false</alarm_pulsing>
         <border_color>
-          <color red="0" green="128" blue="255" />
+          <color blue="255" green="128" red="0" />
         </border_color>
         <y>0</y>
         <actions hook="false" hook_all="false" />

@@ -91,7 +91,6 @@
 # % gui, $(name=), demand, Value 16, $(P)$(P1):VALP
 
 # This makes the component icon reflect the status and severity
-# % gui, $(name=), status, <pv>.MOVN
 # % gui, $(name=), sevr
 
 # List of names for selection by user.

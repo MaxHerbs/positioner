@@ -1,10 +1,14 @@
-from iocbuilder import AutoSubstitution
+from iocbuilder import AutoSubstitution, Device
 from iocbuilder.arginfo import *
 from iocbuilder.modules.calc import Calc
 from iocbuilder.modules.busy import Busy
 
-class multipositioner(AutoSubstitution):
+class Positioner(Device):
     Dependencies = (Calc,Busy)
+    AutoInstantiate = True
+
+class multipositioner(AutoSubstitution):
+    Dependencies = Positioner
     # Substitution attributes
     TemplateFile = 'multipositioner.template'
     

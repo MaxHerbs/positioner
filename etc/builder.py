@@ -8,7 +8,7 @@ class Positioner(Device):
     AutoInstantiate = True
 
 class multipositioner(AutoSubstitution):
-    Dependencies = Positioner
+    Dependencies = (Positioner,)
     # Substitution attributes
     TemplateFile = 'multipositioner.template'
     

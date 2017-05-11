@@ -51,9 +51,9 @@
 # % gui, $(name=), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
 
 # This associates a BOY screen with the template
-# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P),MP=$(MP),DESC=$(DESC),desc=$(DESC),name=$(name=),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),MP=$(MP),DESC=$(DESC),desc=$(DESC),name=$(name=),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
-# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),MP=$(MP),DESC=$(DESC),desc=$(DESC),name=$(name=),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
+# % gui, $(name=), boydetail, positionerApp_opi/positioner_detail.opi, P=$(P),MP=$(MP),DESC=$(DESC),desc=$(DESC),name=$(name=),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8),NPOS=$(NPOS)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed_box.opi, P=$(P),MP=$(MP),DESC=$(DESC),desc=$(DESC),name=$(name=),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8),NPOS=$(NPOS)
+# % gui, $(name=), boyembed, positionerApp_opi/positioner_embed.opi, P=$(P),MP=$(MP),DESC=$(DESC),desc=$(DESC),name=$(name=),P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8),NPOS=$(NPOS)
 
 # This provides the list of PVs to show on the details pane
 # % gui, $(name=), demand, Name 1, <pv>.ZRST
@@ -73,22 +73,59 @@
 # % gui, $(name=), demand, Name 15, <pv>.FTST
 # % gui, $(name=), demand, Name 16, <pv>.FFST
 
-# % gui, $(name=), demand, Value 1, $(P)$(P1):VALA
-# % gui, $(name=), demand, Value 2, $(P)$(P1):VALB
-# % gui, $(name=), demand, Value 3, $(P)$(P1):VALC
-# % gui, $(name=), demand, Value 4, $(P)$(P1):VALD
-# % gui, $(name=), demand, Value 5, $(P)$(P1):VALE
-# % gui, $(name=), demand, Value 6, $(P)$(P1):VALF
-# % gui, $(name=), demand, Value 7, $(P)$(P1):VALG
-# % gui, $(name=), demand, Value 8, $(P)$(P1):VALH
-# % gui, $(name=), demand, Value 9, $(P)$(P1):VALI
-# % gui, $(name=), demand, Value 10, $(P)$(P1):VALJ
-# % gui, $(name=), demand, Value 11, $(P)$(P1):VALK
-# % gui, $(name=), demand, Value 12, $(P)$(P1):VALL
-# % gui, $(name=), demand, Value 13, $(P)$(P1):VALM
-# % gui, $(name=), demand, Value 14, $(P)$(P1):VALN
-# % gui, $(name=), demand, Value 15, $(P)$(P1):VALO
-# % gui, $(name=), demand, Value 16, $(P)$(P1):VALP
+# Positioner 1 values
+# % gui, $(name=), demand, Pos 1 Value 1, $(P)$(P1):VALA
+# % gui, $(name=), demand, Pos 1 Value 2, $(P)$(P1):VALB
+# % gui, $(name=), demand, Pos 1 Value 3, $(P)$(P1):VALC
+# % gui, $(name=), demand, Pos 1 Value 4, $(P)$(P1):VALD
+# % gui, $(name=), demand, Pos 1 Value 5, $(P)$(P1):VALE
+# % gui, $(name=), demand, Pos 1 Value 6, $(P)$(P1):VALF
+# % gui, $(name=), demand, Pos 1 Value 7, $(P)$(P1):VALG
+# % gui, $(name=), demand, Pos 1 Value 8, $(P)$(P1):VALH
+# % gui, $(name=), demand, Pos 1 Value 9, $(P)$(P1):VALI
+# % gui, $(name=), demand, Pos 1 Value 10, $(P)$(P1):VALJ
+# % gui, $(name=), demand, Pos 1 Value 11, $(P)$(P1):VALK
+# % gui, $(name=), demand, Pos 1 Value 12, $(P)$(P1):VALL
+# % gui, $(name=), demand, Pos 1 Value 13, $(P)$(P1):VALM
+# % gui, $(name=), demand, Pos 1 Value 14, $(P)$(P1):VALN
+# % gui, $(name=), demand, Pos 1 Value 15, $(P)$(P1):VALO
+# % gui, $(name=), demand, Pos 1 Value 16, $(P)$(P1):VALP
+
+# Positioner 2 values
+# % gui, $(name=), demand, Pos 2 Value 1, $(P)$(P2):VALA
+# % gui, $(name=), demand, Pos 2 Value 2, $(P)$(P2):VALB
+# % gui, $(name=), demand, Pos 2 Value 3, $(P)$(P2):VALC
+# % gui, $(name=), demand, Pos 2 Value 4, $(P)$(P2):VALD
+# % gui, $(name=), demand, Pos 2 Value 5, $(P)$(P2):VALE
+# % gui, $(name=), demand, Pos 2 Value 6, $(P)$(P2):VALF
+# % gui, $(name=), demand, Pos 2 Value 7, $(P)$(P2):VALG
+# % gui, $(name=), demand, Pos 2 Value 8, $(P)$(P2):VALH
+# % gui, $(name=), demand, Pos 2 Value 9, $(P)$(P2):VALI
+# % gui, $(name=), demand, Pos 2 Value 10, $(P)$(P2):VALJ
+# % gui, $(name=), demand, Pos 2 Value 11, $(P)$(P2):VALK
+# % gui, $(name=), demand, Pos 2 Value 12, $(P)$(P2):VALL
+# % gui, $(name=), demand, Pos 2 Value 13, $(P)$(P2):VALM
+# % gui, $(name=), demand, Pos 2 Value 14, $(P)$(P2):VALN
+# % gui, $(name=), demand, Pos 2 Value 15, $(P)$(P2):VALO
+# % gui, $(name=), demand, Pos 2 Value 16, $(P)$(P2):VALP
+
+# Positioner 3 values
+# % gui, $(name=), demand, Pos 3 Value 1, $(P)$(P3):VALA
+# % gui, $(name=), demand, Pos 3 Value 2, $(P)$(P3):VALB
+# % gui, $(name=), demand, Pos 3 Value 3, $(P)$(P3):VALC
+# % gui, $(name=), demand, Pos 3 Value 4, $(P)$(P3):VALD
+# % gui, $(name=), demand, Pos 3 Value 5, $(P)$(P3):VALE
+# % gui, $(name=), demand, Pos 3 Value 6, $(P)$(P3):VALF
+# % gui, $(name=), demand, Pos 3 Value 7, $(P)$(P3):VALG
+# % gui, $(name=), demand, Pos 3 Value 8, $(P)$(P3):VALH
+# % gui, $(name=), demand, Pos 3 Value 9, $(P)$(P3):VALI
+# % gui, $(name=), demand, Pos 3 Value 10, $(P)$(P3):VALJ
+# % gui, $(name=), demand, Pos 3 Value 11, $(P)$(P3):VALK
+# % gui, $(name=), demand, Pos 3 Value 12, $(P)$(P3):VALL
+# % gui, $(name=), demand, Pos 3 Value 13, $(P)$(P3):VALM
+# % gui, $(name=), demand, Pos 3 Value 14, $(P)$(P3):VALN
+# % gui, $(name=), demand, Pos 3 Value 15, $(P)$(P3):VALO
+# % gui, $(name=), demand, Pos 3 Value 16, $(P)$(P3):VALP
 
 # This makes the component icon reflect the status and severity
 # % gui, $(name=), sevr

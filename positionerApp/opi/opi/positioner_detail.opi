@@ -338,31 +338,31 @@
     <row_34_row_name_value />
     <row_34_row_tooltip>Pos 1 Value 16</row_34_row_tooltip>
     <row_35_row_height>22</row_35_row_height>
-    <row_35_row_level>0</row_35_row_level>
+    <row_35_row_level>1</row_35_row_level>
     <row_35_row_mode>3</row_35_row_mode>
     <row_35_row_name>Positioner 2</row_35_row_name>
     <row_35_row_name_value />
     <row_35_row_tooltip></row_35_row_tooltip>
     <row_36_row_height>27</row_36_row_height>
-    <row_36_row_level>0</row_36_row_level>
+    <row_36_row_level>1</row_36_row_level>
     <row_36_row_mode>0</row_36_row_mode>
     <row_36_row_name>Pos 2 Value 1</row_36_row_name>
     <row_36_row_name_value />
     <row_36_row_tooltip>Pos 2 Value 1</row_36_row_tooltip>
     <row_37_row_height>27</row_37_row_height>
-    <row_37_row_level>0</row_37_row_level>
+    <row_37_row_level>1</row_37_row_level>
     <row_37_row_mode>0</row_37_row_mode>
     <row_37_row_name>Pos 2 Value 2</row_37_row_name>
     <row_37_row_name_value />
     <row_37_row_tooltip>Pos 2 Value 2</row_37_row_tooltip>
     <row_38_row_height>27</row_38_row_height>
-    <row_38_row_level>0</row_38_row_level>
+    <row_38_row_level>1</row_38_row_level>
     <row_38_row_mode>0</row_38_row_mode>
     <row_38_row_name>Pos 2 Value 3</row_38_row_name>
     <row_38_row_name_value />
     <row_38_row_tooltip>Pos 2 Value 3</row_38_row_tooltip>
     <row_39_row_height>27</row_39_row_height>
-    <row_39_row_level>0</row_39_row_level>
+    <row_39_row_level>1</row_39_row_level>
     <row_39_row_mode>0</row_39_row_mode>
     <row_39_row_name>Pos 2 Value 4</row_39_row_name>
     <row_39_row_name_value />
@@ -374,61 +374,61 @@
     <row_3_row_name_value />
     <row_3_row_tooltip>Name 2</row_3_row_tooltip>
     <row_40_row_height>27</row_40_row_height>
-    <row_40_row_level>0</row_40_row_level>
+    <row_40_row_level>1</row_40_row_level>
     <row_40_row_mode>0</row_40_row_mode>
     <row_40_row_name>Pos 2 Value 5</row_40_row_name>
     <row_40_row_name_value />
     <row_40_row_tooltip>Pos 2 Value 5</row_40_row_tooltip>
     <row_41_row_height>27</row_41_row_height>
-    <row_41_row_level>0</row_41_row_level>
+    <row_41_row_level>1</row_41_row_level>
     <row_41_row_mode>0</row_41_row_mode>
     <row_41_row_name>Pos 2 Value 6</row_41_row_name>
     <row_41_row_name_value />
     <row_41_row_tooltip>Pos 2 Value 6</row_41_row_tooltip>
     <row_42_row_height>27</row_42_row_height>
-    <row_42_row_level>0</row_42_row_level>
+    <row_42_row_level>1</row_42_row_level>
     <row_42_row_mode>0</row_42_row_mode>
     <row_42_row_name>Pos 2 Value 7</row_42_row_name>
     <row_42_row_name_value />
     <row_42_row_tooltip>Pos 2 Value 7</row_42_row_tooltip>
     <row_43_row_height>27</row_43_row_height>
-    <row_43_row_level>0</row_43_row_level>
+    <row_43_row_level>1</row_43_row_level>
     <row_43_row_mode>0</row_43_row_mode>
     <row_43_row_name>Pos 2 Value 8</row_43_row_name>
     <row_43_row_name_value />
     <row_43_row_tooltip>Pos 2 Value 8</row_43_row_tooltip>
     <row_44_row_height>27</row_44_row_height>
-    <row_44_row_level>0</row_44_row_level>
+    <row_44_row_level>1</row_44_row_level>
     <row_44_row_mode>0</row_44_row_mode>
     <row_44_row_name>Pos 2 Value 9</row_44_row_name>
     <row_44_row_name_value />
     <row_44_row_tooltip>Pos 2 Value 9</row_44_row_tooltip>
     <row_45_row_height>27</row_45_row_height>
-    <row_45_row_level>0</row_45_row_level>
+    <row_45_row_level>1</row_45_row_level>
     <row_45_row_mode>0</row_45_row_mode>
     <row_45_row_name>Pos 2 Value 10</row_45_row_name>
     <row_45_row_name_value />
     <row_45_row_tooltip>Pos 2 Value 10</row_45_row_tooltip>
     <row_46_row_height>27</row_46_row_height>
-    <row_46_row_level>0</row_46_row_level>
+    <row_46_row_level>1</row_46_row_level>
     <row_46_row_mode>0</row_46_row_mode>
     <row_46_row_name>Pos 2 Value 11</row_46_row_name>
     <row_46_row_name_value />
     <row_46_row_tooltip>Pos 2 Value 11</row_46_row_tooltip>
     <row_47_row_height>27</row_47_row_height>
-    <row_47_row_level>0</row_47_row_level>
+    <row_47_row_level>1</row_47_row_level>
     <row_47_row_mode>0</row_47_row_mode>
     <row_47_row_name>Pos 2 Value 12</row_47_row_name>
     <row_47_row_name_value />
     <row_47_row_tooltip>Pos 2 Value 12</row_47_row_tooltip>
     <row_48_row_height>27</row_48_row_height>
-    <row_48_row_level>0</row_48_row_level>
+    <row_48_row_level>1</row_48_row_level>
     <row_48_row_mode>0</row_48_row_mode>
     <row_48_row_name>Pos 2 Value 13</row_48_row_name>
     <row_48_row_name_value />
     <row_48_row_tooltip>Pos 2 Value 13</row_48_row_tooltip>
     <row_49_row_height>27</row_49_row_height>
-    <row_49_row_level>0</row_49_row_level>
+    <row_49_row_level>1</row_49_row_level>
     <row_49_row_mode>0</row_49_row_mode>
     <row_49_row_name>Pos 2 Value 14</row_49_row_name>
     <row_49_row_name_value />
@@ -440,61 +440,61 @@
     <row_4_row_name_value />
     <row_4_row_tooltip>Name 3</row_4_row_tooltip>
     <row_50_row_height>27</row_50_row_height>
-    <row_50_row_level>0</row_50_row_level>
+    <row_50_row_level>1</row_50_row_level>
     <row_50_row_mode>0</row_50_row_mode>
     <row_50_row_name>Pos 2 Value 15</row_50_row_name>
     <row_50_row_name_value />
     <row_50_row_tooltip>Pos 2 Value 15</row_50_row_tooltip>
     <row_51_row_height>27</row_51_row_height>
-    <row_51_row_level>0</row_51_row_level>
+    <row_51_row_level>1</row_51_row_level>
     <row_51_row_mode>0</row_51_row_mode>
     <row_51_row_name>Pos 2 Value 16</row_51_row_name>
     <row_51_row_name_value />
     <row_51_row_tooltip>Pos 2 Value 16</row_51_row_tooltip>
     <row_52_row_height>22</row_52_row_height>
-    <row_52_row_level>0</row_52_row_level>
+    <row_52_row_level>2</row_52_row_level>
     <row_52_row_mode>3</row_52_row_mode>
     <row_52_row_name>Positioner 3</row_52_row_name>
     <row_52_row_name_value />
     <row_52_row_tooltip></row_52_row_tooltip>
     <row_53_row_height>27</row_53_row_height>
-    <row_53_row_level>0</row_53_row_level>
+    <row_53_row_level>2</row_53_row_level>
     <row_53_row_mode>0</row_53_row_mode>
     <row_53_row_name>Pos 3 Value 1</row_53_row_name>
     <row_53_row_name_value />
     <row_53_row_tooltip>Pos 3 Value 1</row_53_row_tooltip>
     <row_54_row_height>27</row_54_row_height>
-    <row_54_row_level>0</row_54_row_level>
+    <row_54_row_level>2</row_54_row_level>
     <row_54_row_mode>0</row_54_row_mode>
     <row_54_row_name>Pos 3 Value 2</row_54_row_name>
     <row_54_row_name_value />
     <row_54_row_tooltip>Pos 3 Value 2</row_54_row_tooltip>
     <row_55_row_height>27</row_55_row_height>
-    <row_55_row_level>0</row_55_row_level>
+    <row_55_row_level>2</row_55_row_level>
     <row_55_row_mode>0</row_55_row_mode>
     <row_55_row_name>Pos 3 Value 3</row_55_row_name>
     <row_55_row_name_value />
     <row_55_row_tooltip>Pos 3 Value 3</row_55_row_tooltip>
     <row_56_row_height>27</row_56_row_height>
-    <row_56_row_level>0</row_56_row_level>
+    <row_56_row_level>2</row_56_row_level>
     <row_56_row_mode>0</row_56_row_mode>
     <row_56_row_name>Pos 3 Value 4</row_56_row_name>
     <row_56_row_name_value />
     <row_56_row_tooltip>Pos 3 Value 4</row_56_row_tooltip>
     <row_57_row_height>27</row_57_row_height>
-    <row_57_row_level>0</row_57_row_level>
+    <row_57_row_level>2</row_57_row_level>
     <row_57_row_mode>0</row_57_row_mode>
     <row_57_row_name>Pos 3 Value 5</row_57_row_name>
     <row_57_row_name_value />
     <row_57_row_tooltip>Pos 3 Value 5</row_57_row_tooltip>
     <row_58_row_height>27</row_58_row_height>
-    <row_58_row_level>0</row_58_row_level>
+    <row_58_row_level>2</row_58_row_level>
     <row_58_row_mode>0</row_58_row_mode>
     <row_58_row_name>Pos 3 Value 6</row_58_row_name>
     <row_58_row_name_value />
     <row_58_row_tooltip>Pos 3 Value 6</row_58_row_tooltip>
     <row_59_row_height>27</row_59_row_height>
-    <row_59_row_level>0</row_59_row_level>
+    <row_59_row_level>2</row_59_row_level>
     <row_59_row_mode>0</row_59_row_mode>
     <row_59_row_name>Pos 3 Value 7</row_59_row_name>
     <row_59_row_name_value />
@@ -506,55 +506,55 @@
     <row_5_row_name_value />
     <row_5_row_tooltip>Name 4</row_5_row_tooltip>
     <row_60_row_height>27</row_60_row_height>
-    <row_60_row_level>0</row_60_row_level>
+    <row_60_row_level>2</row_60_row_level>
     <row_60_row_mode>0</row_60_row_mode>
     <row_60_row_name>Pos 3 Value 8</row_60_row_name>
     <row_60_row_name_value />
     <row_60_row_tooltip>Pos 3 Value 8</row_60_row_tooltip>
     <row_61_row_height>27</row_61_row_height>
-    <row_61_row_level>0</row_61_row_level>
+    <row_61_row_level>2</row_61_row_level>
     <row_61_row_mode>0</row_61_row_mode>
     <row_61_row_name>Pos 3 Value 9</row_61_row_name>
     <row_61_row_name_value />
     <row_61_row_tooltip>Pos 3 Value 9</row_61_row_tooltip>
     <row_62_row_height>27</row_62_row_height>
-    <row_62_row_level>0</row_62_row_level>
+    <row_62_row_level>2</row_62_row_level>
     <row_62_row_mode>0</row_62_row_mode>
     <row_62_row_name>Pos 3 Value 10</row_62_row_name>
     <row_62_row_name_value />
     <row_62_row_tooltip>Pos 3 Value 10</row_62_row_tooltip>
     <row_63_row_height>27</row_63_row_height>
-    <row_63_row_level>0</row_63_row_level>
+    <row_63_row_level>2</row_63_row_level>
     <row_63_row_mode>0</row_63_row_mode>
     <row_63_row_name>Pos 3 Value 11</row_63_row_name>
     <row_63_row_name_value />
     <row_63_row_tooltip>Pos 3 Value 11</row_63_row_tooltip>
     <row_64_row_height>27</row_64_row_height>
-    <row_64_row_level>0</row_64_row_level>
+    <row_64_row_level>2</row_64_row_level>
     <row_64_row_mode>0</row_64_row_mode>
     <row_64_row_name>Pos 3 Value 12</row_64_row_name>
     <row_64_row_name_value />
     <row_64_row_tooltip>Pos 3 Value 12</row_64_row_tooltip>
     <row_65_row_height>27</row_65_row_height>
-    <row_65_row_level>0</row_65_row_level>
+    <row_65_row_level>2</row_65_row_level>
     <row_65_row_mode>0</row_65_row_mode>
     <row_65_row_name>Pos 3 Value 13</row_65_row_name>
     <row_65_row_name_value />
     <row_65_row_tooltip>Pos 3 Value 13</row_65_row_tooltip>
     <row_66_row_height>27</row_66_row_height>
-    <row_66_row_level>0</row_66_row_level>
+    <row_66_row_level>2</row_66_row_level>
     <row_66_row_mode>0</row_66_row_mode>
     <row_66_row_name>Pos 3 Value 14</row_66_row_name>
     <row_66_row_name_value />
     <row_66_row_tooltip>Pos 3 Value 14</row_66_row_tooltip>
     <row_67_row_height>26</row_67_row_height>
-    <row_67_row_level>0</row_67_row_level>
+    <row_67_row_level>2</row_67_row_level>
     <row_67_row_mode>0</row_67_row_mode>
     <row_67_row_name>Pos 3 Value 15</row_67_row_name>
     <row_67_row_name_value />
     <row_67_row_tooltip>Pos 3 Value 15</row_67_row_tooltip>
     <row_68_row_height>27</row_68_row_height>
-    <row_68_row_level>0</row_68_row_level>
+    <row_68_row_level>2</row_68_row_level>
     <row_68_row_mode>0</row_68_row_mode>
     <row_68_row_name>Pos 3 Value 16</row_68_row_name>
     <row_68_row_name_value />
@@ -616,15 +616,15 @@
     <row_9_row_tooltip>Name 8</row_9_row_tooltip>
     <row_count>69</row_count>
     <rules>
-      <rule name="Show correct number of rows" prop_id="row_count" out_exp="true">
-        <exp bool_exp="pv0==3">
-          <value>69</value>
+      <rule name="Show correct number of rows" prop_id="display_level" out_exp="false">
+        <exp bool_exp="pv0&gt;=3">
+          <value>2</value>
         </exp>
         <exp bool_exp="pv0==2">
-          <value>52</value>
+          <value>1</value>
         </exp>
         <exp bool_exp="pv0==1">
-          <value>35</value>
+          <value>0</value>
         </exp>
         <pv trig="true">loc://$(P)$(MP):NPOS($(NPOS))</pv>
       </rule>
@@ -949,7 +949,7 @@
       <foreground_color>
         <color name="Text: FG" red="0" green="0" blue="0" />
       </foreground_color>
-      <height>58</height>
+      <height>1</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -1031,7 +1031,7 @@
       <foreground_color>
         <color name="Text: FG" red="0" green="0" blue="0" />
       </foreground_color>
-      <height>20</height>
+      <height>1</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -1052,7 +1052,7 @@
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7854</wuid>
       <x>160</x>
-      <y>58</y>
+      <y>0</y>
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
@@ -1093,7 +1093,7 @@
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7852</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1191,7 +1191,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7850</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1289,7 +1289,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-784e</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1387,7 +1387,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-784c</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1485,7 +1485,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-784a</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1583,7 +1583,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7848</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1681,7 +1681,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7846</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1779,7 +1779,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7844</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1877,7 +1877,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7842</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -1975,7 +1975,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7840</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2073,7 +2073,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-783e</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2171,7 +2171,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-783c</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2269,7 +2269,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-783a</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2367,7 +2367,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7838</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2465,7 +2465,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7836</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2563,7 +2563,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7834</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2640,7 +2640,7 @@ $(pv_value)</tooltip>
       <foreground_color>
         <color name="Text: FG" red="0" green="0" blue="0" />
       </foreground_color>
-      <height>22</height>
+      <height>1</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -2661,7 +2661,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7832</wuid>
       <x>160</x>
-      <y>78</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2754,7 +2754,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7830</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2816,7 +2816,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -2852,7 +2852,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-782e</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -2950,7 +2950,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-782c</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3012,7 +3012,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -3048,7 +3048,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-782a</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3146,7 +3146,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7828</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3208,7 +3208,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -3244,7 +3244,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7826</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3342,7 +3342,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7824</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3404,7 +3404,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -3440,7 +3440,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7822</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3538,7 +3538,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7820</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3600,7 +3600,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -3636,7 +3636,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-781e</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3734,7 +3734,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-781c</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3796,7 +3796,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -3832,7 +3832,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-781a</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3930,7 +3930,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7818</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -3992,7 +3992,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -4028,7 +4028,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7816</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4126,7 +4126,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7814</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4188,7 +4188,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="205" green="205" blue="205" />
+        <color red="200" green="200" blue="200" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -4224,7 +4224,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7812</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4301,7 +4301,7 @@ $(pv_value)</tooltip>
       <foreground_color>
         <color name="Text: FG" red="0" green="0" blue="0" />
       </foreground_color>
-      <height>22</height>
+      <height>1</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -4322,7 +4322,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7810</wuid>
       <x>160</x>
-      <y>100</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4415,7 +4415,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-780e</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4477,7 +4477,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -4513,7 +4513,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-780c</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4611,7 +4611,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-780a</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4673,7 +4673,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -4709,7 +4709,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7808</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4807,7 +4807,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7806</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -4869,7 +4869,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -4905,7 +4905,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7804</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5003,7 +5003,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7802</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5065,7 +5065,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -5101,7 +5101,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-7800</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5199,7 +5199,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77fe</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5261,7 +5261,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -5297,7 +5297,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77fc</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5395,7 +5395,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77fa</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5457,7 +5457,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -5493,7 +5493,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77f8</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5591,7 +5591,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77f6</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5653,7 +5653,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -5689,7 +5689,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77f4</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5787,7 +5787,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77f2</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5849,7 +5849,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
       <actions hook="false" hook_all="false" />
       <background_color>
-        <color red="200" green="200" blue="200" />
+        <color red="205" green="205" blue="205" />
       </background_color>
       <border_color>
         <color red="0" green="128" blue="255" />
@@ -5885,7 +5885,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77f0</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -5983,7 +5983,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77ee</wuid>
       <x>160</x>
-      <y>122</y>
+      <y>0</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6076,7 +6076,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77ec</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6174,7 +6174,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77ea</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6272,7 +6272,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77e8</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6370,7 +6370,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77e6</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6468,7 +6468,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77e4</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6566,7 +6566,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77e2</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6664,7 +6664,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77e0</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6762,7 +6762,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77de</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6860,7 +6860,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77dc</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -6958,7 +6958,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77da</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -7056,7 +7056,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77d8</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -7154,7 +7154,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77d6</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -7252,7 +7252,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77cb</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -7350,7 +7350,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77ca</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -7448,7 +7448,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77c9</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
@@ -7546,7 +7546,7 @@ $(pv_value)</tooltip>
       <width>200</width>
       <wuid>24b7ced8:15bf6846080:-77c8</wuid>
       <x>160</x>
-      <y>144</y>
+      <y>22</y>
       <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
         <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>

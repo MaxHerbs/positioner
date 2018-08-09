@@ -8,3 +8,6 @@ lib
 .svn*
 iocs/*IOC*
 .idea
+documentation/doxygen/
+iocs/example/
+iocs/example_sim/

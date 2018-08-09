@@ -28,7 +28,7 @@ $(TOP)/iocs/%: %.xml
 
 # General rule for a simulation IOC
 $(TOP)/iocs/%_sim: %.xml
-	dls-xml-iocbuilder.py $(DEBUG) -e --sim=linux-x86 $<
+	dls-xml-iocbuilder.py $(DEBUG) -e --sim=linux-x86_64 $<
 
 # Remove the generated iocs on clean
 clean:

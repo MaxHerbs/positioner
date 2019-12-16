@@ -45,7 +45,12 @@ try:
             # strip out the motor record pv and egu from the object
             assert motor.args['P'] == args['P'], \
                 "Motor prefix must match motor positioner prefix"
-            args['motor'] = motor.args['M']
+            # The dls_pmac_asyn_motor template uses M for the motor...
+            if 'M' in motor.args:
+                args['motor'] = motor.args['M']
+            # ...but softMotorForPiezo uses Q
+            elif 'Q' in motor.args:
+                args['motor'] = motor.args['Q']
             args['EGU'] = motor.args['EGU']
             self.__super.__init__(**args)
             

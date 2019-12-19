@@ -7,4 +7,6 @@ data
 lib
 .svn*
 iocs/*IOC*
+iocs/example*
 .idea
+documentation/doxygen

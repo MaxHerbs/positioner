@@ -1,2 +1,4 @@
 # Place any example specific dependencies here
-TPMAC=$(SUPPORT)/tpmac/3-11dls15
+#PMAC=$(SUPPORT)/pmac/2-4-18
+PMAC=/dls/science/users/cvl62853/support/pmac
+

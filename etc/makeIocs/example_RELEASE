@@ -1,4 +1,3 @@
 # Place any example specific dependencies here
-#PMAC=$(SUPPORT)/pmac/2-4-18
-PMAC=/dls/science/users/cvl62853/support/pmac
+PMAC=$(SUPPORT)/pmac/2-4-19
 

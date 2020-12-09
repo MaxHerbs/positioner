@@ -47,6 +47,9 @@
 # Only specify if not using the builder object.
 # % macro, P8, Positioner 8 suffix for screen.
 # Only specify if not using the builder object.
+# % macro, P1_VALS, short label for values button <= 6 characters
+# % macro, P2_VALS, short label for values button <= 6 characters
+# % macro, P3_VALS, short label for values button <= 6 characters
 # This associates an edm screen with the template
 # % gui, $(name=), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
 
@@ -391,6 +394,23 @@ record(calc, "$(P)$(MP):ERRPROC") {
   field(CALC, "A||B")
   field(INPA, "$(P)$(MP):SETERROR1.PACT")
   field(INPB, "$(P)$(MP):SETERROR2.PACT")
+}
+
+# short strings to display on positioner value buttons
+# on -2pos and -3pos embedded screens
+record(stringout, "$(P)$(MP):P1VALS") {
+  field(DESC, "short label for P1 VALS")
+  field(VAL,  "$(P1_VALS=P1 Val)")
+}
+
+record(stringout, "$(P)$(MP):P2VALS") {
+  field(DESC, "short label for P2 VALS")
+  field(VAL,  "$(P2_VALS=P2 Val)")
+}
+
+record(stringout, "$(P)$(MP):P3VALS") {
+  field(DESC, "short label for P3 VALS")
+  field(VAL,  "$(P3_VALS=P3 Val)")
 }
 
 #! Further lines contain data used by VisualDCT

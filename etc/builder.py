@@ -23,6 +23,9 @@ class multipositioner(AutoSubstitution):
 
     def Finalise(self):
         # create the args needed for the gui
+        assert hasattr(self, 'positioners'), "{name}: No positioners for me to control :(".format(
+            name=self.args['name']
+        )
         self.args["NPOS"] = len(self.positioners)
         for i, q in enumerate(self.positioners):
             self.args["P%d"%(i+1)]= q.args["Q"]

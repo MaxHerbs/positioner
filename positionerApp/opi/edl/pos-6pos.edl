@@ -1,0 +1,677 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 808
+y 502
+w 190
+h 140
+font "helvetica-medium-r-14.0"
+ctlFont "courier-bold-r-14.0"
+btnFont "helvetica-medium-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 25
+ctlFgColor2 index 30
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 1
+botShadowColor index 11
+title "Pos box small"
+showGrid
+snapToGrid
+gridSize 5
+endScreenProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 0
+y 0
+w 189
+h 139
+fgColor index 0
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 0
+font "helvetica-medium-r-14.0"
+xPosOffset -85
+yPosOffset -60
+button3Popup
+invisible
+buttonLabel "HELP"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "pos-6pos-tooltip"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "auto-label=$(auto-label),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 5
+w 189
+h 134
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 15
+w 180
+h 30
+fgColor index 14
+fgAlarm
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)$(MP):SELECT"
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 162
+y 53
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  1 1
+}
+maxValues {
+  1 2
+  4 1
+}
+controlPvs {
+  0 "$(P)$(MP):INPOS"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 7
+y 53
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  0 6
+  2 2
+  3 4
+  4 1
+}
+maxValues {
+  0 8
+  2 4
+  3 6
+  4 2
+  5 1
+}
+controlPvs {
+  0 "$(P)$(MP):DMOV"
+  1 "$(P)$(MP):ERROR.K"
+}
+numPvs 2
+shiftCount {
+  1 1
+}
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Menu Mux PV)
+object menuMuxPVClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 2000
+y 2000
+w 20
+h 20
+fgColour index 14
+bgColour index 3
+topShadowColour index 1
+botShadowColour index 11
+controlPv "$(P)$(MP):UPDATE"
+font "helvetica-medium-r-14.0"
+numItems 1
+symbolTag {
+  0 "."
+}
+symbol0 {
+  0 "auto-label"
+}
+PV0 {
+  0 "$(P)$(MP):SELECT.DESC"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 5
+y 80
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "P=$(P),PS=$(P1),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 64
+y 51
+w 61
+h 24
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Names"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "posNames.edl"
+}
+symbols {
+  0 "P=$(P),MP=$(MP)"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 127
+y 55
+w 33
+h 20
+font "arial-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "InPos"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 55
+w 33
+h 20
+font "arial-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "State "
+}
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 140
+y 106
+w 45
+h 25
+fgColor index 21
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P)$(MP):STOP.PROC"
+pressValue "1"
+onLabel "STOP"
+offLabel "STOP"
+3d
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 0
+y 0
+w 84
+h 13
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  $(auto-label)  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 80
+w 45
+h 25
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 5
+y 80
+w 45
+h 25
+controlPv "$(P)$(MP):P1VALS"
+font "arial-bold-r-12.0"
+fontAlign "center"
+fgColor index 43
+bgColor index 3
+useDisplayBg
+nullColor index 30
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 50
+y 80
+w 45
+h 25
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 50
+y 80
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "P=$(P),PS=$(P2),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 50
+y 80
+w 45
+h 25
+controlPv "$(P)$(MP):P2VALS"
+font "arial-bold-r-12.0"
+fontAlign "center"
+fgColor index 43
+bgColor index 3
+useDisplayBg
+nullColor index 30
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 95
+y 80
+w 45
+h 25
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 95
+y 80
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "P=$(P),PS=$(P3),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 95
+y 80
+w 45
+h 25
+controlPv "$(P)$(MP):P3VALS"
+font "arial-bold-r-12.0"
+fontAlign "center"
+fgColor index 43
+bgColor index 3
+useDisplayBg
+nullColor index 30
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 5
+y 106
+w 45
+h 25
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 5
+y 106
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "P=$(P),PS=$(P4),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 5
+y 106
+w 45
+h 25
+controlPv "$(P)$(MP):P4VALS"
+font "arial-bold-r-12.0"
+fontAlign "center"
+fgColor index 43
+bgColor index 3
+useDisplayBg
+nullColor index 30
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 50
+y 106
+w 45
+h 25
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 50
+y 106
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "P=$(P),PS=$(P5),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 50
+y 106
+w 45
+h 25
+controlPv "$(P)$(MP):P5VALS"
+font "arial-bold-r-12.0"
+fontAlign "center"
+fgColor index 43
+bgColor index 3
+useDisplayBg
+nullColor index 30
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 95
+y 106
+w 45
+h 25
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 95
+y 106
+w 45
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-12.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "positioner.edl"
+}
+symbols {
+  0 "P=$(P),PS=$(P6),MP=$(MP),filename=$(filename)"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 95
+y 106
+w 45
+h 25
+controlPv "$(P)$(MP):P6VALS"
+font "arial-bold-r-12.0"
+fontAlign "center"
+fgColor index 43
+bgColor index 3
+useDisplayBg
+nullColor index 30
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+

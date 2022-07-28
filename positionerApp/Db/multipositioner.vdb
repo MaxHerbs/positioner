@@ -47,12 +47,12 @@
 # Only specify if not using the builder object.
 # % macro, P8, Positioner 8 suffix for screen.
 # Only specify if not using the builder object.
-# % macro, P1_VALS, short label for values button <= 6 characters
-# % macro, P2_VALS, short label for values button <= 6 characters
-# % macro, P3_VALS, short label for values button <= 6 characters
-# % macro, P4_VALS, short label for values button <= 6 characters
-# % macro, P5_VALS, short label for values button <= 6 characters
-# % macro, P6_VALS, short label for values button <= 6 characters
+# % macro, P1_VALS, Optional.  Defaults to P1 Val.  Short label for values button <= 6 characters
+# % macro, P2_VALS, Optional.  Defaults to P2 Val.  Short label for values button <= 6 characters
+# % macro, P3_VALS, Optional.  Defaults to P3 Val.  Short label for values button <= 6 characters
+# % macro, P4_VALS, Optional.  Defaults to P4 Val.  Short label for values button <= 6 characters
+# % macro, P5_VALS, Optional.  Defaults to P5 Val.  Short label for values button <= 6 characters
+# % macro, P6_VALS, Optional.  Defaults to P6 Val.  Short label for values button <= 6 characters
 # This associates an edm screen with the template
 # % gui, $(name=), edmembed, pos-$(NPOS)pos.edl, P=$(P),MP=$(MP),filename=motor.edl,P1=$(P1),P2=$(P2),P3=$(P3),P4=$(P4),P5=$(P5),P6=$(P6),P7=$(P7),P8=$(P8)
 # This associates a BOY screen with the template

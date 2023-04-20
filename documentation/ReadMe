@@ -19,3 +19,24 @@ $(mp) = multipostioner PV (normally $(P):MP)
 $(p1)..$(p8) = positioner PVs, so $(mp)$(p1) is the first positioner
 (normally $(p1)=$(M[n]) where the [n]th motor in a device is a
 positioner)
+
+
+Information about the motorpositioner_external_motor template
+=============================================================
+
+In addition to the mutlipositioner, motorpositioner, and positioner templates available within xeb,
+there is also one called motorpositioner_external_motor
+
+This can be used to allow an EPICS motor, hosted on a different IOC, to be included within a multipositioner
+
+Instead of providing references to motor and multipositioner xeb objects, as is done with the motorpositioner
+template, you specify the motor PV and its position within the multipositioner directly
+
+The 'motor' macro should take the same value as the 'M' macro (of dls_pmac_asyn_motor) for the motor you wish to include,
+and the 'pos' macro should take the letter of the position you wish the motor to take within the multipositioner
+
+For example, if you have a multipositioner made up of one motor using motorpositioner, and one motor using motorpositioner_external_motor,
+the one using motorpositioner will automatically be assigned the position letter 'A', so you should give your motorpositioner_external_motor
+'pos' macro the letter 'B'
+
+Please see the builder file of BL23I-MO-IOC-07 for a 'real-life' example of this

@@ -34,6 +34,15 @@ class _motorpositionerTemplate(AutoSubstitution):
     # Substitution attributes
     TemplateFile = 'motorpositioner.template'
 
+class motorpositioner_external_motor(_motorpositionerTemplate):
+    __doc__ = _motorpositionerTemplate.__doc__
+    def __init__(self, **args):
+        self.__super.__init__(**args)
+
+    # construct the ArgInfo
+    ArgInfo = makeArgInfo(__init__) + \
+        _motorpositionerTemplate.ArgInfo
+
 try:
     from iocbuilder.modules.motor import MotorRecord
 

@@ -4,9 +4,7 @@
 #! DBDEND
 
 
-# % macro, __doc__, Template for controlling many positioner or
-# it to be controlled by a multipositioner, mapping a list of names onto a
-# list of motor positions
+# % macro, __doc__, Template for controlling many positioners mapping a list of names onto pv values and/or motorpositioners mapping the list of names onto a list of motor positions
 # % macro, P, Device prefix
 # % macro, MP, Device suffix
 # % macro, DESC, Multipositioner description

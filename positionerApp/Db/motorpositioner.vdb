@@ -4,6 +4,33 @@
 #! DBDEND
 
 
+# % macro, __doc__, Template for wrapping a motor as a positioner. This allows it to be controlled by a multipositioner, mapping a list of names onto a list of motor positions
+#
+# % macro, P, Device prefix, must match P of multipositioner
+# % macro, Q, Device suffix
+# % macro, MP, Multipositioner suffix, must match MP of multipositioner
+# % macro, DESC, Positioner description
+# % macro, EGU, Engineering units
+# % macro, PREC, Precision to display to
+# % macro, motor, Motor record pv
+# % macro, VALA, Positioner value for position 1
+# % macro, VALB, Positioner value for position 2
+# % macro, VALC, Positioner value for position 3
+# % macro, VALD, Positioner value for position 4
+# % macro, VALE, Positioner value for position 5
+# % macro, VALF, Positioner value for position 6
+# % macro, VALG, Positioner value for position 7
+# % macro, VALH, Positioner value for position 8
+# % macro, VALI, Positioner value for position 9
+# % macro, VALJ, Positioner value for position 10
+# % macro, VALK, Positioner value for position 11
+# % macro, VALL, Positioner value for position 12
+# % macro, VALM, Positioner value for position 13
+# % macro, VALN, Positioner value for position 14
+# % macro, VALO, Positioner value for position 15
+# % macro, VALP, Positioner value for position 16
+# % macro, pos, Positioner letter (A..H)
+#
 record(stringout, "$(P)$(Q):SETINPUT2") {
   field(DESC, "Create open gate link")
   field(DTYP, "Soft Channel")
@@ -471,33 +498,6 @@ record(ao, "$(P)$(Q):SETP") {
   field(OMSL, "closed_loop")
 }
 
-# % macro, __doc__, Template for wrapping a motor as a positioner. This allows
-# it to be controlled by a multipositioner, mapping a list of names onto a
-# list of motor positions
-# % macro, P, Device prefix, must match P of multipositioner
-# % macro, Q, Device suffix
-# % macro, MP, Multipositioner suffix, must match MP of multipositioner
-# % macro, DESC, Positioner description
-# % macro, EGU, Engineering units
-# % macro, PREC, Precision to display to
-# % macro, motor, Motor record pv
-# % macro, VALA, Positioner value for position 1
-# % macro, VALB, Positioner value for position 2
-# % macro, VALC, Positioner value for position 3
-# % macro, VALD, Positioner value for position 4
-# % macro, VALE, Positioner value for position 5
-# % macro, VALF, Positioner value for position 6
-# % macro, VALG, Positioner value for position 7
-# % macro, VALH, Positioner value for position 8
-# % macro, VALI, Positioner value for position 9
-# % macro, VALJ, Positioner value for position 10
-# % macro, VALK, Positioner value for position 11
-# % macro, VALL, Positioner value for position 12
-# % macro, VALM, Positioner value for position 13
-# % macro, VALN, Positioner value for position 14
-# % macro, VALO, Positioner value for position 15
-# % macro, VALP, Positioner value for position 16
-# % macro, pos, Positioner letter (A..H)
 # This record sets the first input link from the multipositioner.
 # This decouples the two templates.
 # The output can only be set after initialisation. Hence this runs on a scan.

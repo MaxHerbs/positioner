@@ -28,5 +28,4 @@ EPICS_BASE=/dls_sw/epics/R3.14.12.7/base
 #CAPFAST_TEMPLATES=
 #SCH2EDIF_PATH=
 
--include $(TOP)/configure/RELEASE.private
-
+-include $(TOP)/configure/RELEASE.local
